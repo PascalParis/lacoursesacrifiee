@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Solitaire du Figaro. 1970 – 2027. — The Sacrificed Race</title>
+<meta name="description" content="Barring a reversal, the world's greatest offshore racing school will disappear after the 2027 edition — sacrificed by its organiser on the altar of money and entertainment. A death foretold is not a death certain. A documented tribune.">
+<link rel="canonical" href="https://lacoursesacrifiee.fr/en/">
+<link rel="alternate" hreflang="fr" href="https://lacoursesacrifiee.fr/">
+<link rel="alternate" hreflang="en" href="https://lacoursesacrifiee.fr/en/">
+<link rel="alternate" hreflang="x-default" href="https://lacoursesacrifiee.fr/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="The Sacrificed Race">
+<meta property="og:title" content="La Solitaire du Figaro. 1970 – 2027.">
+<meta property="og:description" content="Barring a reversal, the world's greatest offshore racing school will disappear after 2027 — sacrificed on the altar of money and entertainment. A death foretold is not a death certain.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La Solitaire du Figaro. 1970 – 2027.">
+<meta name="twitter:description" content="A death foretold is not a death certain. An entire community still has time to make itself heard. A documented tribune.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23123C6B'/%3E%3Cg fill='%23F1F0EC'%3E%3Crect width='16' height='16'/%3E%3Crect x='32' width='16' height='16'/%3E%3Crect x='16' y='16' width='16' height='16'/%3E%3Crect x='48' y='16' width='16' height='16'/%3E%3Crect y='32' width='16' height='16'/%3E%3Crect x='32' y='32' width='16' height='16'/%3E%3Crect x='16' y='48' width='16' height='16'/%3E%3Crect x='48' y='48' width='16' height='16'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,300..800;1,300..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#F1F0EC;
+  --papier-2:#E5E3DC;
+  --noir:#0E0E0E;
+  --gris:#565657;
+  --rouge:#CB1F17;      /* accents sur papier */
+  --rouge-band:#A31710; /* fonds rouges (contraste AA avec blanc) */
+  --bleu:#123C6B;
+  --jaune:#E8B923;
+  --trait:rgba(14,14,14,.16);
+  --trait-c:rgba(241,240,236,.22);
+
+  --disp:'Anton',Impact,sans-serif;
+  --body:'Libre Franklin',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--papier);color:var(--noir);
+  font-family:var(--body);font-size:17.5px;line-height:1.62;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--jaune);color:var(--noir)}
+p{margin:0 0 1.1em;max-width:64ch}
+a{color:inherit}
+strong{font-weight:700}
+.num{font-variant-numeric:tabular-nums}
+
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.004em}
+h2{font-size:clamp(2.1rem,5.4vw,4.4rem)}
+h3{font-family:var(--body);font-weight:700;font-size:1.12rem;line-height:1.25;letter-spacing:-.01em;text-transform:none}
+
+.kick{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--rouge);margin:0 0 1.3rem}
+.band--dark .kick{color:var(--jaune)}
+.band--red .kick{color:#fff}
+
+.skip{position:absolute;left:-999px;top:0;background:var(--jaune);color:var(--noir);padding:.7rem 1.2rem;font-family:var(--mono);font-size:11px;letter-spacing:.1em;z-index:100}
+.skip:focus{left:0}
+
+/* ---------- barre ---------- */
+.bar{position:sticky;top:0;z-index:60;background:var(--rouge-band);color:#fff;border-bottom:2px solid var(--noir)}
+.bar-in{max-width:1200px;margin:0 auto;padding:.6rem 1.6rem;display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+.bar .brand{font-family:var(--disp);font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.bar nav{margin-left:auto;display:flex;gap:1.2rem;overflow-x:auto;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.9);white-space:nowrap;padding:.2rem 0;border-bottom:1px solid transparent}
+.bar nav a:hover,.bar nav a:focus-visible{color:#fff;border-bottom-color:#fff}
+
+/* ---------- bandes ---------- */
+.band{padding:5.5rem 1.6rem}
+.wrap{max-width:1200px;margin:0 auto}
+.narrow{max-width:780px}
+.band--dark{background:var(--noir);color:var(--papier)}
+.band--dark p{color:rgba(241,240,236,.82)}
+.band--dark strong{color:#fff}
+.band--red{background:var(--rouge-band);color:#fff}
+.band--red p{color:rgba(255,255,255,.94)}
+.band--tint{background:var(--papier-2)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--noir);color:var(--papier);padding:3.2rem 1.6rem 4.5rem;position:relative}
+.hero-in{max-width:1200px;margin:0 auto}
+.flags{display:flex;gap:0;align-items:flex-start;margin-bottom:2.8rem;position:relative}
+.halyard{width:2px;align-self:stretch;background:rgba(241,240,236,.35);margin-right:.9rem;min-height:130px}
+.flagcol{display:flex;flex-direction:column;gap:.55rem}
+.flags svg{display:block;box-shadow:0 0 0 1px rgba(241,240,236,.3)}
+.flags-note{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:rgba(241,240,236,.55);line-height:1.75;margin-left:1.4rem;align-self:flex-end;max-width:26ch}
+.hero h1{font-size:clamp(2.5rem,8.6vw,7.4rem);line-height:.9;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--rouge);display:block}
+.hero-sub{margin-top:2.4rem;max-width:58ch;font-size:clamp(1.05rem,1.7vw,1.32rem);line-height:1.5;color:rgba(241,240,236,.86)}
+.hero-meta{margin-top:2.6rem;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(241,240,236,.5);border-top:1px solid var(--trait-c);padding-top:1.1rem;display:flex;flex-wrap:wrap;gap:.4rem 2rem}
+
+/* ---------- registre bien commun ---------- */
+.ledger{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--trait);border:1px solid var(--trait);margin-top:2.8rem}
+.ledger>div{background:var(--papier);padding:1.9rem 1.6rem}
+.ledger h3{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rouge);margin-bottom:1.2rem}
+.ledger ul{list-style:none;margin:0;padding:0}
+.ledger li{padding:.55rem 0;border-bottom:1px solid var(--trait);font-size:.95rem;line-height:1.45}
+.ledger li:last-child{border-bottom:none}
+.ledger li b{font-weight:700}
+.ledger .side-b{background:var(--noir);color:var(--papier)}
+.ledger .side-b h3{color:var(--jaune)}
+.ledger .side-b li{border-bottom-color:var(--trait-c);color:rgba(241,240,236,.85)}
+.ledger .side-b li b{color:#fff}
+
+/* ---------- chiffres ---------- */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--trait);border:1px solid var(--trait);margin-top:2.8rem}
+.figs>div{background:var(--papier);padding:1.8rem 1.5rem}
+.figs .n{font-family:var(--disp);font-size:clamp(2.4rem,5vw,3.6rem);line-height:.9;color:var(--rouge);font-variant-numeric:tabular-nums}
+.figs .l{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gris);margin-top:.8rem;line-height:1.65}
+
+/* ---------- grille 36 -> 11 ---------- */
+.grid-viz{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;margin-top:3rem}
+.gv h3{margin-bottom:1.1rem}
+.dots{display:grid;grid-template-columns:repeat(9,1fr);gap:7px;max-width:340px}
+.dot{aspect-ratio:1;border:1.6px solid var(--noir)}
+.dot.on{background:var(--noir)}
+.dot.off{border-color:rgba(14,14,14,.2);background:transparent}
+.dot.keep{background:var(--rouge);border-color:var(--rouge)}
+.gv .cap{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);margin-top:1rem;line-height:1.75}
+
+/* ---------- palmarès ---------- */
+.pal{list-style:none;margin:2.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:.1rem 2rem}
+.pal li{display:grid;grid-template-columns:3.4rem 1fr;gap:.5rem;padding:.4rem 0;border-bottom:1px solid rgba(241,240,236,.1);align-items:baseline}
+.pal .y{font-family:var(--mono);font-size:11px;color:rgba(241,240,236,.45);font-variant-numeric:tabular-nums}
+.pal .w{font-size:.93rem;color:rgba(241,240,236,.88);line-height:1.35}
+.pal li.t3 .w{color:var(--jaune);font-weight:600}
+.pal li.t3 .y{color:var(--jaune)}
+.pal-cap{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,240,236,.5);margin-top:1.6rem;display:flex;align-items:center;gap:.6rem;line-height:1.7}
+.pal-cap i{width:22px;height:2px;background:var(--jaune);display:inline-block;flex:none}
+
+/* ---------- villes ---------- */
+.ports{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.4rem;max-width:1000px}
+.ports span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;padding:.42rem .8rem;border:1px solid var(--trait);color:var(--noir)}
+.ports span.hot{border-color:var(--rouge);color:var(--rouge)}
+
+/* ---------- comparatif deux mondes ---------- */
+.cmp-wrap{overflow-x:auto;margin-top:2.6rem}
+.cmp{width:100%;min-width:640px;border-collapse:collapse}
+.cmp th,.cmp td{padding:1rem 1.1rem;text-align:left;border-bottom:1px solid var(--trait-c);vertical-align:top;font-size:.95rem;line-height:1.5}
+.cmp thead th{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--jaune);border-bottom:2px solid var(--jaune)}
+.cmp td:first-child{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,240,236,.5);width:21%;padding-left:0}
+.cmp td:nth-child(2){color:var(--papier)}
+.cmp td:nth-child(3){color:rgba(241,240,236,.72)}
+.cmp thead th:first-child{padding-left:0}
+
+/* ---------- décideurs ---------- */
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--trait-c);border:1px solid var(--trait-c);margin-top:2.6rem}
+.who>div{background:var(--noir);padding:1.8rem 1.5rem}
+.who .nm{font-family:var(--body);font-weight:700;font-size:1.1rem;color:#fff;line-height:1.2}
+.who .ro{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--jaune);margin:.6rem 0 .9rem}
+.who p{font-size:.9rem;margin:0}
+
+/* ---------- listes ---------- */
+.loss{list-style:none;margin:2.4rem 0 0;padding:0}
+.loss li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:1.2rem;padding:1.5rem 0;border-bottom:1px solid var(--trait);align-items:start}
+.loss .no{font-family:var(--disp);font-size:1.5rem;color:var(--rouge);line-height:1}
+.loss h3{margin-bottom:.4rem}
+.loss p{margin:0;font-size:.97rem}
+
+.victims{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.6rem 2.4rem;margin-top:2.4rem}
+.victims div{border-top:2px solid var(--rouge);padding-top:.9rem}
+.victims h3{font-size:1rem;margin-bottom:.4rem;color:#fff}
+.victims p{font-size:.9rem;margin:0;color:rgba(241,240,236,.7)}
+
+/* ---------- argument / réponse ---------- */
+.qa{margin-top:2.6rem;border-top:1px solid var(--trait)}
+.qa>div{padding:1.9rem 0;border-bottom:1px solid var(--trait)}
+.qa .them{font-size:1.05rem;line-height:1.5;color:var(--gris);max-width:62ch;margin:0 0 1rem;padding-left:1.2rem;border-left:2px solid var(--trait)}
+.qa .them b{display:block;font-family:var(--mono);font-style:normal;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem}
+.qa .us{margin:0;max-width:64ch}
+.qa .us b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rouge);margin-bottom:.6rem}
+
+/* ---------- chronologie ---------- */
+.tl{list-style:none;margin:2.6rem 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:1.8rem;padding:1.4rem 0;border-bottom:1px solid var(--trait-c);align-items:start}
+.tl time{font-family:var(--mono);font-size:11px;letter-spacing:.11em;color:var(--jaune);padding-top:.2rem}
+.tl h3{color:#fff;margin-bottom:.35rem}
+.tl p{margin:0;font-size:.94rem}
+.tl li.flash time{color:#FF6B5E}
+.tl li.flash h3{color:#FF6B5E}
+
+/* ---------- demandes ---------- */
+.asks{counter-reset:a;list-style:none;margin:2.6rem 0 0;padding:0;display:grid;gap:1px;background:rgba(255,255,255,.3);border:1px solid rgba(255,255,255,.3)}
+.asks li{counter-increment:a;background:var(--rouge);padding:2rem 1.7rem;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1.2rem;align-items:start}
+.asks li::before{content:counter(a,decimal-leading-zero);font-family:var(--disp);font-size:1.7rem;line-height:.9;color:rgba(255,255,255,.6)}
+.asks h3{color:#fff;font-size:1.18rem;margin-bottom:.5rem}
+.asks p{margin:0;font-size:.95rem}
+
+/* ---------- cta ---------- */
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.6rem}
+.btn{
+  font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  padding:1rem 1.7rem;text-decoration:none;border:2px solid #fff;background:#fff;color:var(--rouge-band);
+  transition:transform .12s, background .15s, color .15s;
+}
+.btn:hover,.btn:focus-visible{background:var(--noir);border-color:var(--noir);color:#fff}
+.btn--ghost{background:transparent;color:#fff}
+.btn--ghost:hover,.btn--ghost:focus-visible{background:#fff;color:var(--rouge-band);border-color:#fff}
+
+.pull{
+  font-family:var(--disp);font-size:clamp(1.6rem,3.6vw,2.9rem);text-transform:uppercase;line-height:1.02;
+  max-width:21ch;margin:2.8rem 0 0;color:var(--rouge);
+}
+.band--dark .pull{color:var(--jaune)}
+.band--red .pull{color:#fff}
+
+.note{
+  font-size:.85rem;color:var(--gris);border-top:1px solid var(--trait);
+  padding-top:1.2rem;margin-top:3rem;max-width:70ch;line-height:1.6;
+}
+.band--dark .note{color:rgba(241,240,236,.55);border-top-color:var(--trait-c)}
+
+footer{background:var(--noir);color:rgba(241,240,236,.6);padding:3.5rem 1.6rem 4.5rem;border-top:3px solid var(--rouge)}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+footer p{font-size:.85rem;max-width:42ch;margin:0}
+footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--jaune);margin-bottom:.8rem}
+
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--jaune);outline-offset:2px}
+
+@media(max-width:820px){
+  body{font-size:16.5px}
+  .band{padding:3.4rem 1.2rem}
+  .hero{padding:2.4rem 1.2rem 3rem}
+  .bar-in{padding:.55rem 1.2rem}
+  .tl li{grid-template-columns:1fr;gap:.4rem}
+  .flags{flex-wrap:wrap}
+  .flags-note{margin-left:0;margin-top:.8rem}
+  .dots{grid-template-columns:repeat(6,1fr)}
+  footer{padding:2.6rem 1.2rem 3.4rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+@media print{
+  .bar,.cta{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  .band,.hero,footer{background:#fff!important;color:#000!important;padding:1.2rem 0}
+  .band--dark p,.band--red p,.hero-sub,.victims p{color:#222!important}
+  .tl h3,.who .nm,.asks h3,.victims h3{color:#000!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="brand">The Sacrificed Race</span>
+    <nav aria-label="Contents">
+      <a href="#facts">The facts</a>
+      <a href="#common">Common good</a>
+      <a href="#honours">Honours</a>
+      <a href="#towns">The towns</a>
+      <a href="#who">Who decided</a>
+      <a href="#lost">What disappears</a>
+      <a href="#twoworlds">Two worlds</a>
+      <a href="#case">Their case</a>
+      <a href="#pays">Who pays</a>
+      <a href="#demands">Our demands</a>
+      <a href="/" lang="fr">FR</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-in">
+    <div class="flags">
+      <div class="halyard" aria-hidden="true"></div>
+      <div class="flagcol">
+        <svg width="92" height="60" viewBox="0 0 92 60" role="img" aria-label="November flag: blue and white checker">
+          <rect width="92" height="60" fill="#123C6B"/>
+          <g fill="#F1F0EC">
+            <rect x="0" y="0" width="23" height="15"/><rect x="46" y="0" width="23" height="15"/>
+            <rect x="23" y="15" width="23" height="15"/><rect x="69" y="15" width="23" height="15"/>
+            <rect x="0" y="30" width="23" height="15"/><rect x="46" y="30" width="23" height="15"/>
+            <rect x="23" y="45" width="23" height="15"/><rect x="69" y="45" width="23" height="15"/>
+          </g>
+        </svg>
+        <svg width="92" height="60" viewBox="0 0 92 60" role="img" aria-label="Charlie flag: blue, white, red, white, blue stripes">
+          <rect width="92" height="60" fill="#123C6B"/>
+          <rect y="12" width="92" height="12" fill="#F1F0EC"/>
+          <rect y="24" width="92" height="12" fill="#CB1F17"/>
+          <rect y="36" width="92" height="12" fill="#F1F0EC"/>
+        </svg>
+      </div>
+      <p class="flags-note">Flags N over C<br>International Code:<br>distress signal</p>
+    </div>
+
+    <h1>La Solitaire du Figaro.<em>1970 – 2027.</em></h1>
+
+    <p class="hero-sub">
+      Barring a reversal, the world's greatest offshore racing school will disappear after the
+      2027 edition. Not for lack of success — it has never gathered so many sailors — but by the
+      decision of a single company: its organiser. No one else was consulted. This is a death
+      foretold. It is not yet certain: nothing is signed for 2028, and an entire community still
+      has time to make itself heard.
+    </p>
+
+    <div class="hero-meta">
+      <span>Opinion piece</span>
+      <span>Decision announced 17 July 2026</span>
+      <span>Updated: August 2026</span>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+
+<!-- THE FACTS -->
+<section class="band rv" id="facts">
+  <div class="wrap">
+    <p class="kick">What was decided</p>
+    <h2>The facts, without comment</h2>
+
+    <div class="narrow" style="margin-top:2rem">
+      <p>
+        On 17 July 2026, Groupe Figaro, owner of the event, and OC Sport Pen Duick, its
+        organiser, jointly announced that La Solitaire du Figaro will be raced on Ocean Fifty
+        trimarans from the 2028 edition. The 2027 edition will be the last sailed on the
+        Figaro Bénéteau 3.
+      </p>
+      <p>
+        The Ocean Fifty class comprises eleven 15-metre trimarans — a cap written into its own
+        class rules. They are prototypes built between 2009 and 2023, under a box rule:
+        comparable boats, not identical ones.
+      </p>
+      <p>
+        The Ocean Fifty class confirms it was consulted beforehand: its statement opens with the
+        words <em>"When the proposal was put to us by OC Sport Pen Duick"</em>. No equivalent
+        consultation of the Figaro Bénéteau class, the circuit's skippers or the training
+        academies has ever been made public. One class received a proposal. The other discovered
+        a decision.
+      </p>
+    </div>
+
+    <div class="figs num">
+      <div><div class="n">36 → 11</div><div class="l">Competitors on the start line<br>2026 fleet → class ceiling</div></div>
+      <div><div class="n">× 25</div><div class="l">Multiplication of the budget<br>for one season's campaign</div></div>
+      <div><div class="n">35 yrs</div><div class="l">Of strict one-design racing<br>erased at a stroke</div></div>
+      <div><div class="n">0</div><div class="l">Consultation of the sailors,<br>the towns, the historic class</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON GOOD -->
+<section class="band band--tint rv" id="common">
+  <div class="wrap">
+    <p class="kick">The heart of the scandal</p>
+    <h2>A common good, governed as private property</h2>
+
+    <div class="narrow" style="margin-top:2rem">
+      <p>
+        La Solitaire du Figaro is, legally, a piece of property: a registered name, an
+        exploitation right, an organising mandate. It is, morally and materially, a collective
+        heritage: fifty-seven years of value built up by people who never held the slightest
+        right over it. The whole crisis of July 2026 lies in the gap between those two realities.
+      </p>
+    </div>
+
+    <div class="ledger">
+      <div>
+        <h3>Who built this heritage</h3>
+        <ul>
+          <li><b>Thousands of sailors</b>, across fifty-seven editions, many of whom staked their own savings on a start line</li>
+          <li><b>The host towns and their taxpayers</b> — every stopover is part-financed through public contracts</li>
+          <li><b>The volunteers</b> of the ports, clubs and race villages, at every edition since 1970</li>
+          <li><b>A shipyard and its workers</b>, who designed and built three generations of one-designs for this race</li>
+          <li><b>The training academies</b> and the federation, which calibrated the entire French pathway on this event</li>
+          <li><b>Hundreds of sponsors</b>, from regional SMEs to title partners, who carried the skippers' campaigns</li>
+          <li><b>The pontoon public</b>, who made every stopover a free popular festival</li>
+        </ul>
+      </div>
+      <div class="side-b">
+        <h3>Who decided its fate</h3>
+        <ul>
+          <li><b>Two signatures</b>: the brand's owner and its mandated organiser — for a single initiative, the organiser's</li>
+          <li><b>A closed-door review</b> lasting months, never made public</li>
+          <li><b>One consultation</b>: of the class that benefits from the decision — and of it alone</li>
+          <li><b>One announcement</b>, on 17 July 2026</li>
+          <li><b>Zero voice</b> for the sailors, the historic class, the academies, the towns, the volunteers or the public</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="narrow" style="margin-top:3rem">
+      <p>
+        How can a heritage of this size be undone in one announcement? Because nothing protects
+        it. <strong>There is no charter of La Solitaire, no founding text, no statute of the
+        event.</strong> Even one-design racing — the principle everyone believes constitutive of
+        the race — rests on nothing more than an organiser's decision taken in 1991. What an
+        organiser's decision created, an organiser's decision has just destroyed. The "DNA" that
+        everyone invokes, including the title partner as it slammed the door, never had any
+        legal existence.
+      </p>
+      <p>
+        And there is something more troubling still: <strong>the public pays, but does not
+        decide.</strong> Every stopover of La Solitaire is supported by public money — contracts
+        awarded by the towns, regional subsidies, harbours and municipal services made
+        available. Local authorities fund part of the event every year; not one was consulted on
+        its transformation.
+      </p>
+      <p>
+        Let us be clear: we do not dispute Groupe Figaro's property rights, nor the validity of
+        OC Sport Pen Duick's mandate. Everything that happened on 17 July is perfectly legal.
+        <strong>That is precisely the scandal.</strong> A sporting heritage built by thousands of
+        people over half a century can be transformed from top to bottom by a handful of
+        decision-makers, without any of those who built it having a say — because its governance
+        gives them none.
+      </p>
+      <p>
+        What we contest is the solitary exercise of a private right over a common thing. French
+        law knows this tension and has settled it for stone:
+        <strong>a listed château belongs to its owner, and yet the owner may not raze it, sell
+        its gargoyles or turn it into a shopping centre</strong> — because the law recognises
+        that heritage exceeds title. What is happening here is a château razed by its manager,
+        entirely legally, because no one ever thought of listing races. La Solitaire has no such
+        protection. Its only protection is us.
+      </p>
+    </div>
+
+    <p class="pull">The name belongs to them. The history belongs to everyone.</p>
+  </div>
+</section>
+
+<!-- HONOURS -->
+<section class="band band--dark rv" id="honours">
+  <div class="wrap">
+    <p class="kick">Exhibit no. 1</p>
+    <h2 style="color:var(--papier)">Fifty-seven names</h2>
+    <p style="margin-top:1.8rem;max-width:62ch">
+      Here is what is about to be interrupted. Every line is a year at sea. Look through this
+      list for the winners of the Vendée Globe, the Route du Rhum, the great crewed races: they
+      are almost all here, and it is here that they were discovered. This roll of honour is not
+      an archive — it is the talent pool of French offshore racing, in continuous operation
+      since 1970.
+    </p>
+
+    <ul class="pal">
+      <li><span class="y">1970</span><span class="w">Joan de Kat</span></li>
+      <li><span class="y">1971</span><span class="w">Michel Malinovsky</span></li>
+      <li><span class="y">1972</span><span class="w">Jean-Marie Vidal</span></li>
+      <li><span class="y">1973</span><span class="w">Gilles Le Baud</span></li>
+      <li><span class="y">1974</span><span class="w">Eugène Riguidel</span></li>
+      <li><span class="y">1975</span><span class="w">Guy Cornou</span></li>
+      <li><span class="y">1976</span><span class="w">Guy Cornou</span></li>
+      <li><span class="y">1977</span><span class="w">Gilles Gahinet</span></li>
+      <li><span class="y">1978</span><span class="w">Gilles Le Baud</span></li>
+      <li><span class="y">1979</span><span class="w">Patrick Éliès</span></li>
+      <li><span class="y">1980</span><span class="w">Gilles Gahinet</span></li>
+      <li><span class="y">1981</span><span class="w">Sylvain Rosier</span></li>
+      <li class="t3"><span class="y">1982</span><span class="w">Philippe Poupon</span></li>
+      <li><span class="y">1983</span><span class="w">Lionel Péan</span></li>
+      <li><span class="y">1984</span><span class="w">Christophe Cudennec</span></li>
+      <li class="t3"><span class="y">1985</span><span class="w">Philippe Poupon</span></li>
+      <li><span class="y">1986</span><span class="w">Christophe Auguin</span></li>
+      <li><span class="y">1987</span><span class="w">Jean-Marie Vidal</span></li>
+      <li><span class="y">1988</span><span class="w">Laurent Bourgnon</span></li>
+      <li><span class="y">1989</span><span class="w">Alain Gautier</span></li>
+      <li><span class="y">1990</span><span class="w">Laurent Cordelle</span></li>
+      <li><span class="y">1991</span><span class="w">Yves Parlier</span></li>
+      <li class="t3"><span class="y">1992</span><span class="w">Michel Desjoyeaux</span></li>
+      <li><span class="y">1993</span><span class="w">Dominic Vittet</span></li>
+      <li class="t3"><span class="y">1994</span><span class="w">Jean Le Cam</span></li>
+      <li class="t3"><span class="y">1995</span><span class="w">Philippe Poupon</span></li>
+      <li class="t3"><span class="y">1996</span><span class="w">Jean Le Cam</span></li>
+      <li><span class="y">1997</span><span class="w">Franck Cammas</span></li>
+      <li class="t3"><span class="y">1998</span><span class="w">Michel Desjoyeaux</span></li>
+      <li class="t3"><span class="y">1999</span><span class="w">Jean Le Cam</span></li>
+      <li><span class="y">2000</span><span class="w">Pascal Bidégorry</span></li>
+      <li><span class="y">2001</span><span class="w">Éric Drouglazet</span></li>
+      <li><span class="y">2002</span><span class="w">Kito de Pavant</span></li>
+      <li class="t3"><span class="y">2003</span><span class="w">Armel Le Cléac'h</span></li>
+      <li><span class="y">2004</span><span class="w">Charles Caudrelier</span></li>
+      <li class="t3"><span class="y">2005</span><span class="w">Jérémie Beyou</span></li>
+      <li><span class="y">2006</span><span class="w">Nicolas Troussel</span></li>
+      <li class="t3"><span class="y">2007</span><span class="w">Michel Desjoyeaux</span></li>
+      <li><span class="y">2008</span><span class="w">Nicolas Troussel</span></li>
+      <li class="t3"><span class="y">2009</span><span class="w">Nicolas Lunven</span></li>
+      <li class="t3"><span class="y">2010</span><span class="w">Armel Le Cléac'h</span></li>
+      <li class="t3"><span class="y">2011</span><span class="w">Jérémie Beyou</span></li>
+      <li class="t3"><span class="y">2012</span><span class="w">Yann Eliès</span></li>
+      <li class="t3"><span class="y">2013</span><span class="w">Yann Eliès</span></li>
+      <li class="t3"><span class="y">2014</span><span class="w">Jérémie Beyou</span></li>
+      <li class="t3"><span class="y">2015</span><span class="w">Yann Eliès</span></li>
+      <li><span class="y">2016</span><span class="w">Yoann Richomme</span></li>
+      <li class="t3"><span class="y">2017</span><span class="w">Nicolas Lunven</span></li>
+      <li><span class="y">2018</span><span class="w">Sébastien Simon</span></li>
+      <li><span class="y">2019</span><span class="w">Yoann Richomme</span></li>
+      <li class="t3"><span class="y">2020</span><span class="w">Armel Le Cléac'h</span></li>
+      <li><span class="y">2021</span><span class="w">Pierre Quiroga</span></li>
+      <li><span class="y">2022</span><span class="w">Tom Laperche</span></li>
+      <li><span class="y">2023</span><span class="w">Corentin Horeau</span></li>
+      <li><span class="y">2024</span><span class="w">Tom Dolan · IRL</span></li>
+      <li><span class="y">2025</span><span class="w">Alexis Loison</span></li>
+      <li class="t3"><span class="y">2026</span><span class="w">Nicolas Lunven</span></li>
+    </ul>
+
+    <p class="pal-cap"><i></i> In amber, the seven three-time winners: Poupon, Desjoyeaux, Le Cam, Le Cléac'h, Beyou, Eliès, Lunven. No sailor has done better in fifty-seven years.</p>
+
+    <p class="pull" style="max-width:26ch">Every name on this list came in through a door that is about to be closed.</p>
+  </div>
+</section>
+
+<!-- TOWNS -->
+<section class="band rv" id="towns">
+  <div class="wrap">
+    <p class="kick">Exhibit no. 2</p>
+    <h2>The towns that built it</h2>
+    <p style="margin-top:1.8rem;max-width:62ch">
+      More than fifty ports — in France, Ireland, Spain, the United Kingdom and Portugal — have
+      hosted the race since 1970. Every stopover is co-financed by local authorities: public
+      contracts, subsidies, harbours and municipal services made available. In other words, each
+      of these towns, and their taxpayers, paid their share of this heritage.
+      <strong>Not one was consulted on its transformation.</strong>
+    </p>
+
+    <div class="ports">
+      <span class="hot">Kinsale</span><span class="hot">Gijón</span><span class="hot">La Coruña</span>
+      <span>Brest</span><span>Pornic</span><span>Laredo</span><span>Perros-Guirec</span>
+      <span>Concarneau</span><span>Les Sables-d'Olonne</span><span>Cherbourg</span>
+      <span>Dieppe</span><span>La Rochelle</span><span>Lorient</span><span>Quiberon</span>
+      <span>Arcachon</span><span>Saint-Malo</span><span>Douarnenez</span><span>Vigo</span>
+      <span>Dublin</span><span>Dún Laoghaire</span><span>Crosshaven</span><span>Dingle</span>
+      <span>Falmouth</span><span>Plymouth</span><span>Portsmouth</span><span>Cowes</span>
+      <span>Torbay</span><span>Porto</span><span>Santander</span><span>Bilbao</span>
+      <span>Roscoff</span><span>Saint-Nazaire</span><span>Saint-Gilles-Croix-de-Vie</span>
+      <span>Caen</span><span>Deauville</span><span>Le Havre</span><span>Bordeaux</span>
+      <span>Pauillac</span><span>Nantes</span><span>Rouen</span><span>Royan</span>
+      <span>Paimpol</span><span>Dunkerque</span><span>Fécamp</span><span>Pornichet</span>
+      <span>La Turballe</span><span>Piriac-sur-Mer</span><span>Saint-Vaast-la-Hougue</span>
+      <span>Saint-Quay-Portrieux</span><span>La Baule</span><span>Granville</span>
+      <span>Boulogne-sur-Mer</span><span>Le Croisic</span><span>Bénodet</span>
+      <span>La Trinité-sur-Mer</span><span>Port-la-Forêt</span>
+    </div>
+
+    <p class="pull">The public paid for every stopover. A private company decided alone.</p>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="band band--dark rv" id="who">
+  <div class="wrap">
+    <p class="kick">Responsibilities</p>
+    <h2 style="color:var(--papier)">Who took this decision</h2>
+    <p style="margin-top:1.8rem;max-width:60ch">
+      This is neither economic fate nor a federation ruling. It is a corporate choice, made by
+      identified actors, inside a private contract.
+    </p>
+
+    <div class="who">
+      <div>
+        <div class="nm">OC Sport Pen Duick</div>
+        <div class="ro">Organiser · Author of the decision</div>
+        <p>Has run the event on Groupe Figaro's behalf since 2011, under a mandate renewed to 2036. The proposal to change boats came from this company: the Ocean Fifty class says so in its own statement.</p>
+      </div>
+      <div>
+        <div class="nm">Groupe Figaro</div>
+        <div class="ro">Owner of the name · Rubber-stamped it</div>
+        <p>Has owned the event since 1980, together with its trademarks. Co-signatory of the 17 July announcement — of a decision conceived, carried and publicly defended by its organiser.</p>
+      </div>
+      <div>
+        <div class="nm">The Ocean Fifty class</div>
+        <div class="ro">Beneficiary</div>
+        <p>Eleven professional teams receive a first-rank annual solo event — an inheritance they did not build. The only stakeholder consulted before the announcement, by its own account.</p>
+      </div>
+    </div>
+
+    <p class="pull">Two signatures at the foot of the announcement. One initiative. And no voice for those who sail the race.</p>
+
+    <ol class="tl">
+      <li>
+        <time>17 OCTOBER 2024</time>
+        <div>
+          <h3>The mandate is extended to 2036</h3>
+          <p>Groupe Figaro and OC Sport Pen Duick announce twelve more years of partnership. The statement sets the first priority: to <em>"allow young talents to measure themselves against the best skippers"</em>.</p>
+        </div>
+      </li>
+      <li>
+        <time>OCT 2024 – JUL 2026</time>
+        <div>
+          <h3>Twenty-one months behind closed doors</h3>
+          <p>The July 2026 statement refers to a review conducted "over several months". It publicly involved neither the Figaro Bénéteau class, nor the skippers, nor the training academies, nor the host towns.</p>
+        </div>
+      </li>
+      <li>
+        <time>MAY – JUNE 2026</time>
+        <div>
+          <h3>Meanwhile, the race is thriving</h3>
+          <p>The 57th edition gathers 36 skippers, including three former winners back on the water, 7 women, 10 rookies and 5 foreign entries. The fleet is described within the sport as steadily growing. Nicolas Lunven, 44, wins his third title. That is the product being shut down.</p>
+        </div>
+      </li>
+      <li class="flash">
+        <time>17 JULY 2026</time>
+        <div>
+          <h3>The announcement</h3>
+          <p>Switch to Ocean Fifty trimarans from 2028. The format, the fleet, the supporting class and the economic model of the event change in a single statement.</p>
+        </div>
+      </li>
+      <li class="flash">
+        <time>17 JULY 2026 · SAME DAY</time>
+        <div>
+          <h3>Paprec walks out</h3>
+          <p>The title partner announces the end of its commitment by the close of 2027 at the latest, denouncing a break with the identity of a race raced <em>"on equal terms"</em> and highly accessible. The event's largest private funder leaves within hours.</p>
+        </div>
+      </li>
+      <li class="flash">
+        <time>17 JULY 2026 · SAME DAY</time>
+        <div>
+          <h3>The Figaro Bénéteau class responds</h3>
+          <p>It announces the creation of a solo one-design event, with the backing of the French Sailing Federation and Groupe Bénéteau. The French pathway splits in two.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="note">
+      The chronology says it all: the organiser first secured twelve years of mandate, then
+      transformed the product inside the perimeter already granted. The October 2024 promise —
+      access for young talents — is the exact opposite of the July 2026 decision.
+    </p>
+
+    <div class="narrow" style="margin-top:4rem">
+      <p class="kick">Naming responsibilities</p>
+
+      <h3 style="color:#fff;font-size:1.25rem;margin-bottom:.8rem">A concession-holder is not an owner — still less an heir</h3>
+      <p>
+        OC Sport Pen Duick did not create this race, did not invent its format, did not build its
+        roll of honour. The company organises the event <strong>on behalf of Groupe
+        Figaro</strong>, since 2011, under a mandate. A concession-holder receives an event in
+        trust: its mission is to run it, keep it alive and hand it on — not to change its nature.
+        The manager of a monument is not there to redraw its plans.
+      </p>
+      <p>
+        And this is the least comprehensible part: <strong>nothing required destroying in order to
+        create.</strong> OC Sport Pen Duick has every skill needed to launch a major solo Ocean
+        Fifty event under a new name — creating and running events is its trade. An independent
+        event would have enriched the calendar without taking anything from anyone. Instead, the
+        choice was made to empty an existing event of its substance and install another project
+        inside it, capitalising on a name that fifty-seven years of history have made precious.
+        Nothing is being created here: someone else's asset — the sailors', the towns', the
+        public's — is being redirected to one's own project.
+      </p>
+
+      <h3 style="color:#fff;font-size:1.25rem;margin:2.2rem 0 .8rem">Hervé Favre, president of OC Sport Pen Duick</h3>
+      <p>
+        The announcement bears two signatures, but the decision has an author. The proposal came
+        from his company — the Ocean Fifty class writes as much itself — and it is he who
+        conceived it, carries it and defends it publicly; the owner of the name rubber-stamped
+        it. Running the mandated organiser of a collective heritage is a particular
+        responsibility: one is accountable to more than a board of directors. An executive who
+        commits the radical transformation of an asset he does not own, against its entire
+        community, without consulting it, and whose first measurable result is the departure of
+        the title partner on the very same day, must answer for it.
+        <strong>If the moratorium is refused and the pathway breaks, the question of his
+        resignation will legitimately be raised.</strong> One does not stay at the helm of a ship
+        one has chosen to scuttle.
+      </p>
+
+      <h3 style="color:#fff;font-size:1.25rem;margin:2.2rem 0 .8rem">Le Figaro, owner — which rubber-stamped it</h3>
+      <p>
+        This race was born inside a newspaper — <em>L'Aurore</em>, in 1970 — and it was a
+        newspaper that ran it directly for thirty years before entrusting its organisation.
+        Le Figaro is no distant shareholder: the race bears its name. And yet everything suggests
+        the owner merely endorsed a project conceived by its contractor. A press title that lets
+        the popular, meritocratic event bearing its name for forty-six years be denatured without
+        defending it <strong>dishonours itself</strong> — by action if it wanted this, by
+        abdication if it merely let it happen. The newspaper's name used to fly on the rookies'
+        sails. It will now sit on the floats of a grand prix.
+      </p>
+
+      <h3 style="color:#fff;font-size:1.25rem;margin:2.2rem 0 .8rem">Le Télégramme, the shareholder — of all newspapers</h3>
+      <p>
+        OC Sport Pen Duick is a subsidiary wholly controlled by Groupe Télégramme, the company of
+        the Coudurier family. A Breton press group whose readership is precisely the pontoon
+        public of Concarneau, Roscoff and Saint-Quay — the tens of thousands of readers who come
+        every summer to shake hands with thirty-six sailors, ten of them unknowns. It is that
+        group which, through its subsidiary, proposes to reserve the race for eleven teams.
+        Responsibility for this decision runs, in law as in fact, all the way up to the
+        shareholder: <strong>it engages Le Télégramme, and it engages the family that owns
+        it.</strong> The newspaper of maritime Brittany will have to explain to its readers why
+        their race will no longer be theirs.
+      </p>
+
+      <h3 style="color:#fff;font-size:1.25rem;margin:2.2rem 0 .8rem">Pen Duick — and what would Éric Tabarly think?</h3>
+      <p>
+        The very name of the organising company raises the question. Pen Duick is Éric Tabarly's
+        boat — the cutter his father wanted to sell and which he spent his life saving, restoring
+        and handing on, until he died at sea while sailing her to a classic boat gathering. The
+        Pen Duick company, he founded himself in 1973. Tabarly is the exact embodiment of what
+        this tribune defends: the idea that a maritime heritage is received, maintained and
+        passed on — and that no one has the right to be merely its last owner. We will not put
+        words in the mouths of the dead. But a company bearing that name should know, better
+        than any other, what handing on means. <strong>The name they received binds them. What
+        Éric would think of this, anyone may ask — and on the pontoons, the answer is hardly in
+        doubt.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT DISAPPEARS -->
+<section class="band band--tint rv" id="lost">
+  <div class="wrap">
+    <p class="kick">The heart of the matter</p>
+    <h2>What this decision abolishes</h2>
+    <p style="margin-top:1.8rem;max-width:62ch">
+      The debate is not "monohull versus multihull", nor "tradition versus modernity". It is
+      about five characteristics that make La Solitaire what it is — and that all disappear at
+      once.
+    </p>
+
+    <ol class="loss">
+      <li>
+        <span class="no">01</span>
+        <div>
+          <h3>One-design racing — offshore sport's only pure filter for talent</h3>
+          <p>
+            Introduced in 1991. For thirty-five years, every competitor has raced La Solitaire on
+            a strictly identical boat, sails checked, weights verified. That is what gives the
+            result a certification value nothing else possesses: a Solitaire ranking measures the
+            sailor, not the budget. Ocean Fifties are prototypes of different generations. That
+            guarantee disappears. And one obvious truth must be said, carried by the name itself:
+            <strong>the Figaro Bénéteau class is the only legitimate class of La Solitaire du
+            Figaro.</strong> The boat bears the name of the race. In 2028, this event will become
+            the only race in the world in which no boat bears its name.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="no">02</span>
+        <div>
+          <h3>Fleet density</h3>
+          <p>
+            Thirty-six sailors on the line in 2026: thirty-six sponsors, thirty-six home
+            territories, thirty-six stories for the press and the race villages. The Ocean Fifty
+            class caps itself at eleven boats by its own rules. A stage race lives on numbers.
+            Eleven trimarans is a grand prix.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="no">03</span>
+        <div>
+          <h3>Accessibility</h3>
+          <p>
+            A season's campaign on a Figaro Bénéteau 3 can be run from €50,000–70,000 with a
+            chartered boat, up to €200,000 for a top-level campaign with a new one. An Ocean
+            Fifty campaign runs to millions of euros a year — on the order of twenty-five times
+            more. The social ladder of French sailing is being dismantled.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="no">04</span>
+        <div>
+          <h3>Openness, since 1970</h3>
+          <p>
+            Intended by the founders, Jean-Louis Guillemard and Jean-Michel Barrault: amateurs on
+            the start line alongside professionals, and a dedicated ranking for the rookies. Ten
+            first-timers started in 2026. With eleven professional boats under a closed quota,
+            that openness has no material support left.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="no">05</span>
+        <div>
+          <h3>The talent pool — the function nothing will replace</h3>
+          <p>
+            Desjoyeaux, Le Cléac'h, Gabart, Gautier, Auguin, Cammas, Caudrelier, Richomme, Dalin:
+            nearly every great name of French offshore racing was discovered here, on talent
+            alone, on a boat identical to the others. This nursery function is what made France
+            the world's leading nation in the discipline. Abolishing it means turning your back
+            on the sailors who embody this race and whom it revealed — and contracting a debt
+            French sailing will pay in ten years' time, when the generation trained elsewhere is
+            not worth the one trained here.
+          </p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="grid-viz">
+      <div class="gv">
+        <h3>The 2026 fleet</h3>
+        <div class="dots" aria-hidden="true">
+          <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span>
+          <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span>
+          <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span>
+          <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span>
+        </div>
+        <p class="cap">36 sailors · 7 women · 10 rookies · 5 foreign entries<br>3 former winners on the line</p>
+      </div>
+      <div class="gv">
+        <h3>The 2028 fleet, at best</h3>
+        <div class="dots" aria-hidden="true">
+          <span class="dot keep"></span><span class="dot keep"></span><span class="dot keep"></span><span class="dot keep"></span><span class="dot keep"></span><span class="dot keep"></span><span class="dot keep"></span><span class="dot keep"></span><span class="dot keep"></span>
+          <span class="dot keep"></span><span class="dot keep"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span>
+          <span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span>
+          <span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span><span class="dot off"></span>
+        </div>
+        <p class="cap">11 trimarans maximum<br>Ceiling set by the Ocean Fifty class rules</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO WORLDS -->
+<section class="band band--dark rv" id="twoworlds">
+  <div class="wrap">
+    <p class="kick">The comparison they will not make</p>
+    <h2 style="color:var(--papier)">Two worlds</h2>
+    <p style="margin-top:1.8rem;max-width:62ch">
+      Here, side by side, are the fleet being shut down and the fleet replacing it. Both raced
+      in 2026. The figures speak for themselves.
+    </p>
+
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr><th></th><th>La Solitaire du Figaro 2026</th><th>Ocean Fifty 2026</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sailors on the line</td><td><strong>36</strong></td><td>11, the class ceiling</td></tr>
+          <tr><td>Average age</td><td><strong>around 29</strong></td><td>around 37</td></tr>
+          <tr><td>Youngest to oldest</td><td>rookies of 21–23 up to Nicolas Lunven, 44 — and the winner</td><td>from Basile Bourgnon, 24, to Erwan Le Roux, 51</td></tr>
+          <tr><td>Women</td><td><strong>7</strong> — one in five</td><td>1 — one in eleven</td></tr>
+          <tr><td>First-timers</td><td><strong>10 rookies</strong>, with a dedicated ranking since the beginning</td><td>no entry route: no free seat, no rookie ranking</td></tr>
+          <tr><td>Nationalities</td><td><strong>4</strong>, including 5 foreign skippers</td><td>an almost entirely French line-up</td></tr>
+          <tr><td>Annual budget</td><td><strong>€50,000 to €200,000</strong></td><td>on the order of €1.5–2.5 million</td></tr>
+          <tr><td>How you get in</td><td>a chartered boat, a first sponsor, an entry form</td><td>a seat opens only when a sponsor leaves — and changes hands for millions</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:1.6rem">
+      Ages estimated from publicly available data (entry lists, class biographies) — orders of
+      magnitude, not official statistics.
+    </p>
+
+    <div class="narrow" style="margin-top:3rem">
+      <h3 style="color:#fff;font-size:1.25rem;margin-bottom:.8rem">Eleven boats, not one more: the logic of a private club</h3>
+      <p>
+        Why this ceiling? Just look at whom it serves. Eleven boats means eleven sponsors
+        guaranteed visibility — the comfort of a ranking in which you cannot finish lower than
+        eleventh. Why eleven, in fact? With three, everyone would be assured of the podium —
+        veterans of the multihull classes, who knew such grids before watching them die, will
+        appreciate the thought. Above all it is a door locked from the inside: to get in, you
+        must buy a member's hull, at a price the very closure drives up. The newcomer's millions
+        do not fund the race — they pay the outgoing member's exit ticket. Those who vote the
+        rule own what the rule makes valuable: few private schemes are so elegantly drawn. And
+        measure what the 17 July decision produced within the hour: <strong>by making these
+        eleven hulls the only entry tickets to a fifty-seven-year-old heritage event, it handed
+        an immediate capital gain to the only party that had been consulted.</strong> The club's
+        members did not have to lift a finger: La Solitaire was brought to them on a plate. A
+        private circle has every right to operate by co-optation, behind closed doors, with dues
+        in the millions. <strong>A heritage event, built on the idea that any gifted kid could
+        enter, has no right to become one.</strong> Their model is the closed door. La
+        Solitaire's, since 1970, was the open one.
+      </p>
+
+      <h3 style="color:#fff;font-size:1.25rem;margin:2.2rem 0 .8rem">A re-sit nobody asked for</h3>
+      <p>
+        Look at where the Ocean Fifty skippers come from. Pierre Quiroga, winner of the 2021
+        Solitaire. Baptiste Hulin, Erwan Le Draoulec, Matthieu Perraut, Basile Bourgnon,
+        Anne-Claire Le Berre: most of the line-up came up through the Figaro circuit. In 2028,
+        the flagship event of their new class will be… La Solitaire du Figaro. <strong>They are
+        being sent back. Nobody asked them</strong> — any more than the Figaro sailors being
+        stripped of their race, or anyone else. A winner of La Solitaire will put his title back
+        on the line in the very race that trained him, seven years on, on a different boat,
+        because two boardrooms decided so. This is no longer a school: it is one long compulsory
+        repeat of the year.
+      </p>
+    </div>
+
+    <p class="pull">You do not replace a school with a showroom. You only replace students with clients.</p>
+  </div>
+</section>
+
+<!-- THEIR CASE -->
+<section class="band rv" id="case">
+  <div class="wrap">
+    <p class="kick">Cross-examination</p>
+    <h2>Their arguments, and what they are worth</h2>
+    <p style="margin-top:1.8rem;max-width:62ch">
+      Below we summarise, faithfully, the justifications publicly advanced by the
+      decision-makers — and we answer them. Anyone can check the record: the statements are
+      public.
+    </p>
+
+    <div class="qa">
+      <div>
+        <p class="them"><b>Their argument no. 1</b>The world of offshore racing has been transformed: the expectations of the public, partners, media and local authorities have all changed, and so have event business models — the race must follow.</p>
+        <p class="us"><b>Our answer</b>Everything has changed, indeed — and that is exactly what made La Solitaire irreplaceable. Everywhere else, offshore racing has become a contest of budgets. La Solitaire was the last great event where the ranking owed nothing to the chequebook. When something becomes rare, you do not trivialise it: you protect it. They did the opposite.</p>
+      </div>
+      <div>
+        <p class="them"><b>Their argument no. 2</b>Preserving La Solitaire means giving it the means to evolve and remain the benchmark for decades to come.</p>
+        <p class="us"><b>Our answer</b>La Solitaire has changed boats four times — half-tonners, Figaro I, Figaro 2, Figaro 3 — without ever changing its nature, because the principle of equality was always maintained. Evolving is something it knows how to do. What is under way here is not an evolution of the boat: it is the abolition of the principle. That is a first in fifty-seven years.</p>
+      </div>
+      <div>
+        <p class="them"><b>Their argument no. 3</b>The fundamentals are preserved: a solo race, in stages, decided on cumulative time, rooted in its coastal territories.</p>
+        <p class="us"><b>Our answer</b>Solo, stages, cumulative time: those three traits are shared by plenty of other races. What distinguished La Solitaire from every other event in the world was the strict equality of the boats and the openness of the entry list. Those are exactly the two characteristics being abolished. What they are keeping is what was never rare.</p>
+      </div>
+      <div>
+        <p class="them"><b>Their argument no. 4 — October 2024</b>The stated ambition when the mandate was renewed: to strengthen the race's sporting appeal so that young talents can measure themselves against the best skippers.</p>
+        <p class="us"><b>Our answer</b>Twenty-one months later, the cost of entering that contest is multiplied by twenty-five and the number of places on the start line divided by more than three. There is no reading of the July 2026 decision in which it serves young talents. That is the central contradiction of this affair, and it is written in their own statements.</p>
+      </div>
+    </div>
+
+    <p class="pull">And the economic argument does not hold either.</p>
+
+    <div class="narrow" style="margin-top:1.6rem">
+      <p>
+        A reconstruction of the event's operating account, built from the organiser's filed
+        company accounts and the public contracts awarded by the host towns, puts the expected
+        gain from the switch at <strong>a few hundred thousand euros per edition, at
+        best</strong> — and in the scenario where the title partner is not replaced, which is now
+        the open question since Paprec walked, the result turns negative.
+      </p>
+      <p>
+        We do not claim this decision was taken out of greed: the figures say the opposite, and
+        that is worse. <strong>The expected economic benefit is marginal, and the cost to the
+        pathway is massive.</strong> A fifty-seven-year sporting heritage has been staked on a
+        gain that does not justify it — and the first measurable effect of the decision was the
+        departure, the same day, of the event's largest private funder.
+      </p>
+      <p>
+        That leaves one explanation, which we state as an opinion we stand by:
+        <strong>prestige.</strong> Eleven giant foiling trimarans photograph better than
+        thirty-six ten-metre one-designs; on-board hospitality presents better to an executive
+        committee than a pontoon open to all. We read in this a showcase project — serving the
+        image of those who decided it, at the expense of those who sail the race. Such a
+        decision dishonours those who took it, because it trades a common achievement for the
+        lustre of a few; nor does it honour those who accept its benefits without having built
+        any of what they receive. If they wish to prove this reading wrong, a single act will
+        do: the moratorium.
+      </p>
+      <p class="note" style="margin-top:2rem">
+        Estimate built from public sources: OC Sport Pen Duick's 2021–2024 company accounts filed
+        with the Lorient registry, public contracts awarded by host authorities, published
+        edition reports. As no per-event accounts are made public, these figures are
+        reconstructed orders of magnitude, not certified data. We will publish any documented
+        correction sent to us.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO PAYS -->
+<section class="band band--dark rv" id="pays">
+  <div class="wrap">
+    <p class="kick">The shockwave</p>
+    <h2 style="color:var(--papier)">Who picks up the bill</h2>
+    <p style="margin-top:1.8rem;max-width:62ch">
+      A decision taken by two companies lands on an entire ecosystem that was never consulted.
+    </p>
+
+    <div class="victims">
+      <div>
+        <h3>The skippers</h3>
+        <p>Those who invested in a Figaro Bénéteau 3 watch the residual value of their boat collapse without notice or compensation.</p>
+      </div>
+      <div>
+        <h3>The rookies</h3>
+        <p>Ten first-timers started in 2026. The entry route they took will no longer exist for those coming after them.</p>
+      </div>
+      <div>
+        <h3>The Figaro Bénéteau class</h3>
+        <p>A fleet, a circuit and a community of owners stripped of their flagship event overnight.</p>
+      </div>
+      <div>
+        <h3>The training academies</h3>
+        <p>Port-la-Forêt, Lorient, the regional structures: France's entire talent-detection architecture is calibrated on the Figaro.</p>
+      </div>
+      <div>
+        <h3>Groupe Bénéteau</h3>
+        <p>A French shipyard, an industrial tool and jobs built around a one-design conceived for this race.</p>
+      </div>
+      <div>
+        <h3>Mid-tier sponsors</h3>
+        <p>A regional SME can fund a Figaro. It cannot fund an ocean-going trimaran. A whole tier of French sponsorship disappears.</p>
+      </div>
+      <div>
+        <h3>The host towns</h3>
+        <p>Fewer boats means fewer local ties, fewer skippers to champion, fewer stories for the regional press.</p>
+      </div>
+      <div>
+        <h3>The public</h3>
+        <p>La Solitaire was the race where, on a pontoon, you could talk to thirty-six sailors, ten of them unknowns who would be tomorrow's champions. A grand prix of eleven professionals does not tell that story.</p>
+      </div>
+    </div>
+
+    <p class="pull" style="max-width:24ch">La Solitaire was not built by its owners. It was built by those who sail it.</p>
+  </div>
+</section>
+
+<!-- DEMANDS -->
+<section class="band band--red rv" id="demands">
+  <div class="wrap">
+    <p class="kick">What we ask</p>
+    <h2>Two demands. Neither is unrealistic.</h2>
+    <p style="margin-top:1.8rem;max-width:60ch">
+      We are not asking for anyone to be expropriated. We are asking for those who built this
+      heritage to be seated at the table where its future is decided.
+    </p>
+
+    <ol class="asks">
+      <li>
+        <div>
+          <h3>A moratorium, and a genuine consultation</h3>
+          <p>Suspend the decision and open a formal consultation with the Figaro Bénéteau class, the French Sailing Federation, the skippers, the boat owners, the training academies and the host towns. Twenty-one months of closed-door deliberation are no substitute for consulting the sport. Nothing is irreversible: no 2028 contract has been announced, no host town committed.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>If the Ocean Fifty project must exist, let it bear its own name</h3>
+          <p>Creating a great solo multihull event is a legitimate ambition. Housing it under the name of an event built for fifty-seven years on the exact opposite principle is not. The name settles it on its own: the boat is called the Figaro Bénéteau, the race is called La Solitaire du Figaro — the Figaro class is its only legitimate class. Let the Ocean Fifty race be born under its own brand, and let La Solitaire remain what it is: one-design, dense, open.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="cta">
+      <a class="btn" href="#">Sign the tribune</a>
+      <a class="btn btn--ghost" href="#">Download the dossier</a>
+      <a class="btn btn--ghost" href="#">Share</a>
+    </div>
+    <p style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-top:1.4rem;color:rgba(255,255,255,.75)">
+      Links to be connected to your petition platform and press area
+    </p>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="band rv">
+  <div class="wrap narrow">
+    <p class="kick">In closing</p>
+    <h2>A death foretold is not a death certain</h2>
+    <p style="margin-top:1.8rem">
+      The 2027 edition will be the fifty-eighth — and, if nothing changes, the last. The name
+      will carry on; the race, as thousands of sailors have lived it since 1970, will go out.
+      But nothing is yet irreversible: no boat is committed, no 2028 contract announced, no host
+      town signed. What was decided in one announcement can be suspended by another.
+    </p>
+    <p>
+      Fifty-seven editions, from Joan de Kat in 1970 to Nicolas Lunven in 2026. Seven three-time
+      winners. Nearly every winner of the Vendée Globe and the Route du Rhum learned their trade
+      here. This heritage does not belong only to those who hold its trademark: it was built by
+      thousands of sailors who crossed a start line, and by the territories that welcomed them.
+    </p>
+    <p><strong>We are simply asking that they be consulted before it is liquidated.</strong></p>
+
+    <p class="note">
+      This page is an opinion piece. It expresses its signatories' disagreement with a corporate
+      decision and imputes to no one any offence, fraud or breach of the law. The facts reported
+      come from public statements, filed company accounts and the specialist press; figures
+      presented as estimates are identified as such. A right of reply will be published in full,
+      uncut and without comment, at the request of any party named. Any idea, any solution, any
+      wish to join or share this effort: we can be reached at
+      <a href="mailto:contact@lacoursesacrifiee.fr"><strong>contact@lacoursesacrifiee.fr</strong></a>.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="ft">The Sacrificed Race</p>
+      <p>An independent tribune for the preservation of the heritage of La Solitaire du Figaro, a common good of French sailing. Unaffiliated with Groupe Figaro, OC Sport Pen Duick, the Figaro Bénéteau class, Groupe Bénéteau or the French Sailing Federation.</p>
+    </div>
+    <div>
+      <p class="ft">Sources</p>
+      <p>Joint Groupe Figaro / OC Sport Pen Duick statement of 17 July 2026 · Paprec, Figaro Bénéteau class and Ocean Fifty class statements of the same day · Renewal statement of 17 October 2024 · OC Sport Pen Duick company accounts (Lorient registry) · Awarded public contracts · Ocean Fifty class rules · 2026 entry list.</p>
+    </div>
+    <div>
+      <p class="ft">Right of reply &amp; contact</p>
+      <p>Any person or organisation named may request publication of a reply: it will be posted in full. Any idea, any wish to share or join this effort: <a href="mailto:contact@lacoursesacrifiee.fr" style="color:var(--jaune)">contact@lacoursesacrifiee.fr</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(en){
+    en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin:'0px 0px -10% 0px', threshold:0.05 });
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
