@@ -68,9 +68,9 @@ h3{font-family:var(--body);font-weight:700;font-size:1.12rem;line-height:1.25;le
 .bar .brand{font-family:var(--disp);font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .bar nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--rouge-band);flex-direction:column;gap:0;padding:.3rem 1.6rem 1rem;border-bottom:2px solid var(--noir);z-index:61}
 .bar nav.open{display:flex}
-.bar nav a{padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.bar nav a{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.16)}
 .bar nav a:last-child{border-bottom:none}
-.bar nav a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.9);white-space:nowrap;padding:.2rem 0;border-bottom:1px solid transparent}
+.bar nav a{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.92);white-space:nowrap;padding:.2rem 0;border-bottom:1px solid transparent}
 .bar nav a:hover,.bar nav a:focus-visible{color:#fff;border-bottom-color:#fff}
 .lang-flag{display:inline-flex;align-items:center;padding:.35rem 0;flex:none;margin-left:auto}
 .lang-flag svg{display:block;width:22px;height:15px;box-shadow:0 0 0 1px rgba(255,255,255,.4)}
@@ -262,7 +262,6 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
 <div class="bar">
   <div class="bar-in">
     <span class="brand">The Sacrificed Race</span>
-    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
     <nav id="mainnav" aria-label="Contents">
       <a href="#facts">The facts</a>
       <a href="#common">Common good</a>
@@ -277,6 +276,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
       <a href="#demands">Our proposals</a>
     </nav>
     <a class="lang-flag" href="/" lang="fr" aria-label="Version française" title="Français"><svg viewBox="0 0 60 40" role="img" aria-hidden="true"><rect width="20" height="40" fill="#123C6B"/><rect x="20" width="20" height="40" fill="#F1F0EC"/><rect x="40" width="20" height="40" fill="#CB1F17"/></svg></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
   </div>
 </div>
 
