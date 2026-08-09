@@ -70,7 +70,7 @@ h3{font-family:var(--body);font-weight:700;font-size:1.12rem;line-height:1.25;le
 .bar nav::-webkit-scrollbar{display:none}
 .bar nav a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.9);white-space:nowrap;padding:.2rem 0;border-bottom:1px solid transparent}
 .bar nav a:hover,.bar nav a:focus-visible{color:#fff;border-bottom-color:#fff}
-.lang-flag{display:inline-flex;align-items:center;padding:.2rem 0;border-bottom:1px solid transparent!important}
+.lang-flag{display:inline-flex;align-items:center;padding:.2rem 0;flex:none}
 .lang-flag svg{display:block;width:22px;height:15px;box-shadow:0 0 0 1px rgba(255,255,255,.4)}
 .lang-flag:hover svg,.lang-flag:focus-visible svg{box-shadow:0 0 0 2px #fff}
 .burger{display:none;margin-left:auto;background:none;border:0;padding:.45rem .2rem;cursor:pointer}
@@ -234,7 +234,8 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
 :focus-visible{outline:3px solid var(--jaune);outline-offset:2px}
 
 @media(max-width:820px){
-  .burger{display:block}
+  .burger{display:block;margin-left:.9rem}
+  .lang-flag{margin-left:auto;padding:.45rem 0}
   .bar nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--rouge-band);flex-direction:column;gap:0;padding:.3rem 1.2rem 1rem;border-bottom:2px solid var(--noir);overflow:visible}
   .bar nav.open{display:flex}
   .bar nav a{padding:.75rem 0;font-size:11px;border-bottom:1px solid rgba(255,255,255,.16)}
@@ -248,7 +249,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
   .bar-in{padding:.55rem 1.2rem}
   .tl li{grid-template-columns:1fr;gap:.4rem}
   .flags{flex-wrap:wrap}
-  .flags-note{margin-left:0;margin-top:.8rem}
+  .flags-note{margin-left:0;margin-top:1.4rem;flex-basis:100%}
   .dots{grid-template-columns:repeat(6,1fr)}
   footer{padding:2.6rem 1.2rem 3.4rem}
 }
@@ -280,8 +281,8 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
       <a href="#raisons">Leurs raisons</a>
       <a href="#paie">Qui paie</a>
       <a href="#demandes">Nos demandes</a>
-      <a class="lang-flag" href="/en/" lang="en" aria-label="English version" title="English"><svg viewBox="0 0 60 40" role="img" aria-hidden="true"><rect width="60" height="40" fill="#123C6B"/><path d="M0 0 L60 40 M60 0 L0 40" stroke="#F1F0EC" stroke-width="9"/><path d="M0 0 L60 40 M60 0 L0 40" stroke="#CB1F17" stroke-width="3.5"/><path d="M30 0 V40 M0 20 H60" stroke="#F1F0EC" stroke-width="14"/><path d="M30 0 V40 M0 20 H60" stroke="#CB1F17" stroke-width="7.5"/></svg></a>
     </nav>
+    <a class="lang-flag" href="/en/" lang="en" aria-label="English version" title="English"><svg viewBox="0 0 60 40" role="img" aria-hidden="true"><rect width="60" height="40" fill="#123C6B"/><path d="M0 0 L60 40 M60 0 L0 40" stroke="#F1F0EC" stroke-width="9"/><path d="M0 0 L60 40 M60 0 L0 40" stroke="#CB1F17" stroke-width="3.5"/><path d="M30 0 V40 M0 20 H60" stroke="#F1F0EC" stroke-width="14"/><path d="M30 0 V40 M0 20 H60" stroke="#CB1F17" stroke-width="7.5"/></svg></a>
   </div>
 </div>
 
