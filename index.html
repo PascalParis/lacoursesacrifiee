@@ -66,14 +66,16 @@ h3{font-family:var(--body);font-weight:700;font-size:1.12rem;line-height:1.25;le
 .bar{position:sticky;top:0;z-index:60;background:var(--rouge-band);color:#fff;border-bottom:2px solid var(--noir)}
 .bar-in{max-width:1200px;margin:0 auto;padding:.6rem 1.6rem;display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
 .bar .brand{font-family:var(--disp);font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
-.bar nav{margin-left:auto;display:flex;gap:1.2rem;overflow-x:auto;scrollbar-width:none}
-.bar nav::-webkit-scrollbar{display:none}
+.bar nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--rouge-band);flex-direction:column;gap:0;padding:.3rem 1.6rem 1rem;border-bottom:2px solid var(--noir);z-index:61}
+.bar nav.open{display:flex}
+.bar nav a{padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.bar nav a:last-child{border-bottom:none}
 .bar nav a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.9);white-space:nowrap;padding:.2rem 0;border-bottom:1px solid transparent}
 .bar nav a:hover,.bar nav a:focus-visible{color:#fff;border-bottom-color:#fff}
-.lang-flag{display:inline-flex;align-items:center;padding:.2rem 0;flex:none}
+.lang-flag{display:inline-flex;align-items:center;padding:.35rem 0;flex:none;margin-left:auto}
 .lang-flag svg{display:block;width:22px;height:15px;box-shadow:0 0 0 1px rgba(255,255,255,.4)}
 .lang-flag:hover svg,.lang-flag:focus-visible svg{box-shadow:0 0 0 2px #fff}
-.burger{display:none;margin-left:auto;background:none;border:0;padding:.45rem .2rem;cursor:pointer}
+.burger{display:block;margin-left:.9rem;background:none;border:0;padding:.45rem .2rem;cursor:pointer}
 .burger span{display:block;width:23px;height:2px;background:#fff;margin:5px 0;transition:transform .2s,opacity .2s}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
@@ -234,15 +236,6 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
 :focus-visible{outline:3px solid var(--jaune);outline-offset:2px}
 
 @media(max-width:820px){
-  .burger{display:block;margin-left:.9rem}
-  .lang-flag{margin-left:auto;padding:.45rem 0}
-  .bar nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--rouge-band);flex-direction:column;gap:0;padding:.3rem 1.2rem 1rem;border-bottom:2px solid var(--noir);overflow:visible}
-  .bar nav.open{display:flex}
-  .bar nav a{padding:.75rem 0;font-size:11px;border-bottom:1px solid rgba(255,255,255,.16)}
-  .bar nav a:last-child{border-bottom:none}
-  .lang-flag{padding:.75rem 0}
-}
-@media(max-width:820px){
   body{font-size:16.5px}
   .band{padding:3.4rem 1.2rem}
   .hero{padding:2.4rem 1.2rem 3rem}
@@ -280,7 +273,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
       <a href="#deuxmondes">Deux mondes</a>
       <a href="#raisons">Leurs raisons</a>
       <a href="#paie">Qui paie</a>
-      <a href="#demandes">Nos demandes</a>
+      <a href="#demandes">Nos propositions</a>
     </nav>
     <a class="lang-flag" href="/en/" lang="en" aria-label="English version" title="English"><svg viewBox="0 0 60 40" role="img" aria-hidden="true"><rect width="60" height="40" fill="#123C6B"/><path d="M0 0 L60 40 M60 0 L0 40" stroke="#F1F0EC" stroke-width="9"/><path d="M0 0 L60 40 M60 0 L0 40" stroke="#CB1F17" stroke-width="3.5"/><path d="M30 0 V40 M0 20 H60" stroke="#F1F0EC" stroke-width="14"/><path d="M30 0 V40 M0 20 H60" stroke="#CB1F17" stroke-width="7.5"/></svg></a>
   </div>
@@ -316,7 +309,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
     <p class="hero-sub">
       Sauf sursaut, la plus grande école de course au large du monde disparaîtra à l'issue de
       l'édition 2027. Non par manque de succès — elle n'a jamais réuni autant de marins — mais
-      par la décision d'une seule entreprise : son organisateur. Personne d'autre n'a été consulté. C'est une mort annoncée. Elle
+      par la décision du prestataire chargé de son organisation. Personne d'autre n'a été consulté. C'est une mort annoncée. Elle
       n'est pas encore certaine : rien n'est signé pour 2028, et une communauté entière a le
       temps de se faire entendre.
     </p>
@@ -1025,8 +1018,8 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
 <!-- DEMANDES -->
 <section class="band band--red rv" id="demandes">
   <div class="wrap">
-    <p class="kick">Ce que nous demandons</p>
-    <h2>Deux demandes. Aucune n'est irréaliste.</h2>
+    <p class="kick">Ce que nous proposons</p>
+    <h2>Deux propositions. Aucune n'est irréaliste.</h2>
     <p style="margin-top:1.8rem;max-width:60ch">
       Nous ne demandons pas l'expropriation de qui que ce soit. Nous demandons que ceux qui ont
       bâti ce patrimoine soient assis à la table où l'on décide de son avenir.
