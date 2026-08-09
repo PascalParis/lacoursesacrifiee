@@ -1078,13 +1078,8 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
     </ol>
 
     <div class="cta">
-      <a class="btn" href="#">Signer la tribune</a>
-      <a class="btn btn--ghost" href="#">Télécharger le dossier</a>
-      <a class="btn btn--ghost" href="#">Partager</a>
+      <button class="btn" id="share-btn" type="button" data-copied="Lien copié !">Partager cette tribune</button>
     </div>
-    <p style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-top:1.4rem;color:rgba(255,255,255,.75)">
-      Liens à connecter à votre plateforme de pétition et à votre espace presse
-    </p>
   </div>
 </section>
 
@@ -1154,6 +1149,19 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
   if(b&&n){
     b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
     n.addEventListener('click',function(e){if(e.target.closest('a')){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+  }
+  var s=document.getElementById('share-btn');
+  if(s){
+    s.addEventListener('click',function(){
+      var data={title:document.title,url:location.origin+location.pathname};
+      if(navigator.share){ navigator.share(data).catch(function(){}); }
+      else if(navigator.clipboard){
+        navigator.clipboard.writeText(data.url).then(function(){
+          var t=s.textContent; s.textContent=s.getAttribute('data-copied');
+          setTimeout(function(){ s.textContent=t; },2000);
+        });
+      }
+    });
   }
 })();
 </script>
