@@ -246,7 +246,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
   .bar-in{padding:.55rem 1.2rem}
   .tl li{grid-template-columns:1fr;gap:.4rem}
   .flags{flex-wrap:wrap}
-  .flags-note{margin-left:0;margin-top:1.4rem;flex-basis:100%}
+  .flags-note{margin-left:1.6rem;margin-top:1.4rem;flex-basis:100%}
   .dots{grid-template-columns:repeat(6,1fr)}
   footer{padding:2.6rem 1.2rem 3.4rem}
 }
@@ -258,7 +258,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
   .band--dark p,.band--red p,.hero-sub,.victims p{color:#222!important}
   .tl h3,.who .nm,.asks h3,.victims h3{color:#000!important}
 }
-.langs{display:flex;gap:.7rem;margin-left:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em}.langs a{color:rgba(255,255,255,.65);text-decoration:none;padding:.25rem 0}.langs a:hover{color:#fff}.langs a.cur{color:var(--jaune);border-bottom:1px solid var(--jaune)}</style>
+.langs{display:flex;align-items:center;gap:.45rem;margin-left:auto}.langs .globe{width:15px;height:15px;flex:none;opacity:.7}.langs select{background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.8);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;cursor:pointer;padding:.25rem .1rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0}.langs select:hover,.langs select:focus{color:#fff;border-bottom-color:#fff;outline:none}.langs select option{color:#111;background:#fff}</style>
 </head>
 <body>
 <a class="skip" href="#contenu">Zum Inhalt springen</a>
@@ -281,7 +281,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
       <a href="#paie">Wer zahlt</a>
       <a href="#demandes">Unsere Vorschläge</a>
     </nav>
-    <div class="langs"><a href="/">FR</a><a href="/en/">EN</a><a href="/es/">ES</a><a href="/it/">IT</a><a href="/de/" class="cur" aria-current="true">DE</a></div>
+    <div class="langs"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c2.8 2.9 4.2 6.4 4.2 10S14.8 19.1 12 22c-2.8-2.9-4.2-6.4-4.2-10S9.2 4.9 12 2z"/></svg><select aria-label="Sprache" onchange="if(this.value)window.location.href=this.value"><option value="/">FR</option><option value="/en/">EN</option><option value="/es/">ES</option><option value="/it/">IT</option><option value="/de/" selected>DE</option></select></div>
     <button class="burger" aria-label="Menü" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
   </div>
 </div>
