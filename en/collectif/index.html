@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the collective — Collectif pour La Solitaire</title>
+<meta name="description" content="Marins, propriétaires, sponsors, bénévoles, partenaires : unissons nos voix pour que vive La Solitaire. Rejoignez le Collectif.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,300..800;1,300..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#F1F0EC; --papier-2:#E5E3DC; --noir:#0E0E0E; --gris:#565657;
+  --rouge:#CB1F17; --rouge-band:#A31710; --bleu:#123C6B; --jaune:#E8B923;
+  --trait:rgba(14,14,14,.16);
+  --disp:'Anton',Impact,sans-serif; --body:'Libre Franklin',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--noir);font-family:var(--body);line-height:1.6;font-size:1.02rem}
+.wrap{max-width:820px;margin:0 auto;padding:0 1.2rem}
+.top{background:var(--noir);color:var(--papier);padding:.7rem 0}
+.top a{color:var(--jaune);text-decoration:none;font-family:var(--mono);font-size:.85rem;letter-spacing:.06em}
+.hero{background:var(--noir);color:var(--papier);padding:3rem 0 2.6rem;border-bottom:6px solid var(--jaune)}
+.kick{font-family:var(--mono);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--jaune);margin:0 0 .8rem}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.02;text-transform:uppercase;margin:0}
+.charte{padding:2.6rem 0 1rem}
+.charte h2{font-family:var(--disp);font-weight:400;font-size:1.5rem;text-transform:uppercase;margin:0 0 1rem}
+.charte p{margin:0 0 1rem;max-width:68ch}
+.charte .signe{font-family:var(--mono);font-size:.85rem;color:var(--gris)}
+.formband{background:var(--papier-2);border-top:2px solid var(--noir);padding:2.4rem 0 3rem;margin-top:2rem}
+.formband h2{font-family:var(--disp);font-weight:400;font-size:1.5rem;text-transform:uppercase;margin:0 0 1.4rem}
+label{display:block;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin:1.1rem 0 .35rem}
+input[type=text],input[type=email],input[type=tel],select{width:100%;padding:.7rem .8rem;border:1.5px solid var(--noir);background:#fff;font-family:var(--body);font-size:1rem;border-radius:0}
+.row{display:grid;grid-template-columns:110px 1fr;gap:.8rem}
+fieldset{border:1.5px solid var(--noir);margin:1.4rem 0 0;padding:1rem 1.1rem}
+legend{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .4rem}
+.opt{display:flex;gap:.8rem;align-items:flex-start;margin:.45rem 0;padding:.65rem .7rem;border:1.5px solid transparent;cursor:pointer}
+.opt:hover{background:#fff}
+.opt:has(input:checked){background:#fff;border-color:var(--noir)}
+.opt input{margin-top:.25rem;transform:scale(1.4);accent-color:var(--rouge-band);cursor:pointer;flex:none}
+.opt b{font-weight:600}
+.opt small{display:block;color:var(--gris)}
+.check{display:flex;gap:.8rem;align-items:flex-start;margin:1.3rem 0 0;cursor:pointer}
+.check input{margin-top:.3rem;transform:scale(1.4);accent-color:var(--rouge-band);cursor:pointer;flex:none}
+.hp{position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden}
+button{margin-top:1.6rem;background:var(--rouge-band);color:#fff;border:none;padding:.95rem 1.8rem;font-family:var(--mono);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+button:hover{background:var(--rouge)}
+button:disabled{background:#B8B6AE;cursor:not-allowed}
+.hint{margin-top:.7rem;font-family:var(--mono);font-size:.78rem;color:var(--rouge-band);display:none}
+.hint.on{display:block}
+.msg{margin-top:1.2rem;padding:1rem 1.1rem;font-family:var(--mono);font-size:.9rem;display:none}
+.msg.ok{display:block;background:var(--noir);color:var(--jaune)}
+.msg.err{display:block;background:var(--rouge-band);color:#fff}
+.rgpd{font-size:.82rem;color:var(--gris);margin-top:1.4rem;max-width:70ch}
+.rgpd a{color:var(--gris)}
+footer{padding:2rem 0;font-family:var(--mono);font-size:.8rem;color:var(--gris)}
+footer a{color:var(--gris)}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><a href="/en/">&larr; lacoursesacrifiee.fr</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <p class="kick">They want to replace her. We want her to live.</p>
+  <h1>The Collective for<br>La Solitaire</h1>
+</div></header>
+
+<section class="charte"><div class="wrap">
+  <h2>The charter</h2>
+  <p>We, sailors, owners, sponsors, volunteers, partners and lovers of offshore racing, join our voices so that La Solitaire lives on: the race that, since 1970, has made French sailing the finest in the world. A race where the ranking rewards the sailor, never the budget.</p>
+  <p>We affirm that its fifty-seven editions form a common sporting heritage, built by thousands of sailors, fifty ports and half a century of public commitment. A capital that no player, whoever they may be, can capture or denature without consulting those who built it.</p>
+  <p>We ask for three things: a moratorium on the decision of 17 July 2026 and the opening of a genuine industry-wide consultation; a fair examination of the economic solutions that allow the race to live without denying its nature (one-design, open, formative); and, for the Ocean Fifty class, the creation of a great race under its own name.</p>
+  <p>Our approach is constructive: we are against no one. We are for a race, for a school, for an ecosystem. Every player, organiser included, has a place in the solution.</p>
+  <p class="signe">By joining the Collective, I support these principles. My name may be published, shared with institutions only, or remain strictly confidential: the choice below is mine.</p>
+</div></section>
+
+<section class="formband"><div class="wrap">
+  <h2>Join the collective</h2>
+  <form id="f" novalidate>
+    <div class="row">
+      <div>
+        <label for="civ">Title</label>
+        <select id="civ" name="civ"><option value="M.">M.</option><option value="Mme">Mme</option></select>
+      </div>
+      <div>
+        <label for="nom">First and last name *</label>
+        <input type="text" id="nom" name="nom" required maxlength="80" autocomplete="name">
+      </div>
+    </div>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required autocomplete="email">
+
+    <label for="tel">Phone (optional)</label>
+    <input type="tel" id="tel" name="tel" autocomplete="tel">
+
+    <label for="qualite">You are *</label>
+    <select id="qualite" name="qualite" required>
+      <option value="">— Choose —</option>
+      <option value="Propriétaire">Owner</option>
+      <option value="Skipper">Skipper</option>
+      <option value="Sponsor">Sponsor</option>
+      <option value="Bénévole">Volunteer</option>
+      <option value="Partenaire">Partner</option>
+      <option value="Supporter">Supporter</option>
+    </select>
+
+    <label for="bateau">Boat, organisation or link to the race (optional)</label>
+    <input type="text" id="bateau" name="bateau" maxlength="200" placeholder="E.g.: Figaro 3 #87, sponsor 2019-2024, volunteer in Kinsale…">
+
+    <fieldset>
+      <legend>Visibility of my support *</legend>
+      <label class="opt"><input type="radio" name="consentement" value="Public"><span><b>Public</b><small>My name and capacity may appear among the published signatories.</small></span></label>
+      <label class="opt"><input type="radio" name="consentement" value="Institutions"><span><b>Institutions only</b><small>My name may be shared with institutions (Federation, officials) but never published.</small></span></label>
+      <label class="opt"><input type="radio" name="consentement" value="Confidentiel"><span><b>Confidential</b><small>I am counted in the total; my name is neither published nor shared.</small></span></label>
+    </fieldset>
+
+    <label class="check">
+      <input type="checkbox" id="charte" name="charte" required>
+      <span>I support the principles of the charter above. *</span>
+    </label>
+
+    <div class="hp" aria-hidden="true">
+      <label for="hp_extra">Laisser vide</label>
+      <input type="text" id="hp_extra" name="hp_extra" tabindex="-1" autocomplete="off">
+    </div>
+
+    <button type="submit" id="btn" disabled>I join the collective</button>
+    <div class="hint" id="hint"></div>
+  </form>
+  <div class="msg" id="ok">Thank you! Your support has been successfully recorded.</div>
+  <div class="msg" id="err"></div>
+
+  <p class="rgpd">Your data (identity, contact, capacity, visibility choice) is collected by the Collective for La Solitaire on the basis of your consent, hosted in the European Union, and used exclusively for the Collective's action. It is neither sold nor used commercially. You may request its modification or deletion at any time: contact@lacoursesacrifiee.fr</p>
+</div></section>
+
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v7</div></footer>
+
+<script>
+var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
+console.log("Formulaire collectif v7 en");
+(function(){
+  var f = document.getElementById('f'), btn = document.getElementById('btn');
+  var ok = document.getElementById('ok'), err = document.getElementById('err'), hint = document.getElementById('hint');
+  var el = function(n){ return f.querySelector('[name="'+n+'"]'); };
+  var emailRe = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/;
+  function missing(){
+    var m = [];
+    if (el('nom').value.trim().length < 3) m.push("your first and last name");
+    if (!emailRe.test(el('email').value.trim())) m.push("a valid email");
+    if (!el('qualite').value) m.push("your capacity");
+    if (!f.querySelector('input[name=consentement]:checked')) m.push("the visibility of your support");
+    if (!el('charte').checked) m.push("your support for the charter");
+    return m;
+  }
+  function refresh(){
+    var m = missing();
+    btn.disabled = m.length > 0;
+    if (m.length > 0 && (el('nom').value || el('email').value || el('qualite').value)) {
+      hint.textContent = "To enable the button, still missing: " + m.join(", ") + ".";
+      hint.classList.add('on');
+    } else {
+      hint.classList.remove('on');
+    }
+  }
+  f.addEventListener('input', refresh);
+  f.addEventListener('change', refresh);
+  refresh();
+  // L'autofill des navigateurs remplit parfois les champs caches : on nettoie derriere lui.
+  setTimeout(function(){ el('hp_extra').value = ''; }, 600);
+  setTimeout(function(){ el('hp_extra').value = ''; }, 2000);
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (missing().length) { refresh(); return; }
+    err.classList.remove('err'); ok.classList.remove('ok');
+    var cons = f.querySelector('input[name=consentement]:checked');
+    var payload = {
+      civ: el('civ').value, nom: el('nom').value.trim(), email: el('email').value.trim(),
+      tel: el('tel').value.trim(), qualite: el('qualite').value, bateau: el('bateau').value.trim(),
+      consentement: cons.value, charte: el('charte').checked, website: el('hp_extra').value
+    };
+    console.log("Payload envoy\u00e9:", JSON.stringify(payload));
+    btn.disabled = true; btn.textContent = "Sending…";
+    fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
+      .then(function(r){ return r.json().then(function(j){ return {s:r.status, j:j}; }); })
+      .then(function(res){
+        if (res.j && res.j.ok) { f.style.display='none'; ok.classList.add('ok'); ok.scrollIntoView({behavior:'smooth'}); }
+        else {
+          err.textContent = (res.j && res.j.error) || "Registration error (" + res.s + ").";
+          err.classList.add('err'); btn.textContent = "Je rejoins le collectif"; refresh();
+        }
+      })
+      .catch(function(){
+        err.textContent = "Cannot reach the server. If you use an ad blocker, disable it for this site or try another browser.";
+        err.classList.add('err'); btn.textContent = "Je rejoins le collectif"; refresh();
+      });
+  });
+})();
+</script>
+</body>
+</html>
