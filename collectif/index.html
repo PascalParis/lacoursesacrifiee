@@ -135,11 +135,11 @@ footer a{color:var(--gris)}
   <p class="rgpd">Vos donn&eacute;es (identit&eacute;, contact, qualit&eacute;, choix de visibilit&eacute;) sont collect&eacute;es par le Collectif pour La Solitaire sur la base de votre consentement, h&eacute;berg&eacute;es en Union europ&eacute;enne, et utilis&eacute;es exclusivement pour l&rsquo;action du Collectif. Elles ne sont ni c&eacute;d&eacute;es ni utilis&eacute;es &agrave; des fins commerciales. Vous pouvez &agrave; tout moment demander leur modification ou leur suppression : contact@lacoursesacrifiee.fr</p>
 </div></section>
 
-<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v4</div></footer>
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v5</div></footer>
 
 <script>
 var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
-console.log("Formulaire collectif v4");
+console.log("Formulaire collectif v5");
 (function(){
   var f = document.getElementById('f'), btn = document.getElementById('btn');
   var ok = document.getElementById('ok'), err = document.getElementById('err'), hint = document.getElementById('hint');
@@ -167,6 +167,9 @@ console.log("Formulaire collectif v4");
   f.addEventListener('input', refresh);
   f.addEventListener('change', refresh);
   refresh();
+  // L'autofill des navigateurs remplit parfois les champs caches : on nettoie derriere lui.
+  setTimeout(function(){ el('hp_extra').value = ''; }, 600);
+  setTimeout(function(){ el('hp_extra').value = ''; }, 2000);
   f.addEventListener('submit', function(e){
     e.preventDefault();
     if (missing().length) { refresh(); return; }
@@ -177,6 +180,7 @@ console.log("Formulaire collectif v4");
       tel: el('tel').value.trim(), qualite: el('qualite').value, bateau: el('bateau').value.trim(),
       consentement: cons.value, charte: el('charte').checked, website: el('hp_extra').value
     };
+    console.log("Payload envoy\u00e9:", JSON.stringify(payload));
     btn.disabled = true; btn.textContent = "Envoi\u2026";
     fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
       .then(function(r){ return r.json().then(function(j){ return {s:r.status, j:j}; }); })
