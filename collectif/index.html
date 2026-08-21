@@ -35,12 +35,14 @@ input[type=text],input[type=email],input[type=tel],select{width:100%;padding:.7r
 .row{display:grid;grid-template-columns:110px 1fr;gap:.8rem}
 fieldset{border:1.5px solid var(--noir);margin:1.4rem 0 0;padding:1rem 1.1rem}
 legend{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .4rem}
-.opt{display:flex;gap:.6rem;align-items:flex-start;margin:.55rem 0}
-.opt input{margin-top:.3rem}
+.opt{display:flex;gap:.8rem;align-items:flex-start;margin:.45rem 0;padding:.65rem .7rem;border:1.5px solid transparent;cursor:pointer}
+.opt:hover{background:#fff}
+.opt:has(input:checked){background:#fff;border-color:var(--noir)}
+.opt input{margin-top:.25rem;transform:scale(1.4);accent-color:var(--rouge-band);cursor:pointer;flex:none}
 .opt b{font-weight:600}
 .opt small{display:block;color:var(--gris)}
-.check{display:flex;gap:.6rem;align-items:flex-start;margin:1.3rem 0 0}
-.check input{margin-top:.3rem}
+.check{display:flex;gap:.8rem;align-items:flex-start;margin:1.3rem 0 0;cursor:pointer}
+.check input{margin-top:.3rem;transform:scale(1.4);accent-color:var(--rouge-band);cursor:pointer;flex:none}
 .hp{position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden}
 button{margin-top:1.6rem;background:var(--rouge-band);color:#fff;border:none;padding:.95rem 1.8rem;font-family:var(--mono);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 button:hover{background:var(--rouge)}
@@ -107,18 +109,15 @@ footer a{color:var(--gris)}
 
     <fieldset>
       <legend>Visibilit&eacute; de mon soutien *</legend>
-      <div class="opt"><input type="radio" name="consentement" id="c1" value="Public">
-        <label for="c1" style="all:unset;cursor:pointer"><b>Public</b><small>Mon nom et ma qualit&eacute; peuvent figurer parmi les signataires publi&eacute;s.</small></label></div>
-      <div class="opt"><input type="radio" name="consentement" id="c2" value="Institutions">
-        <label for="c2" style="all:unset;cursor:pointer"><b>Institutions uniquement</b><small>Mon nom peut &ecirc;tre communiqu&eacute; aux institutions (F&eacute;d&eacute;ration, &eacute;lus) mais jamais publi&eacute;.</small></label></div>
-      <div class="opt"><input type="radio" name="consentement" id="c3" value="Confidentiel">
-        <label for="c3" style="all:unset;cursor:pointer"><b>Confidentiel</b><small>Je suis compt&eacute; dans le nombre, mon nom n&rsquo;est ni publi&eacute; ni communiqu&eacute;.</small></label></div>
+      <label class="opt"><input type="radio" name="consentement" value="Public"><span><b>Public</b><small>Mon nom et ma qualit&eacute; peuvent figurer parmi les signataires publi&eacute;s.</small></span></label>
+      <label class="opt"><input type="radio" name="consentement" value="Institutions"><span><b>Institutions uniquement</b><small>Mon nom peut &ecirc;tre communiqu&eacute; aux institutions (F&eacute;d&eacute;ration, &eacute;lus) mais jamais publi&eacute;.</small></span></label>
+      <label class="opt"><input type="radio" name="consentement" value="Confidentiel"><span><b>Confidentiel</b><small>Je suis compt&eacute; dans le nombre, mon nom n&rsquo;est ni publi&eacute; ni communiqu&eacute;.</small></span></label>
     </fieldset>
 
-    <div class="check">
+    <label class="check">
       <input type="checkbox" id="charte" name="charte" required>
-      <label for="charte" style="all:unset;cursor:pointer">Je soutiens les principes de la charte ci-dessus. *</label>
-    </div>
+      <span>Je soutiens les principes de la charte ci-dessus. *</span>
+    </label>
 
     <div class="hp" aria-hidden="true">
       <label for="website">Site web</label>
