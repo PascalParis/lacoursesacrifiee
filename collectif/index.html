@@ -46,7 +46,9 @@ legend{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transf
 .hp{position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden}
 button{margin-top:1.6rem;background:var(--rouge-band);color:#fff;border:none;padding:.95rem 1.8rem;font-family:var(--mono);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 button:hover{background:var(--rouge)}
-button:disabled{background:var(--gris);cursor:wait}
+button:disabled{background:#B8B6AE;cursor:not-allowed}
+.hint{margin-top:.7rem;font-family:var(--mono);font-size:.78rem;color:var(--rouge-band);display:none}
+.hint.on{display:block}
 .msg{margin-top:1.2rem;padding:1rem 1.1rem;font-family:var(--mono);font-size:.9rem;display:none}
 .msg.ok{display:block;background:var(--noir);color:var(--jaune)}
 .msg.err{display:block;background:var(--rouge-band);color:#fff}
@@ -124,7 +126,8 @@ footer a{color:var(--gris)}
       <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
     </div>
 
-    <button type="submit" id="btn">Je rejoins le collectif</button>
+    <button type="submit" id="btn" disabled>Je rejoins le collectif</button>
+    <div class="hint" id="hint"></div>
     <div class="msg" id="ok">Merci ! Votre soutien est enregistr&eacute;. Nous revenons vers vous tr&egrave;s vite.</div>
     <div class="msg" id="err"></div>
   </form>
@@ -132,35 +135,64 @@ footer a{color:var(--gris)}
   <p class="rgpd">Vos donn&eacute;es (identit&eacute;, contact, qualit&eacute;, choix de visibilit&eacute;) sont collect&eacute;es par le Collectif pour La Solitaire sur la base de votre consentement, h&eacute;berg&eacute;es en Union europ&eacute;enne, et utilis&eacute;es exclusivement pour l&rsquo;action du Collectif. Elles ne sont ni c&eacute;d&eacute;es ni utilis&eacute;es &agrave; des fins commerciales. Vous pouvez &agrave; tout moment demander leur modification ou leur suppression : contact@lacoursesacrifiee.fr</p>
 </div></section>
 
-<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr</div></footer>
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v3</div></footer>
 
 <script>
-var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev"; // à remplacer par l'URL du Worker après déploiement
-document.getElementById('f').addEventListener('submit', function(e){
-  e.preventDefault();
-  var f = e.target, btn = document.getElementById('btn');
-  var ok = document.getElementById('ok'), err = document.getElementById('err');
-  ok.classList.remove('ok'); err.classList.remove('err');
-  var cons = f.querySelector('input[name=consentement]:checked');
-  var payload = {
-    civ: f.civ.value, nom: f.nom.value.trim(), email: f.email.value.trim(),
-    tel: f.tel.value.trim(), qualite: f.qualite.value, bateau: f.bateau.value.trim(),
-    consentement: cons ? cons.value : "", charte: f.charte.checked, website: f.website.value
-  };
-  if(payload.nom.length < 3){ err.textContent = "Merci d'indiquer votre pr\u00e9nom et votre nom."; err.classList.add('err'); return; }
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(payload.email)){ err.textContent = "Email invalide."; err.classList.add('err'); return; }
-  if(!payload.qualite){ err.textContent = "Merci d'indiquer votre qualit\u00e9."; err.classList.add('err'); return; }
-  if(!payload.consentement){ err.textContent = "Merci de choisir la visibilit\u00e9 de votre soutien."; err.classList.add('err'); return; }
-  if(!payload.charte){ err.textContent = "Merci de confirmer votre soutien \u00e0 la charte."; err.classList.add('err'); return; }
-  btn.disabled = true; btn.textContent = "Envoi\u2026";
-  fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
-    .then(function(r){ return r.json().then(function(j){ return {s:r.status, j:j}; }); })
-    .then(function(res){
-      if(res.j && res.j.ok){ f.style.display='none'; ok.classList.add('ok'); ok.scrollIntoView({behavior:'smooth'}); }
-      else { err.textContent = (res.j && res.j.error) || "Erreur d'enregistrement."; err.classList.add('err'); btn.disabled=false; btn.textContent="Je rejoins le collectif"; }
-    })
-    .catch(function(){ err.textContent = "R\u00e9seau indisponible. R\u00e9essayez dans un instant."; err.classList.add('err'); btn.disabled=false; btn.textContent="Je rejoins le collectif"; });
-});
+var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
+console.log("Formulaire collectif v3");
+(function(){
+  var f = document.getElementById('f'), btn = document.getElementById('btn');
+  var ok = document.getElementById('ok'), err = document.getElementById('err'), hint = document.getElementById('hint');
+  var el = function(n){ return f.querySelector('[name="'+n+'"]'); };
+  var emailRe = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/;
+  function missing(){
+    var m = [];
+    if (el('nom').value.trim().length < 3) m.push("votre pr\u00e9nom et nom");
+    if (!emailRe.test(el('email').value.trim())) m.push("un email valide");
+    if (!el('qualite').value) m.push("votre qualit\u00e9");
+    if (!f.querySelector('input[name=consentement]:checked')) m.push("la visibilit\u00e9 de votre soutien");
+    if (!el('charte').checked) m.push("votre soutien \u00e0 la charte");
+    return m;
+  }
+  function refresh(){
+    var m = missing();
+    btn.disabled = m.length > 0;
+    if (m.length > 0 && (el('nom').value || el('email').value || el('qualite').value)) {
+      hint.textContent = "Pour activer le bouton, il manque : " + m.join(", ") + ".";
+      hint.classList.add('on');
+    } else {
+      hint.classList.remove('on');
+    }
+  }
+  f.addEventListener('input', refresh);
+  f.addEventListener('change', refresh);
+  refresh();
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (missing().length) { refresh(); return; }
+    err.classList.remove('err'); ok.classList.remove('ok');
+    var cons = f.querySelector('input[name=consentement]:checked');
+    var payload = {
+      civ: el('civ').value, nom: el('nom').value.trim(), email: el('email').value.trim(),
+      tel: el('tel').value.trim(), qualite: el('qualite').value, bateau: el('bateau').value.trim(),
+      consentement: cons.value, charte: el('charte').checked, website: el('website').value
+    };
+    btn.disabled = true; btn.textContent = "Envoi\u2026";
+    fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
+      .then(function(r){ return r.json().then(function(j){ return {s:r.status, j:j}; }); })
+      .then(function(res){
+        if (res.j && res.j.ok) { f.style.display='none'; ok.classList.add('ok'); ok.scrollIntoView({behavior:'smooth'}); }
+        else {
+          err.textContent = (res.j && res.j.error) || "Erreur d'enregistrement (" + res.s + ").";
+          err.classList.add('err'); btn.textContent = "Je rejoins le collectif"; refresh();
+        }
+      })
+      .catch(function(){
+        err.textContent = "Impossible de joindre le serveur. Si vous utilisez un bloqueur de publicit\u00e9s, d\u00e9sactivez-le pour ce site, ou r\u00e9essayez depuis un autre navigateur.";
+        err.classList.add('err'); btn.textContent = "Je rejoins le collectif"; refresh();
+      });
+  });
+})();
 </script>
 </body>
 </html>
