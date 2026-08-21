@@ -122,24 +122,24 @@ footer a{color:var(--gris)}
     </label>
 
     <div class="hp" aria-hidden="true">
-      <label for="website">Site web</label>
-      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      <label for="hp_extra">Laisser vide</label>
+      <input type="text" id="hp_extra" name="hp_extra" tabindex="-1" autocomplete="off">
     </div>
 
     <button type="submit" id="btn" disabled>Je rejoins le collectif</button>
     <div class="hint" id="hint"></div>
-    <div class="msg" id="ok">Merci ! Votre soutien est enregistr&eacute;. Nous revenons vers vous tr&egrave;s vite.</div>
-    <div class="msg" id="err"></div>
   </form>
+  <div class="msg" id="ok">Merci ! Votre soutien est enregistr&eacute;. Nous revenons vers vous tr&egrave;s vite.</div>
+  <div class="msg" id="err"></div>
 
   <p class="rgpd">Vos donn&eacute;es (identit&eacute;, contact, qualit&eacute;, choix de visibilit&eacute;) sont collect&eacute;es par le Collectif pour La Solitaire sur la base de votre consentement, h&eacute;berg&eacute;es en Union europ&eacute;enne, et utilis&eacute;es exclusivement pour l&rsquo;action du Collectif. Elles ne sont ni c&eacute;d&eacute;es ni utilis&eacute;es &agrave; des fins commerciales. Vous pouvez &agrave; tout moment demander leur modification ou leur suppression : contact@lacoursesacrifiee.fr</p>
 </div></section>
 
-<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v3</div></footer>
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v4</div></footer>
 
 <script>
 var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
-console.log("Formulaire collectif v3");
+console.log("Formulaire collectif v4");
 (function(){
   var f = document.getElementById('f'), btn = document.getElementById('btn');
   var ok = document.getElementById('ok'), err = document.getElementById('err'), hint = document.getElementById('hint');
@@ -175,7 +175,7 @@ console.log("Formulaire collectif v3");
     var payload = {
       civ: el('civ').value, nom: el('nom').value.trim(), email: el('email').value.trim(),
       tel: el('tel').value.trim(), qualite: el('qualite').value, bateau: el('bateau').value.trim(),
-      consentement: cons.value, charte: el('charte').checked, website: el('website').value
+      consentement: cons.value, charte: el('charte').checked, website: el('hp_extra').value
     };
     btn.disabled = true; btn.textContent = "Envoi\u2026";
     fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
