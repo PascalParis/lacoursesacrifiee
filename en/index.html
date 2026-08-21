@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Solitaire du Figaro. 1970 – 2027. — The Sacrificed Race</title>
+<title>For La Solitaire — La Solitaire du Figaro, 1970 – 2027</title>
 <link rel="alternate" hreflang="fr" href="https://lacoursesacrifiee.fr/">
 <link rel="alternate" hreflang="en" href="https://lacoursesacrifiee.fr/en/">
 <link rel="alternate" hreflang="es" href="https://lacoursesacrifiee.fr/es/">
@@ -59,7 +59,9 @@ h3{font-family:var(--body);font-weight:700;font-size:1.12rem;line-height:1.25;le
 /* ---------- barre ---------- */
 .bar{position:sticky;top:0;z-index:60;background:var(--rouge-band);color:#fff;border-bottom:2px solid var(--noir)}
 .bar-in{max-width:1200px;margin:0 auto;padding:.6rem 1.6rem;display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
-.bar .brand{font-family:var(--disp);font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.bar .cta-bar{margin-left:auto;background:var(--jaune);color:var(--noir);font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:.5rem .9rem;text-decoration:none;white-space:nowrap;font-weight:600}
+.cta-bar:hover{background:#fff}
+.brand{font-family:var(--disp);font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .bar nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--rouge-band);flex-direction:column;gap:0;padding:.3rem 1.6rem 1rem;border-bottom:2px solid var(--noir);z-index:61}
 .bar nav.open{display:flex}
 .bar nav a{padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.16)}
@@ -255,7 +257,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
 
 <div class="bar">
   <div class="bar-in">
-    <span class="brand">The Sacrificed Race</span>
+    <span class="brand">For La Solitaire</span>
     <nav id="mainnav" aria-label="Contents">
       <a href="#facts">The facts</a>
       <a href="#common">Common good</a>
@@ -272,6 +274,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
       <a href="#demands">The solution</a>
       <a href="/collectif/">The collective</a>
     </nav>
+    <a class="cta-bar" href="/collectif/">I support La Solitaire</a>
     <div class="langs"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c2.8 2.9 4.2 6.4 4.2 10S14.8 19.1 12 22c-2.8-2.9-4.2-6.4-4.2-10S9.2 4.9 12 2z"/></svg><select aria-label="Language" onchange="if(this.value)window.location.href=this.value"><option value="/">FR</option><option value="/en/" selected>EN</option><option value="/es/">ES</option><option value="/it/">IT</option><option value="/de/">DE</option></select></div>
     <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
   </div>
@@ -1327,7 +1330,7 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
 <footer>
   <div class="wrap">
     <div>
-      <p class="ft">The Sacrificed Race</p>
+      <p class="ft">For La Solitaire</p>
       <p>An independent tribune for the preservation of the heritage of La Solitaire du Figaro, a common good of French sailing. Unaffiliated with Groupe Figaro, OC Sport Pen Duick, the Figaro Bénéteau class, Groupe Bénéteau or the French Sailing Federation.</p>
     </div>
     <div>
