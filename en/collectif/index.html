@@ -78,16 +78,8 @@ footer a{color:var(--gris)}
 <section class="formband"><div class="wrap">
   <h2>Join the collective</h2>
   <form id="f" novalidate>
-    <div class="row">
-      <div>
-        <label for="civ">Title</label>
-        <select id="civ" name="civ"><option value="M.">M.</option><option value="Mme">Mme</option></select>
-      </div>
-      <div>
-        <label for="nom">First and last name *</label>
-        <input type="text" id="nom" name="nom" required maxlength="80" autocomplete="name">
-      </div>
-    </div>
+    <label for="nom">First and last name *</label>
+    <input type="text" id="nom" name="nom" required maxlength="80" autocomplete="name">
 
     <label for="email">Email *</label>
     <input type="email" id="email" name="email" required autocomplete="email">
@@ -135,11 +127,11 @@ footer a{color:var(--gris)}
   <p class="rgpd">Your data (identity, contact, capacity, visibility choice) is collected by the Collective for La Solitaire on the basis of your consent, hosted in the European Union, and used exclusively for the Collective's action. It is neither sold nor used commercially. You may request its modification or deletion at any time: contact@lacoursesacrifiee.fr</p>
 </div></section>
 
-<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v7</div></footer>
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">lacoursesacrifiee.fr</a> &middot; contact@lacoursesacrifiee.fr &middot; v8</div></footer>
 
 <script>
 var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
-console.log("Formulaire collectif v7 en");
+console.log("Formulaire collectif v8 en");
 (function(){
   var f = document.getElementById('f'), btn = document.getElementById('btn');
   var ok = document.getElementById('ok'), err = document.getElementById('err'), hint = document.getElementById('hint');
@@ -176,7 +168,7 @@ console.log("Formulaire collectif v7 en");
     err.classList.remove('err'); ok.classList.remove('ok');
     var cons = f.querySelector('input[name=consentement]:checked');
     var payload = {
-      civ: el('civ').value, nom: el('nom').value.trim(), email: el('email').value.trim(),
+       nom: el('nom').value.trim(), email: el('email').value.trim(),
       tel: el('tel').value.trim(), qualite: el('qualite').value, bateau: el('bateau').value.trim(),
       consentement: cons.value, charte: el('charte').checked, website: el('hp_extra').value
     };
