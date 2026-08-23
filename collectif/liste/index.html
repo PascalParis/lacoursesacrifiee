@@ -58,7 +58,8 @@ h2{font-family:var(--disp);font-weight:400;font-size:1.35rem;text-transform:uppe
 table{width:100%;border-collapse:collapse;margin-top:.4rem}
 th{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;border-bottom:2px solid var(--noir);padding:.5rem .6rem;color:var(--gris)}
 td{border-bottom:1px solid var(--trait);padding:.62rem .6rem;vertical-align:top}
-td.nom{font-weight:600}
+td.nom{font-weight:600;width:42%;min-width:220px}
+th:first-child{width:42%}
 td.q{font-family:var(--mono);font-size:.82rem;color:var(--gris);white-space:nowrap}
 td.b{font-size:.88rem;color:var(--gris)}
 .empty{background:var(--papier-2);padding:1.2rem 1.4rem;font-size:.92rem;color:var(--gris)}
@@ -114,6 +115,27 @@ var QORDER = ["Propriétaire","Skipper","Sponsor","Bénévole","Partenaire","Sup
 
 function esc(s){ var d = document.createElement('div'); d.textContent = s == null ? "" : s; return d.innerHTML; }
 
+// "ADRIEN hardy" → "Adrien Hardy" ; particules et traits d'union gérés
+var PARTICULES = ["de","du","des","le","la","les","van","von","da","di","dos","del","d'","l'"];
+function propre(s){
+  if (!s) return "";
+  var mots = String(s).trim().replace(/\s+/g, " ").split(" ");
+  return mots.map(function(mot, i){
+    var bas = mot.toLocaleLowerCase('fr');
+    if (i > 0 && PARTICULES.indexOf(bas) !== -1) return bas;
+    // majuscule après espace, trait d'union et apostrophe
+    return bas.replace(/(^|[-'’])(\p{L})/gu, function(m, sep, c){ return sep + c.toLocaleUpperCase('fr'); });
+  }).join(" ");
+}
+// Clé de tri : le deuxième mot (le nom de famille dans "Prénom Nom")
+function cleTri(nom){
+  var mots = propre(nom).split(" ").filter(function(m){ return m.length; });
+  var idx = 1;
+  while (idx < mots.length && PARTICULES.indexOf(mots[idx].toLocaleLowerCase('fr')) !== -1) idx++;
+  var base = mots.length > 1 ? mots.slice(idx).join(" ") || mots[mots.length-1] : mots[0] || "";
+  return base + " " + (mots[0] || "");
+}
+
 function render(d){
   document.getElementById('gate').style.display = 'none';
   document.getElementById('panel').style.display = 'block';
@@ -145,9 +167,12 @@ function render(d){
   if (!d.publics.length) {
     p.innerHTML = '<div class="empty">Aucun signataire public vérifié pour l\'instant. Passez un contact en « Vérifié » dans Yuman pour le faire apparaître ici.</div>';
   } else {
+    var lignes = d.publics.slice().sort(function(a, b){
+      return cleTri(a.name).localeCompare(cleTri(b.name), 'fr', { sensitivity: 'base' });
+    });
     p.innerHTML = '<table><thead><tr><th>Nom</th><th>Qualité</th><th>Bateau ou structure</th></tr></thead><tbody>' +
-      d.publics.map(function(x){
-        return '<tr><td class="nom">' + esc(x.name) + '</td><td class="q">' + esc(x.qualite) + '</td><td class="b">' + esc(x.bateau) + '</td></tr>';
+      lignes.map(function(x){
+        return '<tr><td class="nom">' + esc(propre(x.name)) + '</td><td class="q">' + esc(x.qualite) + '</td><td class="b">' + esc(x.bateau) + '</td></tr>';
       }).join("") + '</tbody></table>';
   }
 
