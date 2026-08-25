@@ -63,6 +63,18 @@ td.nom{font-weight:600;width:42%;min-width:220px}
 th:first-child{width:42%}
 td.q{font-family:var(--mono);font-size:.82rem;color:var(--gris);white-space:nowrap}
 td.b{font-size:.88rem;color:var(--gris)}
+td.v{white-space:nowrap}
+.tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:.18rem .5rem;border:1.2px solid var(--noir)}
+.tag.pub{background:var(--jaune);border-color:var(--jaune)}
+.tag.ins{background:#fff}
+.tag.con{background:var(--papier-2);color:var(--gris);border-color:#B8B6AE}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#B8B6AE;margin-left:.45rem;vertical-align:middle}
+.dot.ok{background:#1F7A3D}
+.tools{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.2rem 0 1rem}
+.tools input[type=search]{flex:1;min-width:200px;padding:.6rem .75rem;border:1.5px solid var(--noir);background:#fff;font-family:var(--body);font-size:.95rem;border-radius:0}
+.tools select{padding:.6rem .7rem;border:1.5px solid var(--noir);background:#fff;font-family:var(--mono);font-size:.82rem;border-radius:0}
+.count{font-family:var(--mono);font-size:.8rem;color:var(--gris);white-space:nowrap}
+.warn{background:var(--rouge-band);color:#fff;padding:.75rem 1rem;font-family:var(--mono);font-size:.78rem;line-height:1.6;margin-bottom:1.2rem}
 .empty{background:var(--papier-2);padding:1.2rem 1.4rem;font-size:.92rem;color:var(--gris)}
 .note{font-family:var(--mono);font-size:.78rem;color:var(--gris);margin-top:1.2rem;line-height:1.7}
 footer{padding:2rem 0;font-family:var(--mono);font-size:.78rem;color:var(--gris);border-top:1px solid var(--trait)}
@@ -100,7 +112,24 @@ footer a{color:var(--gris)}
     <h2>Par visibilité</h2>
     <div class="bars" id="bars"></div>
 
-    <h2>Signataires publics</h2>
+    <h2>Tous les membres</h2>
+    <div class="warn">Registre interne. Seuls les membres marqués « Public » et vérifiés peuvent être cités publiquement. Les mentions « Institutions » et « Confidentiel » ne sortent pas de cette page.</div>
+    <div class="tools">
+      <input type="search" id="q" placeholder="Rechercher un nom, un bateau…">
+      <select id="fq"><option value="">Toutes qualités</option></select>
+      <select id="fv">
+        <option value="">Toutes visibilités</option>
+        <option value="Public">Public</option>
+        <option value="Institutions">Institutions</option>
+        <option value="Confidentiel">Confidentiel</option>
+      </select>
+      <select id="fs">
+        <option value="">Tous statuts</option>
+        <option value="1">Vérifiés</option>
+        <option value="0">À valider</option>
+      </select>
+      <span class="count" id="cnt"></span>
+    </div>
     <div id="publics"></div>
 
     <p class="note" id="note"></p>
@@ -108,7 +137,7 @@ footer a{color:var(--gris)}
 
 </main>
 
-<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; registre interne, ne pas diffuser</div></footer>
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; registre interne, ne pas diffuser &middot; v2</div></footer>
 
 <script>
 var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
@@ -164,24 +193,60 @@ function render(d){
              '<span>' + n + '</span></div>';
     }).join("");
 
+  DATA = d.publics.slice().sort(function(a, b){
+    return cleTri(a.name).localeCompare(cleTri(b.name), 'fr', { sensitivity: 'base' });
+  });
+  var fq = document.getElementById('fq');
+  var qs = QORDER.slice();
+  Object.keys(d.counts).forEach(function(k){ if (qs.indexOf(k) === -1) qs.push(k); });
+  fq.innerHTML = '<option value="">Toutes qualités</option>' + qs.map(function(k){
+    return '<option value="' + esc(k) + '">' + esc(k) + ' (' + (d.counts[k] || 0) + ')</option>';
+  }).join("");
+  ['q','fq','fv','fs'].forEach(function(id){
+    var el = document.getElementById(id);
+    el.addEventListener(id === 'q' ? 'input' : 'change', dessine);
+  });
+  dessine();
+
   var p = document.getElementById('publics');
-  if (!d.publics.length) {
-    p.innerHTML = '<div class="empty">Aucun signataire public vérifié pour l\'instant. Passez un contact en « Vérifié » dans Yuman pour le faire apparaître ici.</div>';
-  } else {
-    var lignes = d.publics.slice().sort(function(a, b){
-      return cleTri(a.name).localeCompare(cleTri(b.name), 'fr', { sensitivity: 'base' });
-    });
-    p.innerHTML = '<table><thead><tr><th>Nom</th><th>Qualité</th><th>Bateau ou structure</th></tr></thead><tbody>' +
-      lignes.map(function(x){
-        return '<tr><td class="nom">' + esc(propre(x.name)) + '</td><td class="q">' + esc(x.qualite) + '</td><td class="b">' + esc(x.bateau) + '</td></tr>';
-      }).join("") + '</tbody></table>';
+  if (false) {
+    p.innerHTML = '';
   }
 
   var now = new Date();
   document.getElementById('note').textContent =
-    "Seuls les membres ayant choisi « Public » ET vérifiés manuellement sont nommés ci-dessus. " +
-    "Les soutiens « Institutions » et « Confidentiel » comptent dans les totaux sans être nommés. " +
+    "Pastille verte : membre vérifié. Pastille grise : à valider dans Yuman. " +
+    "Seuls les membres « Public » et vérifiés peuvent être cités publiquement. " +
     "Registre consulté le " + now.toLocaleDateString('fr-FR') + " à " + now.toLocaleTimeString('fr-FR').slice(0,5) + ".";
+}
+
+var DATA = [];
+function norm(s){ return (s || "").toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+function dessine(){
+  var q = norm(document.getElementById('q').value.trim());
+  var fq = document.getElementById('fq').value;
+  var fv = document.getElementById('fv').value;
+  var fs = document.getElementById('fs').value;
+  var l = DATA.filter(function(x){
+    if (fq && x.qualite !== fq) return false;
+    if (fv && x.visibilite !== fv) return false;
+    if (fs === "1" && !x.verifie) return false;
+    if (fs === "0" && x.verifie) return false;
+    if (q && norm(x.name).indexOf(q) === -1 && norm(x.bateau).indexOf(q) === -1) return false;
+    return true;
+  });
+  document.getElementById('cnt').textContent = l.length + " / " + DATA.length;
+  var p = document.getElementById('publics');
+  if (!l.length) { p.innerHTML = '<div class="empty">Aucun membre ne correspond à ces critères.</div>'; return; }
+  var TAG = { "Public":"pub", "Institutions":"ins", "Confidentiel":"con" };
+  p.innerHTML = '<table><thead><tr><th>Nom</th><th>Qualité</th><th>Bateau ou structure</th><th>Visibilité</th></tr></thead><tbody>' +
+    l.map(function(x){
+      return '<tr><td class="nom">' + esc(propre(x.name)) +
+             '<span class="dot' + (x.verifie ? ' ok' : '') + '" title="' + (x.verifie ? 'Vérifié' : 'À valider') + '"></span></td>' +
+             '<td class="q">' + esc(x.qualite) + '</td>' +
+             '<td class="b">' + esc(x.bateau) + '</td>' +
+             '<td class="v"><span class="tag ' + (TAG[x.visibilite] || 'con') + '">' + esc(x.visibilite) + '</span></td></tr>';
+    }).join("") + '</tbody></table>';
 }
 
 function load(){
