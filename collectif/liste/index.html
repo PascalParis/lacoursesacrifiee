@@ -72,6 +72,7 @@ th:first-child{min-width:190px}
 td.q{font-family:var(--mono);font-size:.82rem;color:var(--gris);white-space:nowrap}
 td.b{font-size:.88rem;color:var(--gris)}
 td.v{white-space:nowrap}
+td.d{font-family:var(--mono);font-size:.78rem;color:var(--gris);white-space:nowrap}
 .tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:.18rem .5rem;border:1.2px solid var(--noir)}
 .tag.pub{background:var(--jaune);border-color:var(--jaune)}
 .tag.ins{background:#fff}
@@ -136,6 +137,11 @@ footer a{color:var(--gris)}
         <option value="1">Vérifiés</option>
         <option value="0">À valider</option>
       </select>
+      <select id="tri">
+        <option value="nom">Tri : nom</option>
+        <option value="recent">Tri : plus récents</option>
+        <option value="ancien">Tri : ordre d'inscription</option>
+      </select>
       <span class="count" id="cnt"></span>
     </div>
     <div id="publics"></div>
@@ -145,7 +151,7 @@ footer a{color:var(--gris)}
 
 </main>
 
-<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; registre interne, ne pas diffuser &middot; v3</div></footer>
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; registre interne, ne pas diffuser &middot; v4</div></footer>
 
 <script>
 var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
@@ -201,16 +207,14 @@ function render(d){
              '<span>' + n + '</span></div>';
     }).join("");
 
-  DATA = d.publics.slice().sort(function(a, b){
-    return cleTri(a.name).localeCompare(cleTri(b.name), 'fr', { sensitivity: 'base' });
-  });
+  DATA = d.publics.slice();
   var fq = document.getElementById('fq');
   var qs = QORDER.slice();
   Object.keys(d.counts).forEach(function(k){ if (qs.indexOf(k) === -1) qs.push(k); });
   fq.innerHTML = '<option value="">Toutes qualités</option>' + qs.map(function(k){
     return '<option value="' + esc(k) + '">' + esc(k) + ' (' + (d.counts[k] || 0) + ')</option>';
   }).join("");
-  ['q','fq','fv','fs'].forEach(function(id){
+  ['q','fq','fv','fs','tri'].forEach(function(id){
     var el = document.getElementById(id);
     el.addEventListener(id === 'q' ? 'input' : 'change', dessine);
   });
@@ -229,6 +233,24 @@ function render(d){
 }
 
 var DATA = [];
+function dateFr(iso){
+  if (!iso) return "";
+  var d = new Date(iso);
+  if (isNaN(d)) return String(iso).slice(0, 10);
+  var j = String(d.getDate()).padStart(2, '0'), m = String(d.getMonth() + 1).padStart(2, '0');
+  return j + "/" + m + " " + String(d.getHours()).padStart(2, '0') + "h" + String(d.getMinutes()).padStart(2, '0');
+}
+function trier(l){
+  var mode = document.getElementById('tri').value;
+  if (mode === 'nom') {
+    return l.sort(function(a, b){ return cleTri(a.name).localeCompare(cleTri(b.name), 'fr', { sensitivity: 'base' }); });
+  }
+  return l.sort(function(a, b){
+    var da = a.date || "", db = b.date || "";
+    if (da === db) return (a.id || 0) - (b.id || 0);
+    return mode === 'recent' ? (db < da ? -1 : 1) : (da < db ? -1 : 1);
+  });
+}
 function norm(s){ return (s || "").toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
 function dessine(){
   var q = norm(document.getElementById('q').value.trim());
@@ -243,17 +265,19 @@ function dessine(){
     if (q && norm(x.name).indexOf(q) === -1 && norm(x.bateau).indexOf(q) === -1) return false;
     return true;
   });
+  l = trier(l);
   document.getElementById('cnt').textContent = l.length + " / " + DATA.length;
   var p = document.getElementById('publics');
   if (!l.length) { p.innerHTML = '<div class="empty">Aucun membre ne correspond à ces critères.</div>'; return; }
   var TAG = { "Public":"pub", "Institutions":"ins", "Confidentiel":"con" };
-  p.innerHTML = '<div class="tablewrap"><table><thead><tr><th>Nom</th><th>Qualité</th><th>Bateau ou structure</th><th>Visibilité</th></tr></thead><tbody>' +
+  p.innerHTML = '<div class="tablewrap"><table><thead><tr><th>Nom</th><th>Qualité</th><th>Bateau ou structure</th><th>Visibilité</th><th>Inscrit le</th></tr></thead><tbody>' +
     l.map(function(x){
       return '<tr><td class="nom">' + esc(propre(x.name)) +
              '<span class="dot' + (x.verifie ? ' ok' : '') + '" title="' + (x.verifie ? 'Vérifié' : 'À valider') + '"></span></td>' +
              '<td class="q">' + esc(x.qualite) + '</td>' +
              '<td class="b">' + esc(x.bateau) + '</td>' +
-             '<td class="v"><span class="tag ' + (TAG[x.visibilite] || 'con') + '">' + esc(x.visibilite) + '</span></td></tr>';
+             '<td class="v"><span class="tag ' + (TAG[x.visibilite] || 'con') + '">' + esc(x.visibilite) + '</span></td>' +
+             '<td class="d">' + esc(dateFr(x.date)) + '</td></tr>';
     }).join("") + '</tbody></table></div><p class="hint-scroll">Faites glisser le tableau horizontalement pour voir toutes les colonnes.</p>';
 }
 
