@@ -16,7 +16,8 @@
   --disp:'Anton',Impact,sans-serif; --body:'Libre Franklin',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--papier);color:var(--noir);font-family:var(--body);line-height:1.55;font-size:1rem}
+html{overflow-x:hidden}
+body{margin:0;background:var(--papier);color:var(--noir);font-family:var(--body);line-height:1.55;font-size:1rem;overflow-x:hidden;max-width:100%}
 .wrap{max-width:880px;margin:0 auto;padding:0 1.2rem}
 .top{background:var(--noir);color:var(--papier);padding:.7rem 0}
 .top a{color:var(--jaune);text-decoration:none;font-family:var(--mono);font-size:.85rem;letter-spacing:.06em}
@@ -56,11 +57,18 @@ h2{font-family:var(--disp);font-weight:400;font-size:1.35rem;text-transform:uppe
 .bar.con .fill{background:#B8B6AE}
 
 /* Liste */
-table{width:100%;border-collapse:collapse;margin-top:.4rem}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--trait);background:#fff;position:relative}
+.tablewrap table{margin:0}
+table{width:100%;min-width:600px;border-collapse:collapse;margin-top:.4rem;background:#fff}
+th{position:sticky;top:0;background:#fff;z-index:2}
+td.nom,th:first-child{position:sticky;left:0;background:#fff;z-index:1;box-shadow:1px 0 0 var(--trait)}
+th:first-child{z-index:3}
+.hint-scroll{font-family:var(--mono);font-size:.72rem;color:var(--gris);margin:.5rem 0 0;display:none}
+@media(max-width:640px){.hint-scroll{display:block}}
 th{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;border-bottom:2px solid var(--noir);padding:.5rem .6rem;color:var(--gris)}
 td{border-bottom:1px solid var(--trait);padding:.62rem .6rem;vertical-align:top}
-td.nom{font-weight:600;width:42%;min-width:220px}
-th:first-child{width:42%}
+td.nom{font-weight:600;min-width:190px}
+th:first-child{min-width:190px}
 td.q{font-family:var(--mono);font-size:.82rem;color:var(--gris);white-space:nowrap}
 td.b{font-size:.88rem;color:var(--gris)}
 td.v{white-space:nowrap}
@@ -137,7 +145,7 @@ footer a{color:var(--gris)}
 
 </main>
 
-<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; registre interne, ne pas diffuser &middot; v2</div></footer>
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; registre interne, ne pas diffuser &middot; v3</div></footer>
 
 <script>
 var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
@@ -239,14 +247,14 @@ function dessine(){
   var p = document.getElementById('publics');
   if (!l.length) { p.innerHTML = '<div class="empty">Aucun membre ne correspond à ces critères.</div>'; return; }
   var TAG = { "Public":"pub", "Institutions":"ins", "Confidentiel":"con" };
-  p.innerHTML = '<table><thead><tr><th>Nom</th><th>Qualité</th><th>Bateau ou structure</th><th>Visibilité</th></tr></thead><tbody>' +
+  p.innerHTML = '<div class="tablewrap"><table><thead><tr><th>Nom</th><th>Qualité</th><th>Bateau ou structure</th><th>Visibilité</th></tr></thead><tbody>' +
     l.map(function(x){
       return '<tr><td class="nom">' + esc(propre(x.name)) +
              '<span class="dot' + (x.verifie ? ' ok' : '') + '" title="' + (x.verifie ? 'Vérifié' : 'À valider') + '"></span></td>' +
              '<td class="q">' + esc(x.qualite) + '</td>' +
              '<td class="b">' + esc(x.bateau) + '</td>' +
              '<td class="v"><span class="tag ' + (TAG[x.visibilite] || 'con') + '">' + esc(x.visibilite) + '</span></td></tr>';
-    }).join("") + '</tbody></table>';
+    }).join("") + '</tbody></table></div><p class="hint-scroll">Faites glisser le tableau horizontalement pour voir toutes les colonnes.</p>';
 }
 
 function load(){
