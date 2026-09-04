@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les figaristes du Collectif pour La Solitaire</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23123C6B'/%3E%3Cg fill='%23F1F0EC'%3E%3Crect width='16' height='16'/%3E%3Crect x='32' width='16' height='16'/%3E%3Crect x='16' y='16' width='16' height='16'/%3E%3Crect x='48' y='16' width='16' height='16'/%3E%3Crect y='32' width='16' height='16'/%3E%3Crect x='32' y='32' width='16' height='16'/%3E%3Crect x='16' y='48' width='16' height='16'/%3E%3Crect x='48' y='48' width='16' height='16'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="description" content="30 victoires au général, 70 podiums, 103 victoires d'étape : les figaristes qui ont écrit le palmarès de La Solitaire ont signé pour la défendre.">
+<meta property="og:title" content="Ils ont écrit La Solitaire. Ils signent.">
+<meta property="og:description" content="Plus de la moitié du palmarès de l'histoire de la course a rejoint le Collectif pour La Solitaire.">
+<meta property="og:url" content="https://pourlasolitaire.fr/collectif/figaristes/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,300..800;1,300..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#F1F0EC; --papier-2:#E5E3DC; --noir:#0E0E0E; --gris:#565657;
+  --rouge:#CB1F17; --rouge-band:#A31710; --jaune:#E8B923; --trait:rgba(14,14,14,.16);
+  --disp:'Anton',Impact,sans-serif; --body:'Libre Franklin',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;background:var(--papier);color:var(--noir);font-family:var(--body);line-height:1.55;font-size:1rem;overflow-x:hidden;max-width:100%}
+.wrap{max-width:880px;margin:0 auto;padding:0 1.2rem}
+.top{background:var(--noir);color:var(--papier);padding:.7rem 0}
+.top a{color:var(--jaune);text-decoration:none;font-family:var(--mono);font-size:.85rem;letter-spacing:.06em}
+.hero{background:var(--noir);color:var(--papier);padding:3.2rem 0 2.8rem;border-bottom:6px solid var(--jaune)}
+.kick{font-family:var(--mono);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--jaune);margin:0 0 .9rem}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.1rem,6vw,3.6rem);line-height:1.02;text-transform:uppercase;margin:0}
+.hero .lede{margin:1.6rem 0 0;max-width:62ch;font-size:1.08rem}
+.manifeste{padding:2.6rem 0 2.2rem}
+.manifeste p{max-width:68ch;margin:0 0 1.15rem;font-size:1.05rem}
+.manifeste .frappe{font-family:var(--disp);font-weight:400;font-size:clamp(1.25rem,3.4vw,1.7rem);line-height:1.15;text-transform:uppercase;max-width:30ch;margin:1.8rem 0 .4rem}
+.chiffres{background:var(--noir);color:var(--papier);padding:2rem 0}
+.chiffres .wrap{display:flex;flex-wrap:wrap;gap:1.6rem 2.6rem;align-items:baseline}
+.chiffres .c{display:flex;flex-direction:column}
+.chiffres b{font-family:var(--disp);font-weight:400;font-size:clamp(1.9rem,5vw,2.8rem);color:var(--jaune);line-height:1}
+.chiffres span{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-top:.35rem;color:var(--papier)}
+.chiffres .phr{flex-basis:100%;font-family:var(--mono);font-size:.85rem;color:var(--jaune);letter-spacing:.04em;margin-top:.4rem}
+.liste{padding:2.4rem 0 2.6rem}
+.liste h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.35rem,3.8vw,1.9rem);text-transform:uppercase;margin:2.2rem 0 1rem;line-height:1.05}
+.liste h2:first-child{margin-top:0}
+.liste h2 small{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--gris);margin-top:.35rem}
+ul.fig{list-style:none;margin:0;padding:0;border-top:2px solid var(--noir)}
+ul.fig li{border-bottom:1px solid var(--trait);padding:.72rem .2rem;display:flex;gap:1.1rem;align-items:baseline;flex-wrap:wrap}
+ul.fig li.vq{border-left:5px solid var(--jaune);padding-left:.7rem;background:linear-gradient(90deg,rgba(232,185,35,.10),transparent 55%)}
+.nm{font-weight:700;font-size:1.06rem;min-width:230px}
+.pl{font-family:var(--mono);font-size:.8rem;color:var(--gris);flex:1;min-width:250px}
+.note{font-family:var(--mono);font-size:.78rem;color:var(--gris);margin-top:1.8rem;line-height:1.7;max-width:72ch}
+.cta{margin:2.2rem 0 0}
+.btn{display:inline-block;background:var(--rouge-band);color:#fff;text-decoration:none;padding:.95rem 1.8rem;font-family:var(--mono);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+.btn:hover{background:var(--rouge)}
+footer{padding:2rem 0;font-family:var(--mono);font-size:.78rem;color:var(--gris);border-top:1px solid var(--trait)}
+footer a{color:var(--gris)}
+@media(max-width:600px){.nm{min-width:100%}.pl{min-width:100%}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><a href="/collectif/">&larr; Le Collectif pour La Solitaire</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <p class="kick">Le registre des figaristes</p>
+  <h1>Ils ont &eacute;crit<br>cette course.<br>Ils signent.</h1>
+  <p class="lede">On nous a demand&eacute; de quel droit nous parlions au nom de La Solitaire. Voici la r&eacute;ponse. Elle tient en soixante-dix-sept noms, et chacun d&rsquo;eux s&rsquo;est gagn&eacute; en mer.</p>
+</div></header>
+
+<section class="manifeste"><div class="wrap">
+  <p>Ils ont couru cette course sur des coques de trois g&eacute;n&eacute;rations. Ils l&rsquo;ont gagn&eacute;e dans les ann&eacute;es 70, quand elle s&rsquo;appelait encore l&rsquo;Aurore, et ils l&rsquo;ont gagn&eacute;e en 2026. Ils ont veill&eacute; des nuits enti&egrave;res au rase-cailloux, jou&eacute; les renverses &agrave; dix minutes pr&egrave;s, dormi par tranches de vingt minutes pour aller chercher des victoires qui se comptent en secondes. Certains sont devenus des l&eacute;gendes du Vend&eacute;e Globe et de la Route du Rhum. D&rsquo;autres restent des noms que seuls les pontons connaissent. Tous ont laiss&eacute; quelque chose dans cette course, et cette course a laiss&eacute; quelque chose en chacun d&rsquo;eux.</p>
+  <p>Ce nom qu&rsquo;on voudrait aujourd&rsquo;hui d&eacute;placer sur d&rsquo;autres bateaux, d&rsquo;autres formats, une autre course, ils ne le revendiquent pas : <b>ils l&rsquo;ont &eacute;crit</b>. &Eacute;tape apr&egrave;s &eacute;tape, &eacute;dition apr&egrave;s &eacute;dition, depuis 1970. La Solitaire n&rsquo;est pas un actif qu&rsquo;on d&eacute;place d&rsquo;un portefeuille &agrave; un projet. C&rsquo;est un palmar&egrave;s d&eacute;pos&eacute; dans la m&eacute;moire de la voile fran&ccedil;aise, et il a des auteurs. Les voici.</p>
+  <p class="frappe">La propri&eacute;t&eacute; d&rsquo;un nom se discute en droit. Sa l&eacute;gitimit&eacute; se lit ici.</p>
+</div></section>
+
+<section class="chiffres"><div class="wrap">
+  <div class="c"><b>86</b><span>figaristes signataires</span></div>
+  <div class="c"><b>496</b><span>participations</span></div>
+  <div class="c"><b>30</b><span>victoires au g&eacute;n&eacute;ral</span></div>
+  <div class="c"><b>70</b><span>podiums</span></div>
+  <div class="c"><b>103</b><span>victoires d&rsquo;&eacute;tape</span></div>
+  <p class="phr">Trente victoires sur cinquante-sept &eacute;ditions : plus de la moiti&eacute; du palmar&egrave;s de l&rsquo;histoire de la course a sign&eacute;.</p>
+</div></section>
+
+<main class="liste"><div class="wrap">
+  <h2>Les vainqueurs<small>17 vainqueurs au g&eacute;n&eacute;ral, de l&rsquo;Aurore &agrave; 2026</small></h2>
+  <ul class="fig">
+<li class=vq><span class="nm">Yann Eliès</span><span class="pl">3 victoires au général , 10 victoires d&#x27;étapes et 5 podiums au général</span></li>
+<li class=vq><span class="nm">Nicolas Lunven</span><span class="pl">3 victoires au général , 2 victoires d&#x27;étapes et 5 podiums au général</span></li>
+<li class=vq><span class="nm">Jérémie Beyou</span><span class="pl">3 victoires au général , 7 victoires d&#x27;étapes et 4 podiums au général</span></li>
+<li class=vq><span class="nm">Armel Le Cléac&#x27;h</span><span class="pl">3 victoires au général , 7 victoires d&#x27;étapes et 4 podiums au général</span></li>
+<li class=vq><span class="nm">Gilles Le Baud</span><span class="pl">2 victoires au général , 4 victoires d&#x27;étapes et 2 podiums au général</span></li>
+<li class=vq><span class="nm">Nicolas Troussel</span><span class="pl">2 victoires au général , 2 victoires d&#x27;étapes et 2 podiums au général</span></li>
+<li class=vq><span class="nm">Jean-Marie Vidal</span><span class="pl">2 victoires au général , 2 victoires d&#x27;étapes et 2 podiums au général</span></li>
+<li class=vq><span class="nm">Alain Gautier</span><span class="pl">1 victoire au général , 8 victoires d&#x27;étapes et 3 podiums au général</span></li>
+<li class=vq><span class="nm">Éric Drouglazet</span><span class="pl">1 victoire au général , 5 victoires d&#x27;étapes et 3 podiums au général</span></li>
+<li class=vq><span class="nm">Laurent Cordelle</span><span class="pl">1 victoire au général , 3 victoires d&#x27;étapes et 2 podiums au général</span></li>
+<li class=vq><span class="nm">Kito de Pavant</span><span class="pl">1 victoire au général et 2 podiums au général</span></li>
+<li class=vq><span class="nm">Lionel Péan</span><span class="pl">1 victoire au général , 4 victoires d&#x27;étapes et 1 podium au général</span></li>
+<li class=vq><span class="nm">Yves Parlier</span><span class="pl">1 victoire au général , 4 victoires d&#x27;étapes et 1 podium au général</span></li>
+<li class=vq><span class="nm">Alexis Loison</span><span class="pl">1 victoire au général , 3 victoires d&#x27;étapes et 1 podium au général</span></li>
+<li class=vq><span class="nm">Tom Dolan</span><span class="pl">1 victoire au général , 3 victoires d&#x27;étapes et 1 podium au général</span></li>
+<li class=vq><span class="nm">Franck Cammas</span><span class="pl">1 victoire au général , 2 victoires d&#x27;étapes et 1 podium au général</span></li>
+<li class=vq><span class="nm">Sylvain Rosier</span><span class="pl">1 victoire au général et 1 podium au général</span></li>
+  </ul>
+
+  <h2>Podiums et victoires d&rsquo;&eacute;tape<small>19 signataires mont&eacute;s sur les podiums de l&rsquo;&eacute;preuve</small></h2>
+  <ul class="fig">
+<li><span class="nm">Gildas Morvan</span><span class="pl">6 victoires d&#x27;étapes et 4 podiums au général</span></li>
+<li><span class="nm">Damien Savatier</span><span class="pl">3 victoires d&#x27;étapes et 3 podiums au général</span></li>
+<li><span class="nm">Xavier Macaire</span><span class="pl">2 victoires d&#x27;étapes et 3 podiums au général</span></li>
+<li><span class="nm">Anthony Marchand</span><span class="pl">3 victoires d&#x27;étapes et 2 podiums au général</span></li>
+<li><span class="nm">Bruno Lunven</span><span class="pl">2 victoires d&#x27;étapes et 2 podiums au général</span></li>
+<li><span class="nm">Bernard Pallard</span><span class="pl">2 victoires d&#x27;étapes et 2 podiums au général</span></li>
+<li><span class="nm">Antoine Lebec</span><span class="pl">2 podiums au général</span></li>
+<li><span class="nm">Adrien Hardy</span><span class="pl">5 victoires d&#x27;étapes et 1 podium au général</span></li>
+<li><span class="nm">Gérald Véniard</span><span class="pl">2 victoires d&#x27;étapes et 1 podium au général</span></li>
+<li><span class="nm">Thierry Chabagny</span><span class="pl">1 victoire d&#x27;étape et 1 podium au général</span></li>
+<li><span class="nm">Paul Morvan</span><span class="pl">1 victoire d&#x27;étape et 1 podium au général</span></li>
+<li><span class="nm">Marc Guillemot</span><span class="pl">1 podium au général</span></li>
+<li><span class="nm">Charlotte Yven</span><span class="pl">1 podium au général</span></li>
+<li><span class="nm">Achille Nebout</span><span class="pl">1 podium au général</span></li>
+<li><span class="nm">Marc Guessard</span><span class="pl">1 podium au général</span></li>
+<li><span class="nm">Loïck Peyron</span><span class="pl">2 victoires d&#x27;étapes</span></li>
+<li><span class="nm">Sébastien Audigane</span><span class="pl">1 victoire d&#x27;étape</span></li>
+<li><span class="nm">Pierre Leboucher</span><span class="pl">1 victoire d&#x27;étape</span></li>
+<li><span class="nm">Paul Loiseau</span><span class="pl">1 victoire d&#x27;étape</span></li>
+  </ul>
+
+  <h2>Et ceux qui ont fait la course<small>41 signataires, du premier bizuth au recordman des participations</small></h2>
+  <ul class="fig">
+<li><span class="nm">Alan Roberts</span><span class="pl">6ème en 2018</span></li>
+<li><span class="nm">Armel Tripon</span><span class="pl">16ème en 2009</span></li>
+<li><span class="nm">Louis Robein</span><span class="pl">36ème en 2022</span></li>
+<li><span class="nm">Nicolas Bérenger</span><span class="pl">7ème en 2008</span></li>
+<li><span class="nm">Patrice Bougard</span><span class="pl">31ème en 2003</span></li>
+<li><span class="nm">Arnaud Godart-Philippe</span><span class="pl">20ème en 2016</span></li>
+<li><span class="nm">Vincent Riou</span><span class="pl">4ème en 2002</span></li>
+<li><span class="nm">Damien Cloarec</span><span class="pl">10ème en 2017</span></li>
+<li><span class="nm">Florian Foglietti</span><span class="pl">6ème en 1987</span></li>
+<li><span class="nm">Yannig Livory</span><span class="pl">34ème en 2013 - Ancien Président CFB</span></li>
+<li><span class="nm">Etienne Svilaritch</span><span class="pl">20ème en 2011</span></li>
+<li><span class="nm">Paul Meilhat</span><span class="pl">5ème en 2014</span></li>
+<li><span class="nm">Philippe Hartz</span><span class="pl">15ème en 2022</span></li>
+<li><span class="nm">Samantha Davies</span><span class="pl">19ème en 2003 &amp; 2004</span></li>
+<li><span class="nm">Annick Martin</span><span class="pl">9ème en 1976</span></li>
+<li><span class="nm">Arnaud Boissières</span><span class="pl">27ème en 2002</span></li>
+<li><span class="nm">Mico Bolo</span><span class="pl">19ème en 1978</span></li>
+<li><span class="nm">Pierre Follenfant</span><span class="pl">4ème en 1981</span></li>
+<li><span class="nm">Raphaël Dinelli</span><span class="pl">10ème en 1995 - 2ème bizuth en 1993</span></li>
+<li><span class="nm">Tolga Pamir</span><span class="pl">37ème en 2015</span></li>
+<li><span class="nm">Victor Le Pape</span><span class="pl">1er bizuth en 2023 &amp; 5ème en 2025</span></li>
+<li><span class="nm">Yannick Evenou</span><span class="pl">31ème en 1994</span></li>
+<li><span class="nm">Adrien Simon</span><span class="pl">14ème en 2025</span></li>
+<li><span class="nm">Anne Liardet</span><span class="pl">10ème en 1987</span></li>
+<li><span class="nm">Bruno Gillard</span><span class="pl">34ème en 2001</span></li>
+<li><span class="nm">David Sineau</span><span class="pl">26ème en 2012</span></li>
+<li><span class="nm">Gwénolé Gahinet</span><span class="pl">5ème en 2015</span></li>
+<li><span class="nm">Marc Pouydebat</span><span class="pl">39ème en 2015</span></li>
+<li><span class="nm">Marcus Hutchinson</span><span class="pl">26e et 3e bizuth en 1998 - Vice Pdt CFB</span></li>
+<li><span class="nm">Romain Bouillard</span><span class="pl">18ème en 2025</span></li>
+<li><span class="nm">Thierry Levayer</span><span class="pl">32ème en 2024</span></li>
+<li><span class="nm">Tiphaine Ragueneau</span><span class="pl">19ème en 2026</span></li>
+<li><span class="nm">Alain Ferec</span><span class="pl">27ème en 2002</span></li>
+<li><span class="nm">Bernard Mallaret</span><span class="pl">12ème en 1991</span></li>
+<li><span class="nm">Erik Nigon</span><span class="pl">37ème en 2017</span></li>
+<li><span class="nm">François Jambou</span><span class="pl">31ème en 2026</span></li>
+<li><span class="nm">Jean-Yves Bernot</span><span class="pl">33ème en 1983</span></li>
+<li><span class="nm">Louis Duc</span><span class="pl">45ème en 2009</span></li>
+<li><span class="nm">Michel Sauget</span><span class="pl"></span></li>
+<li><span class="nm">Paul Ô Riain</span><span class="pl">43ème en 2007</span></li>
+<li><span class="nm">Thibault Houéry</span><span class="pl">48ème en 2009</span></li>
+  </ul>
+
+  <p class="note">Ne figurent sur cette page que les figaristes ayant choisi la visibilit&eacute; publique de leur soutien, apr&egrave;s v&eacute;rification de leur inscription. D&rsquo;autres vainqueurs et concurrents de l&rsquo;&eacute;preuve soutiennent le Collectif sans que leur nom soit publi&eacute; : chacun reste libre de la visibilit&eacute; de son engagement. Palmar&egrave;s d&eacute;clar&eacute;s par les signataires.</p>
+
+  <div class="cta"><a class="btn" href="/collectif/">Rejoindre le collectif</a></div>
+</div></main>
+
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; contact@pourlasolitaire.fr</div></footer>
+</body>
+</html>
