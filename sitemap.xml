@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pourlasolitaire.fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pourlasolitaire.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pourlasolitaire.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pourlasolitaire.fr/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pourlasolitaire.fr/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pourlasolitaire.fr/de/"/>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://pourlasolitaire.fr/en/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/es/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/it/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/de/</loc></url>
+  <url>
+    <loc>https://pourlasolitaire.fr/collectif/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pourlasolitaire.fr/collectif/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pourlasolitaire.fr/en/collectif/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pourlasolitaire.fr/es/collectif/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pourlasolitaire.fr/it/collectif/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pourlasolitaire.fr/de/collectif/"/>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://pourlasolitaire.fr/en/collectif/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/es/collectif/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/it/collectif/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/de/collectif/</loc></url>
+  <url>
+    <loc>https://pourlasolitaire.fr/collectif/figaristes/</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>
