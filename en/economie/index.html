@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The economic value of a monument: La Solitaire 2028</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23123C6B'/%3E%3Cg fill='%23F1F0EC'%3E%3Crect width='16' height='16'/%3E%3Crect x='32' width='16' height='16'/%3E%3Crect x='16' y='16' width='16' height='16'/%3E%3Crect x='48' y='16' width='16' height='16'/%3E%3Crect y='32' width='16' height='16'/%3E%3Crect x='32' y='32' width='16' height='16'/%3E%3Crect x='16' y='48' width='16' height='16'/%3E%3Crect x='48' y='48' width='16' height='16'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="description" content="La Solitaire 2028: compared economic scenarios, precedents, OC Sport track record. Analysis built on public data and explicit assumptions.">
+<meta property="og:title" content="The economic value of a monument: La Solitaire 2028">
+<meta property="og:description" content="What 57 years of recurrence are worth, and what their dissociation would cost. Scenarios 2028-2032, precedents, track record.">
+<meta property="og:url" content="https://pourlasolitaire.fr/en/economie/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,300..800;1,300..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#F1F0EC; --papier-2:#E5E3DC; --noir:#0E0E0E; --gris:#565657;
+  --rouge:#CB1F17; --rouge-band:#A31710; --jaune:#E8B923; --trait:rgba(14,14,14,.16);
+  --disp:'Anton',Impact,sans-serif; --body:'Libre Franklin',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;background:var(--papier);color:var(--noir);font-family:var(--body);line-height:1.55;font-size:1rem;overflow-x:hidden;max-width:100%}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.2rem}
+.top{background:var(--noir);color:var(--papier);padding:.7rem 0}
+.top a{color:var(--jaune);text-decoration:none;font-family:var(--mono);font-size:.85rem;letter-spacing:.06em}
+.hero{background:var(--noir);color:var(--papier);padding:3rem 0 2.6rem;border-bottom:6px solid var(--jaune)}
+.kick{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--jaune);margin:0 0 .9rem}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.03;text-transform:uppercase;margin:0}
+.hero .lede{margin:1.4rem 0 0;max-width:66ch;font-size:1.06rem}
+.avert{background:var(--papier-2);border-left:5px solid var(--noir);padding:.9rem 1.1rem;font-size:.9rem;color:var(--gris);margin:2rem 0 0}
+.avert b{color:var(--noir)}
+section{padding:2.4rem 0 .6rem}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.45rem,4vw,2rem);line-height:1.08;text-transform:uppercase;margin:0 0 .4rem}
+h2 small{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--rouge-band);margin-bottom:.5rem;text-transform:uppercase}
+h3{font-family:var(--body);font-weight:700;font-size:1.08rem;margin:1.8rem 0 .5rem}
+p{max-width:72ch}
+.encadre{border-left:5px solid var(--rouge-band);background:var(--papier-2);padding:1rem 1.2rem;margin:1.3rem 0;max-width:78ch}
+.encadre b{color:var(--rouge-band)}
+.cle{background:var(--noir);color:var(--papier);padding:1.3rem 1.4rem;margin:1.6rem 0;max-width:78ch}
+.cle .t{font-family:var(--disp);font-size:1.15rem;text-transform:uppercase;color:var(--jaune);letter-spacing:.02em;margin:0 0 .5rem}
+.cle p{margin:0;color:var(--papier)}
+.twrap{overflow-x:auto;margin:1.1rem 0 1.6rem;border:1px solid var(--trait)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:620px;background:#FBFAF7}
+th{background:var(--noir);color:var(--papier);font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;text-align:left;padding:.6rem .65rem;font-weight:500}
+td{border-bottom:1px solid var(--trait);padding:.55rem .65rem;vertical-align:top}
+td.num{font-family:var(--mono);font-size:.84rem;white-space:nowrap}
+.neg{color:var(--rouge-band);font-weight:600}
+.pos{font-weight:600}
+tr.bp td{background:var(--jaune);font-weight:700;font-family:var(--mono);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+tr.total td{border-top:2px solid var(--noir);font-weight:700;background:var(--papier-2)}
+.src{font-family:var(--mono);font-size:.72rem;color:var(--gris);line-height:1.6;max-width:82ch;margin:-0.8rem 0 1.4rem}
+.fiche{border:2px solid var(--noir);background:#FBFAF7;padding:1.4rem 1.5rem;margin:1.4rem 0}
+.fiche .ft{font-family:var(--disp);font-size:clamp(1.1rem,3vw,1.4rem);text-transform:uppercase;margin:0 0 1rem;line-height:1.1}
+.fiche .fk{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rouge-band);margin:0 0 .4rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.55rem 2rem}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+.item{display:flex;gap:.55rem;align-items:baseline;font-size:.92rem}
+.item .sq{flex:none;width:.72em;height:.72em;background:var(--rouge-band);transform:translateY(.06em)}
+.item b{white-space:nowrap}
+.item span{color:var(--gris)}
+.fiche.raye{background:var(--papier-2)}
+.fiche.raye .fk{color:var(--gris)}
+.fiche.raye .item .sq{background:#B9B7AF}
+.fiche.raye .item b,.fiche.raye .item span{text-decoration:line-through;color:#8A8880}
+.fiche .fbas{margin:1.1rem 0 0;font-weight:700;font-style:italic;color:var(--rouge-band);font-size:.95rem}
+.quat{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.3rem 0}
+@media(max-width:640px){.quat{grid-template-columns:1fr}}
+.quat .q{background:var(--papier-2);padding:1rem 1.1rem}
+.quat .q b{display:block;margin-bottom:.3rem}
+.quat .q span{color:var(--gris);font-size:.92rem}
+.concl{background:var(--jaune);padding:1.4rem 1.5rem;margin:2rem 0;max-width:100%}
+.concl p{margin:0;font-weight:700;font-size:1.05rem;max-width:72ch}
+footer{padding:2.2rem 0 2.6rem;font-family:var(--mono);font-size:.78rem;color:var(--gris);border-top:1px solid var(--trait);margin-top:2.5rem}
+footer a{color:var(--gris)}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><a href="/en/">&larr; pourlasolitaire.fr</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <p class="kick">Economic analysis · The organiser's miscalculation</p>
+  <h1>The economic value<br>of a monument</h1>
+  <p class="lede">La Solitaire 2028: compared scenarios, precedents and the organiser's track record. A working document built on public data and explicit assumptions, to inform a decision that commits a fifty-seven-year-old asset.</p>
+  <p class="avert" style="background:transparent;border-left-color:var(--jaune);color:var(--papier)"><b style="color:var(--jaune)">Method.</b> The 2028-2032 projections are illustrative scenarios, built from the public structure of OC Sport Pen Duick's activity and explicit assumptions on event contribution. They are neither OC Sport internal accounts, nor forecasts, nor an independent valuation.</p>
+</div></header>
+
+<!-- 1. SYNTHÈSE -->
+<section><div class="wrap">
+  <h2><small>1 · Summary</small>The equation on one page</h2>
+  <div class="encadre"><b>The central point.</b> Moving to the Ocean Fifty creates a risk of dissociation between the brand and the sporting ecosystem that carries its legitimacy. If a benchmark Figaro race retains the Class, the FFVoile, the training centres, the skippers and part of the partners and host territories, the monetisation capacity of “La Solitaire” may erode while a large share of the organisation costs remains fixed.</div>
+
+  <div class="twrap"><table>
+    <tr><th>Indicator</th><th>Figaro continuity</th><th>O50: target scenario</th><th>O50 facing a strong benchmark Figaro race</th></tr>
+    <tr><td>EBITDA 2028</td><td class="num pos">+0,15 M€</td><td class="num pos">+0,40 M€</td><td class="num neg">-0,30 M€</td></tr>
+    <tr><td>EBITDA 2029</td><td class="num pos">+0,17 M€</td><td class="num pos">+0,45 M€</td><td class="num neg">-0,40 M€</td></tr>
+    <tr><td>EBITDA 2030</td><td class="num pos">+0,19 M€</td><td class="num pos">+0,50 M€</td><td class="num neg">-0,50 M€</td></tr>
+    <tr><td>EBITDA 2031</td><td class="num pos">+0,21 M€</td><td class="num pos">+0,55 M€</td><td class="num">Break point: likely shutdown or restructuring around 2030</td></tr>
+    <tr><td>EBITDA 2032</td><td class="num pos">+0,23 M€</td><td class="num pos">+0,60 M€</td><td class="num"></td></tr>
+    <tr class="total"><td>Cumulative EBITDA 2028-2032</td><td class="num pos">+0,95 M€</td><td class="num pos">+2,50 M€</td><td class="num neg">-1,20 M€ before break point</td></tr>
+  </table></div>
+  <p class="src">Illustrative scenario model built from the public structure of OC Sport Pen Duick's activity and assumptions on event contribution. Losses after the break point are not counted.</p>
+
+  <div class="twrap"><table>
+    <tr><th>Value gap over 5 years</th><th>Indicative amount</th></tr>
+    <tr><td>Upside of the O50 target scenario vs Figaro continuity</td><td class="num pos">+1,55 M€</td></tr>
+    <tr><td>Downside of the contested scenario vs Figaro continuity</td><td class="num neg">-2,15 M€</td></tr>
+    <tr><td>Gap between the contested scenario and the O50 target scenario</td><td class="num neg">-3,70 M€</td></tr>
+  </table></div>
+  <p>The reading fits in one sentence: the organiser's target scenario only exists if the community follows. If it gathers elsewhere, around a benchmark Figaro race, the same project goes from +2,50 M€ to -1,20 M€: and that is the scenario the current mobilisation makes more likely every week.</p>
+</div></section>
+
+<!-- 2. LE PRODUIT SPORTIF (slides 6 et 7) -->
+<section><div class="wrap">
+  <h2><small>2 · The product</small>What the name designates</h2>
+  <p>Before the figures, the product. The economic value of La Solitaire flows from a precise sporting format, inseparable from the boat designed for it. It is this product, described below, that the July 2026 decision intends to replace.</p>
+
+  <div class="fiche">
+    <p class="fk">The format makes the race</p>
+    <p class="ft">What this name designates, and why it does not transfer</p>
+    <div class="grid2">
+      <div class="item"><span class="sq"></span><div><b>One design</b> <span>identical boats, the sailor alone makes the difference</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Accessibility</b> <span>a budget within a sailor's reach, not a fortune's</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Coastal solo</b> <span>alone, at night, close along the shore</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Sleep</b> <span>keeping watch to one's very limit, in 20-minute snatches</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Rock-hopping</b> <span>shaving the lighthouses, where places are won</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Currents</b> <span>the tide turning within ten minutes, audacity rewarded</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Back-to-back legs</b> <span>setting off again exhausted, the race within the race</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Fleet</b> <span>30 to 40 boats, legends and unknowns on the same line</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Rookies</b> <span>at twenty, proving yourself against the greatest</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Legend</b> <span>gaps counted in minutes after three days at sea</span></div></div>
+    </div>
+    <p class="fbas">One boat, the Figaro Bénéteau 3, designed for this race.</p>
+  </div>
+
+  <div class="fiche raye">
+    <p class="fk">The same format, on Ocean Fifty</p>
+    <p class="ft">What would remain of it on 50-foot trimarans</p>
+    <div class="grid2">
+      <div class="item"><span class="sq"></span><div><b>One design</b> <span>identical boats, the sailor alone makes the difference</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Accessibility</b> <span>a budget within a sailor's reach, not a fortune's</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Coastal solo</b> <span>alone, at night, close along the shore</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Sleep</b> <span>keeping watch to one's very limit, in 20-minute snatches</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Rock-hopping</b> <span>shaving the lighthouses, where places are won</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Currents</b> <span>the tide turning within ten minutes, audacity rewarded</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Back-to-back legs</b> <span>setting off again exhausted, the race within the race</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Fleet</b> <span>30 to 40 boats, legends and unknowns on the same line</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Rookies</b> <span>at twenty, proving yourself against the greatest</span></div></div>
+      <div class="item"><span class="sq"></span><div><b>Legend</b> <span>gaps counted in minutes after three days at sea</span></div></div>
+    </div>
+    <p class="fbas">50-foot trimarans: incompatible with everything that makes this race.</p>
+  </div>
+</div></section>
+
+<!-- 3. STRUCTURE DE LA VALEUR -->
+<section><div class="wrap">
+  <h2><small>3 · The structure of value</small>Value spread across seven actors</h2>
+  <div class="twrap"><table>
+    <tr><th>Actor</th><th>Asset / economic function</th><th>Contribution to value</th></tr>
+    <tr><td><b>Classe Figaro</b></td><td>Fleet, rules, one design, owners, calendar</td><td>Availability and comparability of the sporting product</td></tr>
+    <tr><td><b>FFVoile</b></td><td>Championship, institutional legitimacy, elite pathway</td><td>Sporting benchmark and continuity of the pathway</td></tr>
+    <tr><td><b>Training centres</b></td><td>Training and concentration of the best</td><td>Talent pipeline</td></tr>
+    <tr><td><b>Skippers</b></td><td>Sporting density, honours, reference figures</td><td>Prestige, narrative and audience</td></tr>
+    <tr><td><b>Project sponsors</b></td><td>Campaign funding</td><td>Volume and diversity of the fleet</td></tr>
+    <tr><td><b>Host cities and territories</b></td><td>Funding, infrastructure, public</td><td>Local anchoring and monetisation</td></tr>
+    <tr><td><b>OC Sport / Groupe Figaro</b></td><td>Brand, commercialisation, production, media</td><td>Event aggregation and monetisation</td></tr>
+  </table></div>
+  <div class="encadre"><b>Economic consequence.</b> The value of La Solitaire rests on assets spread across several actors. Ownership of the brand therefore does not, on its own, guarantee the transfer of sporting, commercial and territorial value when the platform changes. The organiser holds one asset out of seven.</div>
+</div></section>
+
+<!-- 4. CHIFFRES PUBLICS -->
+<section><div class="wrap">
+  <h2><small>4 · The organiser</small>OC Sport Pen Duick: the public figures</h2>
+  <div class="twrap"><table>
+    <tr><th>Financial year</th><th>Revenue</th><th>EBITDA</th><th>EBITDA margin</th><th>Net income</th></tr>
+    <tr><td>2022</td><td class="num">17,13 M€</td><td class="num pos">+0,60 M€</td><td class="num">+3,5 %</td><td class="num neg">-1,20 M€</td></tr>
+    <tr><td>2023</td><td class="num">4,31 M€</td><td class="num neg">-0,05 M€</td><td class="num">-1,2 %</td><td class="num neg">-0,17 M€</td></tr>
+    <tr><td>2024</td><td class="num">12,82 M€</td><td class="num neg">-0,19 M€</td><td class="num">-1,5 %</td><td class="num pos">+0,12 M€</td></tr>
+  </table></div>
+  <p class="src">Pappers / OC Sport Pen Duick statutory accounts 2022-2024. The periodicity of the major races makes financial years hard to compare year on year.</p>
+
+  <h3>Scale and recurrence: Route du Rhum and La Solitaire</h3>
+  <div class="twrap"><table>
+    <tr><th>Indicator</th><th>Route du Rhum</th><th>La Solitaire</th></tr>
+    <tr><td>Periodicity</td><td>1 edition every 4 years</td><td>1 edition per year</td></tr>
+    <tr><td>Order of magnitude per edition</td><td class="num">10,5 to 11 M€ (2022)</td><td class="num">1,7 to 2,2 M€ estimated</td></tr>
+    <tr><td>Cumulative over a 4-year cycle</td><td class="num">10,5 to 11 M€</td><td class="num">6,8 to 8,8 M€</td></tr>
+    <tr><td>Annual equivalent</td><td class="num">2,6 to 2,75 M€</td><td class="num">1,7 to 2,2 M€</td></tr>
+  </table></div>
+  <div class="encadre"><b>Economic recurrence.</b> La Solitaire does not play at the scale of a Route du Rhum per edition, but its annual frequency represents an estimated 6,8 to 8,8 M€ of cumulative activity over four years, and maintains the relationships with partners, territories, media and community every year. It is the only asset in the portfolio that works every year.</div>
+  <p class="src">Route du Rhum 2022: budget 10,5-11 M€ (News Tank Sport / Sporsora). La Solitaire: working estimate of 1,7-2,2 M€ per edition based on public territorial contributions, partnerships and OC Sport Pen Duick accounts; the race's revenue is not published separately.</p>
+</div></section>
+
+<!-- 5. LA RARETÉ -->
+<section><div class="wrap">
+  <h2><small>5 · The asset</small>Fifty-seven years: the rarity that makes the value</h2>
+  <div class="cle">
+    <p class="t">The key sentence of this document</p>
+    <p>Radically changing the product after fifty-seven years is less like launching a new version than risking breaking the very retention mechanism that allowed the asset to survive fifty-seven years.</p>
+  </div>
+  <p>The recent history of offshore racing shows it: creating a race is relatively common; keeping it alive for decades is rare. Races gathering great skippers, sponsors, territories and media coverage have nonetheless disappeared after a few editions. Longevity creates a specific value: recurring commercial relationships, prestige passed between generations, permanent renewal of competitors, and the ecosystem's capacity to reinvest every year in the same sporting benchmark.</p>
+
+  <h3>The ones that disappeared</h3>
+  <div class="twrap"><table>
+    <tr><th>Race</th><th>Period</th><th>Format</th><th>Outcome</th></tr>
+    <tr><td>Lorient-Les Bermudes-Lorient</td><td class="num">1979-1983</td><td>Double-handed, Atlantic round trip</td><td>2 editions; the race never settles in</td></tr>
+    <tr><td>La Baule-Dakar</td><td class="num">1980-1991</td><td>Crewed, then double-handed and solo</td><td>4 editions; last one in 1991</td></tr>
+    <tr><td>Course de l'Europe</td><td class="num">1985-1999</td><td>European legs, mono and multihulls</td><td>8 editions; the last reduced to 2 legs for lack of entries</td></tr>
+    <tr><td>The Race</td><td class="num">2000-2001</td><td>Crewed round the world, giant multihulls</td><td>1 edition; spectacular concept with no second edition</td></tr>
+    <tr><td>Calais Round Britain Race</td><td class="num">2003-2007</td><td>Crewed IMOCA around the British Isles</td><td>3 editions; last one in 2007</td></tr>
+    <tr><td>Transat Bretagne-Martinique</td><td class="num">2011-2013</td><td>Figaro, solo transatlantic</td><td>2 editions under this name; stopped after 2013</td></tr>
+    <tr><td>Barcelona World Race</td><td class="num">2007-2015</td><td>IMOCA, double-handed round the world</td><td>3 editions; the 2019 edition cancelled, race never relaunched</td></tr>
+  </table></div>
+  <p><b>The common thread:</b> the presence of great sailors or spectacular boats was not enough, on its own, to build lasting recurrence. In several cases, the class or sporting category kept existing after the event disappeared.</p>
+  <p class="src">Le Monde (Lorient-Bermudes-Lorient, La Baule-Dakar); World Sailing (Calais Round Britain Race); Course de l'Europe, Transat Bretagne-Martinique, Barcelona World Race and The Race archives.</p>
+
+  <h3>The ones that last</h3>
+  <div class="twrap"><table>
+    <tr><th>Race</th><th>Created</th><th>Recurrence</th><th>Durable core</th><th>Editions</th></tr>
+    <tr><td><b>La Solitaire</b></td><td class="num">1970</td><td>Annual</td><td>Solo stage race; Figaro pathway; FFVoile; training centres; skippers and owners; flagship event of the French Elite Offshore Racing Championship</td><td class="num">57 in 2026</td></tr>
+    <tr><td>Mini Transat</td><td class="num">1977</td><td>Biennial</td><td>Mini 6.50 class; concept kept very stable since the origin</td><td class="num">25 in 2025</td></tr>
+    <tr><td>Route du Rhum</td><td class="num">1978</td><td>Every 4 years</td><td>Multi-class platform; amateurs and professionals on the same transat</td><td class="num">13 in 2026</td></tr>
+    <tr><td>Vendée Globe</td><td class="num">1989</td><td>Every 4 years</td><td>IMOCA; solo, non-stop and unassisted</td><td class="num">10 (1989-2025)</td></tr>
+    <tr><td>Transat Paprec</td><td class="num">1992</td><td>Biennial</td><td>One-design Figaro; double-handed, today mixed; French Elite Offshore Racing Championship</td><td class="num">17 in 2025</td></tr>
+    <tr><td>Transat Jacques Vabre / Café L'Or</td><td class="num">1993</td><td>Biennial</td><td>Double-handed; multi-class platform; anchored in Le Havre; continuity of the coffee route</td><td class="num">17 in 2025</td></tr>
+    <tr><td>The Transat CIC</td><td class="num">1960</td><td>Every 4 years, with interruptions and revivals (2016, 2024)</td><td>Solo transatlantic; continuity of the concept despite changes of name and classes</td><td class="num">15 (1960-2024)</td></tr>
+  </table></div>
+
+  <div class="encadre"><b>The durable formula.</b> The rarity is not launching a race. The rarity is creating a rendezvous that renews its participants, funders and public without losing what makes it identifiable. These races evolved: sponsors, boats, organisers or formats. But they kept a sporting core legible enough to pass their reputation from one generation to the next. That continuity is what turns an event into a recurring heritage asset.</div>
+
+  <h3>What the survivors have in common</h3>
+  <div class="quat">
+    <div class="q"><b>A clear sporting proposition</b><span>A promise immediately understandable and comparable from one edition to the next.</span></div>
+    <div class="q"><b>A self-renewing ecosystem</b><span>Classes, skippers, teams and pathways able to produce new generations.</span></div>
+    <div class="q"><b>Predictable recurrence</b><span>A rendezvous that regularly maintains sponsors, territories, media and public.</span></div>
+    <div class="q"><b>A transmitted identity</b><span>Technical or commercial evolutions without breaking the core that makes the reputation.</span></div>
+  </div>
+  <p class="src">Official sites of The Transat CIC, Route du Rhum, Vendée Globe, Transat Paprec, Transat Café L'Or; Classe Figaro Bénéteau; official Mini Transat 2025 file.</p>
+</div></section>
+
+<!-- 6. P&L -->
+<section><div class="wrap">
+  <h2><small>6 · The scenarios</small>2028-2032: the compared P&amp;L</h2>
+  <div class="twrap"><table>
+    <tr><th>Year</th><th>Figaro continuity</th><th>O50: target scenario</th><th>O50 facing a strong benchmark Figaro race</th><th>Contested scenario, cumulative</th></tr>
+    <tr><td class="num">2028</td><td class="num pos">+0,15 M€</td><td class="num pos">+0,40 M€</td><td class="num neg">-0,30 M€</td><td class="num neg">-0,30 M€</td></tr>
+    <tr><td class="num">2029</td><td class="num pos">+0,17 M€</td><td class="num pos">+0,45 M€</td><td class="num neg">-0,40 M€</td><td class="num neg">-0,70 M€</td></tr>
+    <tr><td class="num">2030</td><td class="num pos">+0,19 M€</td><td class="num pos">+0,50 M€</td><td class="num neg">-0,50 M€</td><td class="num neg">-1,20 M€</td></tr>
+    <tr class="bp"><td colspan="3">Break point</td><td colspan="2">Likely shutdown or restructuring</td></tr>
+    <tr><td class="num">2031</td><td class="num pos">+0,21 M€</td><td class="num pos">+0,55 M€</td><td class="num"></td><td class="num"></td></tr>
+    <tr><td class="num">2032</td><td class="num pos">+0,23 M€</td><td class="num pos">+0,60 M€</td><td class="num"></td><td class="num"></td></tr>
+    <tr class="total"><td>5-year cumulative</td><td class="num pos">+0,95 M€</td><td class="num pos">+2,50 M€</td><td class="num neg">-1,20 M€</td><td class="num neg">-1,20 M€</td></tr>
+  </table></div>
+  <p class="src">Central assumptions: Figaro continuity modestly profitable; O50 more profitable in the target scenario; contested scenario = lower pricing power and commercial value, with largely fixed organisation costs. The break point is a management assumption, not OC Sport information.</p>
+
+  <h3>What must be true for the target scenario to exist</h3>
+  <div class="twrap"><table>
+    <tr><th>Variable</th><th>Assumption favourable to the O50 scenario</th><th>Economic risk</th></tr>
+    <tr><td><b>Sporting legitimacy</b></td><td>The race keeps its benchmark status</td><td>A benchmark Figaro race captures the Championship and the pathway</td></tr>
+    <tr><td><b>Sponsors</b></td><td>The premium proposition raises commercial value</td><td>Smaller fleet and competition from another sporting narrative</td></tr>
+    <tr><td><b>Territories</b></td><td>Cities value the O50 spectacle more</td><td>Arbitration between two events and lower pricing power</td></tr>
+    <tr><td><b>Media and public</b></td><td>Speed and spectacle offset the smaller fleet</td><td>Fragmentation of audience and narrative</td></tr>
+    <tr><td><b>Costs</b></td><td>Ability to adapt costs to revenue level</td><td>Race direction, safety, villages and media remain largely fixed</td></tr>
+  </table></div>
+</div></section>
+
+<!-- 7. ARKÉA -->
+<section><div class="wrap">
+  <h2><small>7 · The precedent</small>Arkéa Ultim Challenge: creating without destroying</h2>
+  <div class="twrap"><table>
+    <tr><th>Edition</th><th>Format</th><th>Public indicators</th><th>Status</th></tr>
+    <tr><td class="num">2024</td><td>First edition, 6 skippers</td><td>230,000 visitors; 1.25 M TV viewers at the start; 54 M€ of announced advertising equivalent</td><td>Successful launch</td></tr>
+    <tr><td class="num">2028</td><td>Second edition confirmed</td><td>Arkéa, Brest, Brittany Region, Finistère and the Ultim Class mobilised again</td><td>Continuation confirmed</td></tr>
+  </table></div>
+  <div class="encadre"><b>The economic reading.</b> The Arkéa Ultim Challenge was built as a new brand, with the Ultim Class, the owners and the territories. It benefits from a very strong pre-existing imaginary around giant multihulls and round-the-world records, notably the one popularised by the Jules Verne Trophy, without substituting itself for that trophy. The case demonstrates that a new event asset can be created alongside a historic asset when the sporting proposition is distinct. Nothing required taking someone else's name: and the launch succeeded.</div>
+  <p class="src">Ultim Class; Crédit Mutuel Arkéa; public review of the 2024 edition.</p>
+</div></section>
+
+<!-- 8. TRACK-RECORD -->
+<section><div class="wrap">
+  <h2><small>8 · The organiser at work</small>OC Sport's track record</h2>
+  <h3>In sailing</h3>
+  <div class="twrap"><table>
+    <tr><th>Race</th><th>OC Sport role</th><th>Since</th><th>Outcome</th><th>Status</th></tr>
+    <tr><td>Route du Rhum - Destination Guadeloupe</td><td>Organisation and rights via Pen Duick</td><td class="num">1980s</td><td>Major success; 138 boats in 2022</td><td>Ongoing</td></tr>
+    <tr><td><b>La Solitaire du Figaro</b></td><td>Organisation</td><td class="num">2011</td><td>Historic success; model deemed fragile by the organiser</td><td>Figaro until 2027; O50 announced for 2028</td></tr>
+    <tr><td>Transat Paprec (ex AG2R)</td><td>Ownership and organisation</td><td class="num">1992</td><td>Lasting success; gender-parity innovation</td><td>Ongoing</td></tr>
+    <tr><td>The Transat CIC</td><td>Ownership and organisation</td><td class="num">2004</td><td>Successful relaunch; 48 entries in 2024</td><td>Ongoing</td></tr>
+    <tr><td>Barcelona World Race</td><td>Co-creation with the FNOB</td><td class="num">2007-2018</td><td>3 editions; weakened sponsorship</td><td>2019 edition suspended, never relaunched</td></tr>
+    <tr><td>Extreme Sailing Series</td><td>Creation and ownership</td><td class="num">2007-2018</td><td>Strong innovation; model became unviable</td><td>Closed in 2019</td></tr>
+    <tr><td>Arkéa Ultim Challenge - Brest</td><td>Creation with the Ultim ecosystem</td><td class="num">2024</td><td>Very good launch</td><td>2nd edition confirmed for 2028</td></tr>
+    <tr><td>Tour de Belle-Île</td><td>Acquisition (race created in 2008)</td><td class="num">2023</td><td>Recognised asset; post-Covid recovery</td><td>Ongoing</td></tr>
+  </table></div>
+
+  <h3>Beyond sailing</h3>
+  <div class="twrap"><table>
+    <tr><th>Asset</th><th>Sport</th><th>OC Sport role</th><th>Outcome</th><th>Status</th></tr>
+    <tr><td>Haute Route</td><td>Cycling</td><td>Creation and international development (2011)</td><td>Entrepreneurial success</td><td>Sold to The IRONMAN Group in 2021</td></tr>
+    <tr><td>UTMB International</td><td>Trail running</td><td>Co-creation and licensing (circa 2016)</td><td>Strategic internationalisation success</td><td>Stake sold in 2021</td></tr>
+    <tr><td>Generali Genève Marathon</td><td>Running</td><td>Organiser, rights holder</td><td>Very strong success; 27,578 participants in 2026</td><td>Ongoing</td></tr>
+    <tr><td>Genève Triathlon</td><td>Triathlon</td><td>Organiser</td><td>Success; over 4,600 participants in 2025</td><td>Ongoing</td></tr>
+    <tr><td>Balexert 20 km de Genève</td><td>Running</td><td>Concept created by OC Sport (2017)</td><td>Success; 3,861 participants by 2019</td><td>Ongoing</td></tr>
+    <tr><td>Run Mate Lac Léman</td><td>Running</td><td>Concept created by OC Sport (2019)</td><td>Niche success</td><td>Ongoing</td></tr>
+    <tr><td>Abalone Marathon de Nantes</td><td>Running</td><td>Integrated via SportOuest (2022)</td><td>Success, strong growth</td><td>Ongoing</td></tr>
+    <tr><td>Marathon de la Côte d'Amour Amarris</td><td>Running</td><td>Created by OC Sport Outdoor France (2024)</td><td>Very good launch; over 13,000 participants</td><td>Ongoing</td></tr>
+    <tr><td>24 Heures Vélo - Le Mans</td><td>Cycling</td><td>Takeover (2025)</td><td>Too recent to judge</td><td>Ongoing</td></tr>
+  </table></div>
+
+  <h3>What this track record says</h3>
+  <div class="twrap"><table>
+    <tr><th>Dimension</th><th>Factual observation</th><th>Examples</th></tr>
+    <tr><td><b>Concept creation</b></td><td>Demonstrated ability to create new sporting properties</td><td>Extreme Sailing Series, Haute Route, Arkéa Ultim Challenge</td></tr>
+    <tr><td><b>Production and logistics</b></td><td>Strong experience on complex, multi-site events</td><td>Route du Rhum, The Transat, marathons and triathlons</td></tr>
+    <tr><td><b>Commercialisation</b></td><td>Ability to aggregate title partners, local authorities and hospitality</td><td>Arkéa, CIC, Paprec, territories</td></tr>
+    <tr><td><b>Creation of sellable assets</b></td><td>Several assets developed then sold</td><td>Haute Route, UTMB International</td></tr>
+    <tr><td><b>Durability of premium circuits</b></td><td>More mixed results depending on the business model</td><td>Extreme Sailing Series, closed in 2019 for financial unviability</td></tr>
+    <tr><td><b>Co-construction with a class</b></td><td>Recent successes rest on alignment with the sporting ecosystem</td><td>Arkéa Ultim Challenge with the Ultim Class</td></tr>
+  </table></div>
+  <p>The conclusion writes itself: when OC Sport builds <b>with</b> the sporting ecosystem, it succeeds (Arkéa Ultim Challenge). When the premium model drifts away from its community, it closes (Extreme Sailing Series). The July 2026 decision repeats the second pattern on the only asset in the portfolio that has worked every year for fifty-seven years.</p>
+  <p class="src">OC Sport / OC Sport Pen Duick: portfolio, Event Creation, Event Licensing, Outdoor France and Switzerland, releases 2004-2026; official race sites; FFVoile; Sail-World; FNOB; Haute Route / The IRONMAN Group.</p>
+</div></section>
+
+<!-- 9. SCÉNARIOS DE COEXISTENCE -->
+<section><div class="wrap">
+  <h2><small>9 · The outcomes</small>Three coexistence scenarios</h2>
+  <div class="twrap"><table>
+    <tr><th></th><th>Scenario</th><th>Description</th><th>Economic reading</th></tr>
+    <tr><td class="num"><b>A</b></td><td><b>Figaro continuity</b></td><td>La Solitaire stays in Figaro with the current organisation</td><td>Low risk; certain profitability; continuity of the historic asset</td></tr>
+    <tr><td class="num"><b>B</b></td><td><b>Coexistence under two brands</b></td><td>La Solitaire stays in Figaro with its community; the O50 race develops under its own brand, as an autonomous asset</td><td>Two distinct propositions; the name, the legitimacy and the community stay together; the O50 proposition is clarified; a logic comparable to the Arkéa Ultim Challenge / Jules Verne Trophy pair</td></tr>
+    <tr><td class="num"><b>C</b></td><td><b>Two competing races</b></td><td>OC Sport switches La Solitaire to O50; the benchmark Figaro race is created opposite</td><td>Value fragmentation; competition for partners, cities and media; this is the break-point scenario</td></tr>
+  </table></div>
+  <div class="encadre"><b>The common economic criterion.</b> The most efficient scenario is the one that maximises the combined value of existing assets while limiting the cost of rebuilding brand, community, partners and territories. Two scenarios out of three respect it. The July 2026 decision chose the third.</div>
+  <div class="concl"><p>The name can survive the separation. Prestige, though, follows the system that keeps producing the sporting benchmark. In the long run, value concentrates where the pathway, the best competitors and the community remain.</p></div>
+</div></section>
+
+<!-- 11. SOURCES -->
+<section><div class="wrap">
+  <h2><small>References</small>Sources and method</h2>
+  <div class="twrap"><table>
+    <tr><th>Topic</th><th>Main public source</th></tr>
+    <tr><td>2028 decision</td><td>Groupe Figaro / OC Sport, 17 July 2026: announcement of the move to Ocean Fifty</td></tr>
+    <tr><td>FFVoile reaction</td><td>FFVoile, 17 July 2026: support for the Figaro Bénéteau Class and the elite pathway</td></tr>
+    <tr><td>Class reaction</td><td>Classe Figaro Bénéteau, 17 July 2026: continuation of a flagship one-design event</td></tr>
+    <tr><td>OC Sport / Groupe Figaro partnership</td><td>Groupe Figaro / La Solitaire, October 2024: organisation partnership renewed until 2036</td></tr>
+    <tr><td>OC Sport Pen Duick accounts</td><td>Pappers / statutory accounts 2022, 2023, 2024</td></tr>
+    <tr><td>Extreme Sailing Series</td><td>Sail-World / Sailweb, 2019: closure after finding of economic unviability</td></tr>
+    <tr><td>Haute Route</td><td>Haute Route / The IRONMAN Group, August 2021: acquisition</td></tr>
+    <tr><td>Barcelona World Race</td><td>FNOB / Catalan press, March 2018: suspension of the 2019 edition</td></tr>
+    <tr><td>Arkéa Ultim Challenge</td><td>Ultim Class / Crédit Mutuel Arkéa / organiser's 2024 review</td></tr>
+    <tr><td>Outdoor activities</td><td>OC Sport: portfolio, Outdoor France and Switzerland, releases 2017-2026</td></tr>
+    <tr><td>Route du Rhum 2022, budget</td><td>News Tank Sport / Sporsora: budget of 10,5-11 M€, incl. 4,0 M€ from local authorities, 3,0 M€ from partners, 2,45 M€ in entries, 1,1 M€ from the village</td></tr>
+    <tr><td>La Solitaire, economic order of magnitude</td><td>Public territorial minutes and agreements (incl. La Turballe / Loire-Atlantique) and OC Sport Pen Duick accounts; estimate of 1,7 to 2,2 M€ per edition, not published separately</td></tr>
+    <tr><td>Longevity and vanished races</td><td>Le Monde; World Sailing; official race archives and histories</td></tr>
+    <tr><td>Active historic races</td><td>The Transat CIC; Route du Rhum; Vendée Globe; Mini Transat; Transat Paprec; Classe Figaro Bénéteau</td></tr>
+  </table></div>
+  <div class="avert"><b>Financial method.</b> The 2028-2032 EBITDA figures are illustrative scenarios meant to compare economic trajectories. They are neither OC Sport internal accounts nor an independent valuation. The assumptions are deliberately simple and should be confronted with the real data of partners, territories and production costs. Any documented correction is welcome: contact@pourlasolitaire.fr.</div>
+</div></section>
+
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/">pourlasolitaire.fr</a> &middot; contact@pourlasolitaire.fr</div></footer>
+</body>
+</html>
