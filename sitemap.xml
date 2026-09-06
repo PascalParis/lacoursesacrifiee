@@ -31,4 +31,17 @@
     <loc>https://pourlasolitaire.fr/collectif/figaristes/</loc>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://pourlasolitaire.fr/economie/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pourlasolitaire.fr/economie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pourlasolitaire.fr/en/economie/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pourlasolitaire.fr/es/economie/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pourlasolitaire.fr/it/economie/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pourlasolitaire.fr/de/economie/"/>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://pourlasolitaire.fr/en/economie/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/es/economie/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/it/economie/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/de/economie/</loc></url>
 </urlset>
