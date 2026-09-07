@@ -259,7 +259,29 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
   .band--dark p,.band--red p,.hero-sub,.victims p{color:#222!important}
   .tl h3,.who .nm,.asks h3,.victims h3{color:#000!important}
 }
-.langs{display:flex;align-items:center;gap:.45rem;margin-left:auto}.langs .globe{width:15px;height:15px;flex:none;opacity:.7}.langs select{background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.8);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;cursor:pointer;padding:.25rem .1rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0}.langs select:hover,.langs select:focus{color:#fff;border-bottom-color:#fff;outline:none}.langs select option{color:#111;background:#fff}</style>
+.langs{display:flex;align-items:center;gap:.45rem;margin-left:auto}.langs .globe{width:15px;height:15px;flex:none;opacity:.7}.langs select{background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.8);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;cursor:pointer;padding:.25rem .1rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0}.langs select:hover,.langs select:focus{color:#fff;border-bottom-color:#fff;outline:none}.langs select option{color:#111;background:#fff}
+/* --- Photographies Jacques Vapillon --- */
+.photoband{position:relative;width:100%;height:clamp(280px,52vh,560px);overflow:hidden;background:var(--noir)}
+.photoband img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}
+.photoband .cap{position:absolute;left:0;right:0;bottom:0;padding:.5rem 1.2rem;background:linear-gradient(transparent,rgba(14,14,14,.82));color:#F1F0EC;font-family:var(--mono,monospace);font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.photoband .cap b{font-weight:600;color:#E8B923}
+.gal{padding:2.6rem 0 2.2rem}
+.gal h2{font-family:var(--disp,Anton,sans-serif);font-weight:400;text-transform:uppercase;font-size:clamp(1.35rem,3.6vw,1.9rem);margin:0 0 .3rem;line-height:1.06}
+.gal .sub{font-family:var(--mono,monospace);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#A31710;margin:0 0 1.4rem}
+.galgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+@media(max-width:800px){.galgrid{grid-template-columns:repeat(2,1fr)}}
+.galgrid figure{margin:0;position:relative;overflow:hidden;background:var(--noir)}
+.galgrid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .5s ease}
+.galgrid figure:hover img{transform:scale(1.04)}
+.galgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:.45rem .6rem;background:linear-gradient(transparent,rgba(14,14,14,.88));color:#F1F0EC;font-family:var(--mono,monospace);font-size:.7rem;letter-spacing:.04em}
+.galgrid figcaption b{color:#E8B923;font-weight:600}
+.galnote{font-family:var(--mono,monospace);font-size:.72rem;color:#565657;margin-top:1rem}
+</style>
+<meta property="og:image" content="https://pourlasolitaire.fr/img/og-accueil.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pourlasolitaire.fr/img/og-accueil.webp">
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -333,6 +355,13 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
     </div>
   </div>
 </header>
+<div class="photoband">
+  <img src="/img/depart-brest-97-1600.webp"
+       srcset="/img/depart-brest-97-640.webp 640w, /img/depart-brest-97-1000.webp 1000w, /img/depart-brest-97-1600.webp 1600w"
+       sizes="100vw" alt="Départ de La Solitaire du Figaro à Brest en 1997, la flotte des monotypes sous un ciel d'orage" width="1600" height="1035" fetchpriority="high">
+  <div class="cap"><span><b>Départ de Brest, 1997.</b> Une flotte, un format, une même ligne.</span><span>© Jacques Vapillon</span></div>
+</div>
+
 
 <main id="contenu">
 
@@ -1354,6 +1383,20 @@ footer .ft{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-tran
 </section>
 
 </main>
+
+<section class="gal"><div class="wrap">
+  <p class="sub">Photographies Jacques Vapillon</p>
+  <h2>Ceux qui ont fait la course</h2>
+  <div class="galgrid">
+    <figure><img src="/img/gautier-89-640.webp" srcset="/img/gautier-89-640.webp 640w, /img/gautier-89-1000.webp 1000w" sizes="(max-width:800px) 50vw, 33vw" loading="lazy" alt="Alain Gautier sur son Figaro en 1989" width="640" height="421"><figcaption><b>Alain Gautier</b> · 1989</figcaption></figure>
+    <figure><img src="/img/autissier-88-500.webp" srcset="/img/autissier-88-500.webp 500w, /img/autissier-88-800.webp 800w" sizes="(max-width:800px) 50vw, 33vw" loading="lazy" alt="Le Figaro d'Isabelle Autissier sous spinnaker en 1988" width="500" height="749"><figcaption><b>Isabelle Autissier</b> · 1988</figcaption></figure>
+    <figure><img src="/img/bourgnon-88-640.webp" srcset="/img/bourgnon-88-640.webp 640w, /img/bourgnon-88-1000.webp 1000w" sizes="(max-width:800px) 50vw, 33vw" loading="lazy" alt="Laurent Bourgnon à la manœuvre sur son Figaro en 1988" width="640" height="429"><figcaption><b>Laurent Bourgnon</b> · 1988</figcaption></figure>
+    <figure><img src="/img/drouglazet-92-500.webp" srcset="/img/drouglazet-92-500.webp 500w, /img/drouglazet-92-800.webp 800w" sizes="(max-width:800px) 50vw, 33vw" loading="lazy" alt="Éric Drouglazet au portant sous spinnaker en 1992" width="500" height="767"><figcaption><b>Éric Drouglazet</b> · 1992</figcaption></figure>
+    <figure><img src="/img/jourdain-barre-500.webp" srcset="/img/jourdain-barre-500.webp 500w, /img/jourdain-barre-800.webp 800w" sizes="(max-width:800px) 50vw, 33vw" loading="lazy" alt="Roland Jourdain à la barre de son Figaro" width="500" height="746"><figcaption><b>Roland Jourdain</b></figcaption></figure>
+    <figure><img src="/img/elies-ambition-98-640.webp" srcset="/img/elies-ambition-98-640.webp 640w, /img/elies-ambition-98-1000.webp 1000w" sizes="(max-width:800px) 50vw, 33vw" loading="lazy" alt="Yann Eliès sur Generali Ambition dans la mer formée en 1998" width="640" height="427"><figcaption><b>Yann Eliès</b> · 1998</figcaption></figure>
+  </div>
+  <p class="galnote">Photographies © Jacques Vapillon, publiées avec son autorisation.</p>
+</div></section>
 
 <footer>
   <div class="wrap">
