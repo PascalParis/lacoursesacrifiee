@@ -53,7 +53,17 @@ ul.fig li.vq{border-left:5px solid var(--jaune);padding-left:.7rem;background:li
 footer{padding:2rem 0;font-family:var(--mono);font-size:.78rem;color:var(--gris);border-top:1px solid var(--trait)}
 footer a{color:var(--gris)}
 @media(max-width:600px){.nm{min-width:100%}.pl{min-width:100%}}
+
+.photoband{position:relative;width:100%;height:clamp(260px,46vh,480px);overflow:hidden;background:var(--noir)}
+.photoband img{width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block}
+.photoband .cap{position:absolute;left:0;right:0;bottom:0;padding:.5rem 1.2rem;background:linear-gradient(transparent,rgba(14,14,14,.82));color:var(--papier);font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.photoband .cap b{color:var(--jaune);font-weight:600}
 </style>
+<meta property="og:image" content="https://pourlasolitaire.fr/img/og-figaristes.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pourlasolitaire.fr/img/og-figaristes.webp">
 </head>
 <body>
 <div class="top"><div class="wrap"><a href="/collectif/">&larr; Le Collectif pour La Solitaire</a></div></div>
@@ -63,6 +73,14 @@ footer a{color:var(--gris)}
   <h1>Ils &eacute;crivent<br>La Solitaire.<br>Ils la signent.</h1>
   <p class="lede">Soixante-dix-sept noms, et chacun d&rsquo;eux s&rsquo;est gagn&eacute; en mer.</p>
 </div></header>
+
+<div class="photoband">
+  <img src="/img/kerangat-fastnet-88-1600.webp"
+       srcset="/img/kerangat-fastnet-88-640.webp 640w, /img/kerangat-fastnet-88-1000.webp 1000w, /img/kerangat-fastnet-88-1600.webp 1600w"
+       sizes="100vw" alt="Un Figaro passe au pied du phare du Fastnet en 1988" width="1600" height="1067" fetchpriority="high">
+  <div class="cap"><span><b>Le Fastnet, 1988.</b> Seul, au contact du caillou.</span><span>© Jacques Vapillon</span></div>
+</div>
+
 
 <section class="manifeste"><div class="wrap">
   <p>Depuis 1970, ils ont gagn&eacute; la course sur les quarter-tonners de l&rsquo;Aurore, puis sur les Figaro B&eacute;n&eacute;teau 1, 2 et 3. Ils ont veill&eacute; des nuits enti&egrave;res au rase-cailloux, jou&eacute; les renverses, dormi par tranches de vingt minutes pour des victoires qui se comptent en secondes.</p>
