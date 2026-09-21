@@ -44,4 +44,5 @@
   <url><loc>https://pourlasolitaire.fr/es/economie/</loc></url>
   <url><loc>https://pourlasolitaire.fr/it/economie/</loc></url>
   <url><loc>https://pourlasolitaire.fr/de/economie/</loc></url>
+  <url><loc>https://pourlasolitaire.fr/mentions-legales/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
