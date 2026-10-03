@@ -148,6 +148,16 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
  .nav ul li a{display:block;padding:.9rem 0;color:var(--papier);font-size:1.05rem;border-bottom:1px solid rgba(241,240,236,.14)}
  .nav ul li:nth-last-child(2) a{border-bottom:0}
 }
+.rgrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3.5rem;align-items:start}
+@media(max-width:860px){
+ .rgrid{grid-template-columns:1fr;gap:2.4rem}
+ .rgrid > div{border-top:3px solid var(--jaune);padding-top:1.8rem}
+ .citation{font-size:clamp(2rem,10vw,2.8rem)}
+ .chrono li{padding-bottom:1.8rem;padding-left:1.4rem}
+ .chrono h3{font-size:1.35rem}
+ .phead h1{font-size:clamp(2.3rem,11vw,3.4rem)}
+ .archives{gap:2.4rem}
+}
 </style>
 <script data-goatcounter="https://lacoursesacrifiee.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
@@ -181,7 +191,7 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 
 <section><div class="wrap">
  <div class="sec-head"><h2>D&rsquo;où nous venons</h2><p>Trois mois, trois noms de domaine, une seule conviction : cette course est trop précieuse pour disparaître. Voici le chemin, sans détour.</p></div>
- <div class="grid" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3.5rem;align-items:start">
+ <div class="rgrid">
  <ol class="chrono">
   <li><span class="d">17 juillet 2026</span><h3>L&rsquo;annonce</h3><p>L&rsquo;épreuve qui porte depuis 1990 le nom d&rsquo;un quotidien national doit quitter le Figaro Bénéteau pour des multicoques de cinquante pieds à partir de 2028. Pour les skippers, c&rsquo;est une autre course. Pour la filière, c&rsquo;est une onde de choc.</p></li>
   <li><span class="d">Août 2026</span><h3>Le collectif</h3><p>Cinq passionnés ouvrent un premier site, puis <b>pourlasolitaire.fr</b>. En quelques semaines, les signatures affluent : vainqueurs, figaristes de toutes les générations, préparateurs, partenaires, élus, bénévoles. Plus de six cents noms, dont vingt et un vainqueurs de l&rsquo;épreuve.</p></li>
@@ -199,8 +209,8 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 <section style="background:var(--mer2);color:var(--papier)"><div class="wrap">
  <div class="sec-head"><h2>Archives</h2><p style="color:#C9D2D9">Le site sur lequel vous avez signé, tel qu&rsquo;il était.</p></div>
  <div class="archives">
-  <figure><div class="shot"><div class="dots"><i></i><i></i><i></i></div><img src="/img/relais-accueil-800.webp" srcset="/img/relais-accueil-800.webp 800w, /img/relais-accueil-1400.webp 1400w" sizes="(max-width:860px) 100vw, 50vw" alt="Page d'accueil de pourlasolitaire.fr, août 2026" loading="lazy"></div><figcaption>pourlasolitaire.fr, page d&rsquo;accueil, été 2026. Le pavillon N sur C, signal international de détresse, ouvrait le site.</figcaption></figure>
-  <figure><div class="shot"><div class="dots"><i></i><i></i><i></i></div><img src="/img/relais-collectif-800.webp" srcset="/img/relais-collectif-800.webp 800w, /img/relais-collectif-1400.webp 1400w" sizes="(max-width:860px) 100vw, 50vw" alt="La charte du collectif sur pourlasolitaire.fr" loading="lazy"></div><figcaption>La charte signée par plus de six cents personnes. Ses principes sont repris mot pour mot dans <a href="/v2/rejoindre/" style="color:var(--jaune)">ce que vous soutenez</a> aujourd&rsquo;hui.</figcaption></figure>
+  <figure><div class="shot"><div class="dots"><i></i><i></i><i></i></div><img src="/img/relais-accueil-800.webp" srcset="/img/relais-accueil-800.webp 800w, /img/relais-accueil-1400.webp 1400w" sizes="(max-width:860px) 100vw, 50vw" alt="Page d'accueil de pourlasolitaire.fr, août 2026" loading="eager"></div><figcaption>pourlasolitaire.fr, page d&rsquo;accueil, été 2026. Le pavillon N sur C, signal international de détresse, ouvrait le site.</figcaption></figure>
+  <figure><div class="shot"><div class="dots"><i></i><i></i><i></i></div><img src="/img/relais-collectif-800.webp" srcset="/img/relais-collectif-800.webp 800w, /img/relais-collectif-1400.webp 1400w" sizes="(max-width:860px) 100vw, 50vw" alt="La charte du collectif sur pourlasolitaire.fr" loading="eager"></div><figcaption>La charte signée par plus de six cents personnes. Ses principes sont repris mot pour mot dans <a href="/v2/rejoindre/" style="color:var(--jaune)">ce que vous soutenez</a> aujourd&rsquo;hui.</figcaption></figure>
  </div>
 </div></section>
 
