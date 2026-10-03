@@ -129,6 +129,26 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 .legal p,.legal dd{max-width:72ch}
 .legal dt{font-weight:700;margin-top:1rem}
 .legal dd{margin:0}
+
+
+.ss{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.ss h2{font-size:clamp(2.4rem,6.5vw,5rem);line-height:.95;margin:0 0 1rem}
+.ss .intro{font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.5;max-width:52ch;margin:0 0 3rem}
+.acq{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;border-top:3px solid var(--encre)}
+.acq li{padding:1.3rem 0 1.4rem;border-bottom:1px solid var(--trait)}
+.acq b{display:block;font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1;margin-bottom:.45rem}
+.acq span{font-size:1.02rem;color:#3C4248;line-height:1.5}
+@media(max-width:760px){.acq{grid-template-columns:1fr}}
+.chg{background:var(--mer2);color:var(--papier)}
+.chg .nom{font-family:var(--disp);text-transform:uppercase;color:var(--jaune);font-size:clamp(5rem,20vw,16rem);line-height:.85;margin:.5rem 0 1.4rem;letter-spacing:.01em}
+.chg p{color:#DCE3E8;font-size:clamp(1.1rem,2vw,1.35rem);margin:0;max-width:40ch}
+.cap{background:var(--mer);color:var(--papier)}
+.cap .intro{color:#DCE3E8}
+.pil{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 2.5rem;border-top:1px solid rgba(241,240,236,.3)}
+.pil div{padding:1.6rem 0 0}
+.pil h3{font-size:clamp(1.5rem,2.6vw,2rem);color:var(--jaune);margin:0 0 .6rem}
+.pil p{margin:0;color:#DCE3E8}
+@media(max-width:860px){.pil{grid-template-columns:1fr}.pil div{padding-top:1.4rem}.pil div+div{border-top:1px solid rgba(241,240,236,.18)}}
 </style>
 <script data-goatcounter="https://lacoursesacrifiee.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
@@ -138,23 +158,34 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 <ul><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/la-suite/" aria-current="page">La suite</a></li><li class=navopt><a href="/v2/le-relais/">D&rsquo;où nous venons</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
 </nav></header>
 <div class="phead"><div class="wrap"><h1>La suite s&rsquo;écrit maintenant</h1><p class="lede">La course a ses bateaux, sa classe, ses marins et ses ports. Il lui faut un nouveau nom, et celles et ceux qui la porteront avec nous. C&rsquo;est ce que nous construisons.</p></div></div>
-<section><div class="wrap">
- <div class="sec-head"><h2>Ce qui est déjà là</h2><p>Tout ce qui fait une grande course existe déjà. Il ne reste qu&rsquo;à lui donner son nouveau nom.</p></div>
- <ul class="acquis">
-  <li>Une flotte de Figaro Bénéteau 3, le même bateau pour tous</li>
-  <li>Une classe structurée et son calendrier</li>
-  <li>Le Championnat de France Élite de Course au Large</li>
-  <li>Des pôles d&rsquo;entraînement et une filière de formation</li>
-  <li>Plus de six cents signataires, dont 21 vainqueurs</li>
-  <li>Des ports qui accueillent la course depuis cinquante-sept ans</li>
+<section class="ss"><div class="wrap">
+ <h2>Ce qui est déjà là</h2>
+ <p class="intro">Une grande course tient à peu de choses. Toutes sont là, et aucune ne dépend d&rsquo;un nom.</p>
+ <ul class="acq">
+  <li><b>Une flotte</b><span>Des dizaines de Figaro Bénéteau 3 armés et prêts, le même bateau pour tous, et le marin qui fait la différence.</span></li>
+  <li><b>Une classe</b><span>La Classe Figaro Bénéteau, sa jauge, ses règles et son calendrier, tenus par les coureurs eux-mêmes depuis trente-six ans.</span></li>
+  <li><b>Un championnat</b><span>Le Championnat de France Élite de Course au Large, dont la course est le sommet et la raison d&rsquo;être.</span></li>
+  <li><b>Une filière</b><span>Port-la-Forêt, Lorient, les entraîneurs et les préparateurs qui forment chaque hiver les bizuths de l&rsquo;été suivant.</span></li>
+  <li><b>Un palmarès</b><span>Cinquante-sept éditions, des vainqueurs devenus des légendes, et vingt et un d&rsquo;entre eux déjà signataires.</span></li>
+  <li><b>Des ports</b><span>Des villes qui accueillent départs et arrivées depuis un demi-siècle, et un public qui se presse sur les jetées.</span></li>
+  <li><b>Un public</b><span>Des passionnés qui suivent chaque étape, des familles sur les quais, une filière qui fait vivre tout un littoral.</span></li>
+  <li><b>Une communauté</b><span>Plus de six cents signataires : vainqueurs, figaristes, préparateurs, partenaires, élus et bénévoles, prêts pour la suite.</span></li>
  </ul>
 </div></section>
-<section style="background:var(--mer);color:var(--papier)"><div class="wrap">
- <div class="sec-head" style="grid-template-columns:1fr"><h2 style="white-space:nowrap;font-size:clamp(1.6rem,7vw,3.6rem)">La légende poursuit son cap</h2></div>
- <div class="cercles">
-  <div><h3 style="color:var(--jaune)">Un nom</h3><p style="color:#DCE3E8">Choisi pour durer et pour porter cinquante-sept ans d&rsquo;histoire. Il sera annoncé prochainement.</p></div>
-  <div><h3 style="color:var(--jaune)">Une organisation</h3><p style="color:#DCE3E8">Construite avec celles et ceux qui aiment la course, au service des marins et des territoires.</p></div>
-  <div><h3 style="color:var(--jaune)">Des partenaires</h3><p style="color:#DCE3E8">Entreprises et territoires qui veulent associer leur nom à une course mythique, ouverte et formatrice.</p></div>
+
+<section class="ss chg"><div class="wrap">
+ <h2>Ce qui va changer</h2>
+ <p class="nom">Le nom.</p>
+ <p>Choisi pour durer. Annoncé prochainement.</p>
+</div></section>
+
+<section class="ss cap"><div class="wrap">
+ <h2>La légende poursuit son cap</h2>
+ <p class="intro">Trois chantiers, menés avec celles et ceux qui aiment la course.</p>
+ <div class="pil">
+  <div><h3>Une organisation</h3><p>Au service des marins et des territoires, légère, transparente, et construite pour durer autant que la course elle-même.</p></div>
+  <div><h3>Des partenaires</h3><p>Des entreprises et des collectivités qui associent leur nom à la plus prestigieuse des courses au large, ouverte et formatrice.</p></div>
+  <div><h3>Une édition</h3><p>Un départ, des étapes, des arrivées à la minute : la prochaine édition se prépare dès maintenant avec les skippers et les ports.</p></div>
  </div>
 </div></section>
 <section><div class="wrap formwrap">
