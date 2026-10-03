@@ -56,9 +56,9 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;line-h
 h2{font-size:clamp(2rem,5.2vw,3.6rem)}
 h3{font-size:1.45rem}
 .lede{font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.5;max-width:44ch}
-section{padding:clamp(3.5rem,8vw,6.5rem) 0}
-.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:2.5rem;align-items:start;margin-bottom:3rem}
-.sec-head p{margin:0;max-width:52ch;padding-top:.45rem}
+section{padding:clamp(3rem,5.5vw,5rem) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3.5rem;align-items:start;margin-bottom:3rem}
+.sec-head p{margin:0;max-width:52ch}.sec-head p + p{margin-top:1.1rem}
 @media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:1.2rem}}
 /* pied */
 footer{background:var(--mer2);color:#C9D2D9;padding:3.5rem 0 2.5rem;font-size:.92rem}
@@ -337,11 +337,11 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
  <div>
   <p class="niv-lead">Notre course est la plus prestigieuse au monde parce que le niveau y est le plus élevé de toute la course au large. La raison tient en un mot&nbsp;: la monotypie.</p>
   <p>Dans les autres classes de course au large, les bateaux sont construits selon une jauge. C&rsquo;est une formidable source d&rsquo;innovation et de créativité. La contrepartie&nbsp;: les bateaux diffèrent et vieillissent vite, les flottes deviennent hétérogènes, et le budget pèse dans le classement avant même le talent du skipper.</p>
-  <p>Sur Figaro Bénéteau 3, tous les bateaux sont identiques, et le restent. Seul compte le skipper&nbsp;: sa vitesse, sa stratégie, sa gestion du sommeil, son audace au ras des cailloux. Les écarts s&rsquo;y comptent en minutes après des jours de mer, et inscrire son nom au palmarès, c&rsquo;est entrer directement dans la légende. Cette course est une fabrique de légendes.</p>
+  <p>Sur Figaro Bénéteau 3, tous les bateaux sont identiques, et le restent. Seul compte le skipper&nbsp;: sa vitesse, sa stratégie, sa gestion du sommeil, son audace au ras des cailloux. Les écarts s&rsquo;y comptent en minutes après des jours de mer, et inscrire son nom au palmarès, c&rsquo;est entrer directement dans la légende. <strong>Cette course est la fabrique des légendes.</strong></p>
  </div>
 </div></section>
 <section class="fond"><div class="wrap">
- <div class="sec-head"><h2>Ce qui la rend unique</h2><p>Aucune autre course au monde ne réunit ces dix fondamentaux. C&rsquo;est ce qui fait d&rsquo;elle, depuis plus d&rsquo;un demi-siècle, l&rsquo;épreuve que tout grand skipper veut avoir gagnée. Ils continuent tous.</p></div>
+ <div class="sec-head"><h2>Ce qui la rend unique</h2><div><p>Aucune autre course au monde ne réunit ces dix fondamentaux. C&rsquo;est ce qui fait d&rsquo;elle, depuis plus d&rsquo;un demi-siècle, l&rsquo;épreuve que tout grand skipper veut avoir gagnée. Ils continuent tous.</p><p><strong>Une telle course ne se remplace pas.</strong> Cinquante-sept ans l&rsquo;ont bâtie. Elle mérite d&rsquo;être respectée, protégée, et qu&rsquo;on en prenne le plus grand soin.</p></div></div>
  <div class="fgrid"><div><h3>La monotypie</h3><p>Des bateaux strictement identiques. Seul le skipper fait la différence.</p></div>
 <div><h3>Le solitaire côtier</h3><p>Seul à bord, au contact de la côte, des phares et des cailloux.</p></div>
 <div><h3>Le rase-cailloux</h3><p>Naviguer au plus près de terre, là où se gagnent les places.</p></div>
@@ -352,11 +352,6 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 <div><h3>Le plateau</h3><p>Une flotte nombreuse et dense, des duels à chaque mille.</p></div>
 <div><h3>Les bizuths</h3><p>Chaque année, une nouvelle génération entre dans le haut niveau.</p></div>
 <div><h3>La légende</h3><p>Cinquante-sept ans de récits, de vainqueurs et de vocations.</p></div></div>
-
- <div class="soin">
-  <p class="soin-t">Une telle course ne se remplace pas.</p>
-  <p class="soin-p">Cinquante-sept ans l&rsquo;ont bâtie. Elle mérite d&rsquo;être respectée, protégée, et qu&rsquo;on en prenne le plus grand soin.</p>
- </div>
 </div></section>
 <section id="bateaux"><div class="wrap">
  <div class="sec-head"><h2>Quatre bateaux, une seule course</h2><p>La course a toujours su évoluer. Elle a changé de bateau à chaque génération, en gardant ce qui compte : la même règle pour tous.</p></div>
@@ -410,7 +405,7 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 </div></section>
 
 
-<section style="background:var(--papier);border-top:1px solid var(--trait);padding:clamp(2.5rem,5vw,4rem) 0"><div class="wrap" style="display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:3rem;align-items:center" id="relais">
+<section style="background:var(--papier);border-top:1px solid var(--trait)"><div class="wrap" style="display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:3rem;align-items:center" id="relais">
  <div><p style="font-family:var(--mono);font-size:.85rem;color:var(--rouge);margin:0 0 .6rem;text-transform:uppercase;letter-spacing:.14em">Vous nous avez connus sous un autre nom</p><h2 style="font-size:clamp(1.9rem,4vw,2.8rem)">De Pour la Solitaire à La course continue</h2>
  <p style="margin:1rem 0 0;max-width:56ch">Plus de six cents d&rsquo;entre vous ont signé sur pourlasolitaire.fr. Ce site va fermer, le collectif continue ici, et votre signature reste acquise. Rien à refaire.</p></div>
  <div><a class="btn btn--mer" href="/v2/le-relais/">Lire notre histoire</a></div>
