@@ -250,6 +250,11 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 .voies h3{font-size:clamp(1.4rem,2.4vw,1.8rem);color:var(--jaune);margin:0 0 .5rem}
 .voies p{margin:0;color:#DCE3E8}
 @media(max-width:860px){.voies{grid-template-columns:1fr}.voies div+div{margin-top:.4rem}}
+.bilan{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3rem;align-items:end;margin-top:3.5rem;padding-top:2.4rem;border-top:3px solid var(--jaune)}
+.bilan-def{margin:0;font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.5;color:#DCE3E8;max-width:40ch}
+.bilan .chg-line{margin:0}
+.bilan .seul{margin:.5rem 0 0!important}
+@media(max-width:860px){.bilan{grid-template-columns:1fr;gap:1.6rem}}
 </style>
 <script data-goatcounter="https://lacoursesacrifiee.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
@@ -287,7 +292,7 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 </div></div>
 
 <section class="continue" id="continue"><div class="wrap">
- <div class="sec-head"><h2>Ce qui continue</h2><p>Une course, ce n&rsquo;est pas un nom. Ce sont des bateaux, des règles, des skippers, un palmarès et des ports qui se retrouvent chaque année. Tout cela reste, intact.</p></div>
+ <h2 style="margin-bottom:2.6rem">Ce qui continue</h2>
  <ul class="ledger"><li><b>Les bateaux</b><span>Le Figaro Bénéteau 3, le même pour tous. Des bateaux identiques, et le skipper qui fait la différence.</span></li>
 <li><b>La classe</b><span>La Classe Figaro Bénéteau, ses règles, sa jauge et l'esprit qui la tient depuis trente-six ans.</span></li>
 <li><b>Le championnat</b><span>Le Championnat de France Élite de Course au Large, dont la course est le sommet de la saison.</span></li>
@@ -298,8 +303,13 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 <li><b>Les ports</b><span>Les villes qui accueillent les départs et les arrivées, et le public qui se presse sur les jetées.</span></li>
 <li><b>Le format</b><span>Le solitaire côtier, les étapes, les nuits au ras des cailloux et des arrivées qui se jouent à la minute.</span></li>
 <li><b>L'esprit</b><span>Une course ouverte, où un jeune skipper soutenu par une entreprise de sa région peut battre les meilleurs.</span></li></ul>
- <p class="chg-line">Ce qui change&nbsp;: le nom, la marque, l&rsquo;organisateur.</p>
- <p class="seul">Tout le reste continue.</p>
+ <div class="bilan">
+  <p class="bilan-def">Une course n&rsquo;est pas un nom. C&rsquo;est une flotte, des règles, des skippers, un palmarès et des ports qui se retrouvent chaque été.</p>
+  <div>
+   <p class="chg-line">Ce qui change&nbsp;: le nom, la marque, l&rsquo;organisateur.</p>
+   <p class="seul">Tout le reste continue.</p>
+  </div>
+ </div>
 </div></section>
 
 <section class="niv" id="niveau"><div class="wrap niv-grid">
