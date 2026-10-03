@@ -179,6 +179,12 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 .rassure{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin-top:2rem}
 .rassure h3{font-size:1.35rem;margin:0 0 .5rem}.rassure p{margin:0;color:#3C4248}
 @media(max-width:860px){.rassure{grid-template-columns:1fr}}
+
+/* Échelle typographique unique */
+:root{--t-body:1.125rem;--t-item:1.05rem;--t-small:.9rem}
+.recit p,.continue .bilan-def,.suite .lede,.signer p,.facts p{font-size:var(--t-body)!important}
+.fgrid p,.frise li p:not(.an),.ledger span{font-size:var(--t-item)!important}
+.gal figcaption,.vlist span,.archives figcaption,.formwrap > div > p,.note,.fig .pl,.legal .narrow > p:last-child{font-size:var(--t-small)!important}
 </style>
 </head>
 <body>
