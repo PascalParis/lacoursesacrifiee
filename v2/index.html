@@ -250,11 +250,11 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 .voies h3{font-size:clamp(1.4rem,2.4vw,1.8rem);color:var(--jaune);margin:0 0 .5rem}
 .voies p{margin:0;color:#DCE3E8}
 @media(max-width:860px){.voies{grid-template-columns:1fr}.voies div+div{margin-top:.4rem}}
-.bilan{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3rem;align-items:end;margin-top:3.5rem;padding-top:2.4rem;border-top:3px solid var(--jaune)}
-.bilan-def{margin:0;font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.5;color:#DCE3E8;max-width:40ch}
-.bilan .chg-line{margin:0}
-.bilan .seul{margin:.5rem 0 0!important}
-@media(max-width:860px){.bilan{grid-template-columns:1fr;gap:1.6rem}}
+.bilan{margin-top:3.5rem;padding-top:2.6rem;border-top:3px solid var(--jaune)}
+.bilan-def{margin:0 0 2.2rem;font-size:clamp(1.2rem,2.2vw,1.5rem);line-height:1.5;color:#DCE3E8;max-width:46ch}
+.bilan-chg{margin:0;font-weight:700;color:var(--papier);font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.25;letter-spacing:-.01em}
+.bilan-chg span{display:block;font-family:var(--mono);font-weight:500;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--jaune);margin-bottom:.5rem}
+.bilan .seul{margin:1rem 0 0!important}
 </style>
 <script data-goatcounter="https://lacoursesacrifiee.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
@@ -305,10 +305,8 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 <li><b>L'esprit</b><span>Une course ouverte, où un jeune skipper soutenu par une entreprise de sa région peut battre les meilleurs.</span></li></ul>
  <div class="bilan">
   <p class="bilan-def">Une course n&rsquo;est pas un nom. C&rsquo;est une flotte, des règles, des skippers, un palmarès et des ports qui se retrouvent chaque été.</p>
-  <div>
-   <p class="chg-line">Ce qui change&nbsp;: le nom, la marque, l&rsquo;organisateur.</p>
-   <p class="seul">Tout le reste continue.</p>
-  </div>
+  <p class="bilan-chg"><span>Ce qui change</span>Le nom, la marque, l&rsquo;organisateur.</p>
+  <p class="seul">Tout le reste continue.</p>
  </div>
 </div></section>
 
