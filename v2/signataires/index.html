@@ -129,14 +129,33 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 .legal p,.legal dd{max-width:72ch}
 .legal dt{font-weight:700;margin-top:1rem}
 .legal dd{margin:0}
+
+.navbar{position:relative;z-index:50}
+.nav-r{display:none}
+.burger{background:none;border:0;width:44px;height:44px;padding:11px 9px;cursor:pointer;color:inherit}
+.burger span{display:block;height:2px;background:currentColor;margin:0 0 6px;transition:transform .2s,opacity .2s}
+.burger span:last-child{margin:0}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:860px){
+ .nav-r{display:flex;align-items:center;gap:.5rem}
+ .nav-r .cta{background:var(--jaune);color:var(--encre);padding:.5rem 1rem;font-weight:700;font-size:.92rem;text-decoration:none}
+ .nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--mer2);padding:.4rem 1.4rem 1.2rem;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+ .nav ul.open{display:flex}
+ .nav ul li,.nav ul li.navopt{display:block!important}
+ .nav ul li:last-child{display:none!important}
+ .nav ul li a{display:block;padding:.9rem 0;color:var(--papier);font-size:1.05rem;border-bottom:1px solid rgba(241,240,236,.14)}
+ .nav ul li:nth-last-child(2) a{border-bottom:0}
+}
 </style>
 <script data-goatcounter="https://lacoursesacrifiee.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <header class="navbar"><nav class="nav" aria-label="Navigation principale">
 <a class="brand" href="/v2/">La course <span>continue</span></a>
-<ul><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/" aria-current="page">Les signataires</a></li><li><a href="/v2/#suite">La suite</a></li><li class=navopt><a href="/v2/le-relais/">D&rsquo;où nous venons</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
-</nav></header>
+<ul id="menu"><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/" aria-current="page">Les signataires</a></li><li><a href="/v2/#suite">La suite</a></li><li class=navopt><a href="/v2/le-relais/">D&rsquo;où nous venons</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
+<div class="nav-r"><a class="cta" href="/v2/rejoindre/">Signer</a><button class="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav></header>
 <div class="phead"><div class="wrap"><h1>Ils signent pour la course</h1><p class="lede">Plus de six cents signataires, dont 109 figaristes et 21 vainqueurs de l&rsquo;épreuve. Voici ceux qui ont choisi de le dire publiquement.</p></div></div>
 <div class="facts"><div class="wrap"><p>35 des 57 éditions remportées par nos signataires. 572 participations, 75 podiums et 109 victoires d&rsquo;étape.</p></div></div>
 <section class="reg"><div class="wrap"><h2>Les vainqueurs</h2><p class="sub">20 vainqueurs signataires publics, de la plus ancienne victoire à la plus récente.</p><ul class="fig fig--vq"><li><span class="nm">Jean-Marie Vidal</span><span class="pl">Vainqueur en <span class="yr">1972 et 1987</span>, 2 victoires d'étape</span></li><li><span class="nm">Gilles Le Baud</span><span class="pl">Vainqueur en <span class="yr">1973 et 1978</span>, 4 victoires d'étape</span></li><li><span class="nm">Sylvain Rosier</span><span class="pl">Vainqueur en <span class="yr">1981</span></span></li><li><span class="nm">Philippe Poupon</span><span class="pl">Vainqueur en <span class="yr">1982, 1985 et 1995</span>, 4 victoires d'étape</span></li><li><span class="nm">Lionel Péan</span><span class="pl">Vainqueur en <span class="yr">1983</span>, 4 victoires d'étape</span></li><li><span class="nm">Alain Gautier</span><span class="pl">Vainqueur en <span class="yr">1989</span>, 8 victoires d'étape</span></li><li><span class="nm">Laurent Cordelle</span><span class="pl">Vainqueur en <span class="yr">1990</span>, 3 victoires d'étape</span></li><li><span class="nm">Yves Parlier</span><span class="pl">Vainqueur en <span class="yr">1991</span>, 4 victoires d'étape</span></li><li><span class="nm">Franck Cammas</span><span class="pl">Vainqueur en <span class="yr">1997</span>, 2 victoires d'étape</span></li><li><span class="nm">Éric Drouglazet</span><span class="pl">Vainqueur en <span class="yr">2001</span>, 5 victoires d'étape</span></li><li><span class="nm">Kito de Pavant</span><span class="pl">Vainqueur en <span class="yr">2002</span></span></li><li><span class="nm">Armel Le Cléac&#x27;h</span><span class="pl">Vainqueur en <span class="yr">2003, 2010 et 2020</span>, 7 victoires d'étape</span></li><li><span class="nm">Jérémie Beyou</span><span class="pl">Vainqueur en <span class="yr">2005, 2011 et 2014</span>, 7 victoires d'étape</span></li><li><span class="nm">Nicolas Troussel</span><span class="pl">Vainqueur en <span class="yr">2006 et 2008</span>, 2 victoires d'étape</span></li><li><span class="nm">Nicolas Lunven</span><span class="pl">Vainqueur en <span class="yr">2009, 2017 et 2026</span>, 2 victoires d'étape</span></li><li><span class="nm">Yann Eliès</span><span class="pl">Vainqueur en <span class="yr">2012, 2013 et 2015</span>, 10 victoires d'étape</span></li><li><span class="nm">Tom Laperche</span><span class="pl">Vainqueur en <span class="yr">2022</span></span></li><li><span class="nm">Corentin Horeau</span><span class="pl">Vainqueur en <span class="yr">2023</span></span></li><li><span class="nm">Tom Dolan</span><span class="pl">Vainqueur en <span class="yr">2024</span>, 3 victoires d'étape</span></li><li><span class="nm">Alexis Loison</span><span class="pl">Vainqueur en <span class="yr">2025</span>, 3 victoires d'étape</span></li></ul></div></section>
@@ -174,4 +193,8 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 </div></footer>
 <button id="totop" type="button" aria-label="Revenir en haut de la page">&#8593;</button>
 <script>(function(){var b=document.getElementById('totop');function t(){b.classList.toggle('on',window.scrollY>700)}window.addEventListener('scroll',t,{passive:true});t();b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();</script>
+<script>(function(){var b=document.querySelector('.burger'),m=document.getElementById('menu');if(!b||!m)return;
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();</script>
 </body></html>
