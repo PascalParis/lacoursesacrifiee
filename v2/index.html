@@ -239,6 +239,17 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 
 .suite .formwrap h2,.suite .cercles h3{color:var(--papier)}.suite .cercles p{color:#DCE3E8}.suite .formwrap > div > p{color:#C9D2D9!important}.suite form{color:var(--encre)}
 .seul{font-size:clamp(1.9rem,4.4vw,3.4rem)!important}
+.niv{background:#fff;border-top:1px solid var(--trait)}
+.niv-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3.5rem;align-items:start}
+.niv h2{font-size:clamp(2.4rem,5.6vw,4.2rem)}
+.niv p{margin:0 0 1.1rem;max-width:58ch}
+.niv .niv-lead{font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.5;font-weight:600}
+@media(max-width:860px){.niv-grid{grid-template-columns:1fr;gap:1.4rem}}
+.voies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 2.5rem;border-top:1px solid rgba(241,240,236,.3);margin-bottom:2.6rem}
+.voies div{padding-top:1.5rem}
+.voies h3{font-size:clamp(1.4rem,2.4vw,1.8rem);color:var(--jaune);margin:0 0 .5rem}
+.voies p{margin:0;color:#DCE3E8}
+@media(max-width:860px){.voies{grid-template-columns:1fr}.voies div+div{margin-top:.4rem}}
 </style>
 <script data-goatcounter="https://lacoursesacrifiee.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
@@ -265,7 +276,7 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
  <h2>Cinquante-sept éditions, une même course</h2>
  <div>
   <p>Chaque été depuis 1970, des skippers partent seuls pour plusieurs étapes au contact de la côte. On l&rsquo;a connue sous le nom de Course de l&rsquo;Aurore, puis de La Solitaire du Figaro. Elle a changé quatre fois de bateau sans jamais changer de nature.</p>
-  <p>Toujours la même règle : des bateaux identiques, un skipper seul à bord, et des écarts qui se comptent en minutes après des jours de mer. C&rsquo;est elle qui a formé la plupart des grands noms de la course au large française.</p>
+  <p>Toujours la même règle : des bateaux identiques, un skipper seul à bord, et des écarts qui se comptent en minutes après des jours de mer. C&rsquo;est là que la plupart des grands noms de la course au large française ont fait leurs preuves.</p>
   <p>Son nom historique désignera désormais une autre épreuve. La course, elle, garde tout ce qui la fait : sa classe, son championnat, ses bateaux, ses skippers et ses ports. Elle continue, et ils sont déjà plus de six cents à l&rsquo;accompagner.</p>
  </div>
 </div></section>
@@ -280,7 +291,7 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
  <ul class="ledger"><li><b>Les bateaux</b><span>Le Figaro Bénéteau 3, le même pour tous. Des bateaux identiques, et le skipper qui fait la différence.</span></li>
 <li><b>La classe</b><span>La Classe Figaro Bénéteau, ses règles, sa jauge et l'esprit qui la tient depuis trente-six ans.</span></li>
 <li><b>Le championnat</b><span>Le Championnat de France Élite de Course au Large, dont la course est le sommet de la saison.</span></li>
-<li><b>Les pôles</b><span>Port-la-Forêt, Lorient, les entraîneurs et les préparateurs qui forment, chaque hiver, les skippers de demain.</span></li>
+<li><b>Les pôles</b><span>Port-la-Forêt, Lorient, les entraîneurs et les préparateurs : chaque hiver, un entraînement au plus haut niveau.</span></li>
 <li><b>Les skippers</b><span>Les vainqueurs d'hier, les champions d'aujourd'hui et les bizuths qui découvrent le haut niveau.</span></li>
 <li><b>Le palmarès</b><span>Cinquante-sept éditions, des vainqueurs devenus des légendes, et une liste que la course continue d&rsquo;allonger chaque été.</span></li>
 <li><b>Le prestige</b><span>Une aura qui dépasse les frontières : des skippers venus de toute l&rsquo;Europe et d&rsquo;au-delà se mesurent chaque été à la référence mondiale du solitaire côtier.</span></li>
@@ -291,6 +302,15 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
  <p class="seul">Tout le reste continue.</p>
 </div></section>
 
+<section class="niv" id="niveau"><div class="wrap niv-grid">
+ <div><h2>Ici, il n&rsquo;y a que le skipper</h2></div>
+ <div>
+  <p class="niv-lead">C&rsquo;est sur cette course que le niveau est le plus élevé de toute la course au large. La raison tient en un mot : la monotypie.</p>
+  <p>En IMOCA, en Ultim, en Ocean Fifty ou en Class40, les bateaux sont construits selon une jauge, et ils diffèrent. Le plan, le chantier, les appendices et le budget pèsent dans le classement avant même le talent du skipper.</p>
+  <p>La seule exception approchante est le Mini 6.50 en catégorie Série. Mais plusieurs modèles y courent ensemble, et la monotypie n&rsquo;y est pas stricte.</p>
+  <p>Sur Figaro Bénéteau 3, tous les bateaux sont identiques, et le restent. Il ne reste que le skipper : sa lecture du vent et des courants, sa gestion du sommeil, son audace au ras des cailloux. C&rsquo;est pourquoi les écarts s&rsquo;y comptent en minutes après des jours de mer, et pourquoi gagner cette course a toujours valu davantage qu&rsquo;une victoire.</p>
+ </div>
+</div></section>
 <section id="bateaux"><div class="wrap">
  <div class="sec-head"><h2>Quatre bateaux, une seule course</h2><p>La course a toujours su évoluer. Elle a changé de bateau à chaque génération, en gardant ce qui compte : la même règle pour tous.</p></div>
  <ol class="frise">
@@ -361,35 +381,16 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
  <p style="margin:1rem 0 0;max-width:56ch">Plus de six cents d&rsquo;entre vous ont signé sur pourlasolitaire.fr. Ce site ferme, le collectif continue ici, et votre signature reste acquise. Rien à refaire.</p></div>
  <div><a class="btn btn--mer" href="/v2/le-relais/">Lire notre histoire</a></div>
 </div></section>
-<section class="suite" id="suite">
-<div class="wrap"><h2 style="margin-bottom:1.2rem">La légende poursuit son cap</h2><p class="lede" style="margin:0 0 3rem;color:#DCE3E8">Un nouveau nom, une organisation, des partenaires. Tout se construit maintenant, et vous pouvez en être.</p></div>
-<div class="wrap formwrap">
- <div>
-  <div class="cercles" style="grid-template-columns:1fr;gap:1.4rem;margin-top:0">
-   <div><h3>Villes et territoires</h3><p>Accueillir un départ, une arrivée ou une escale, et retrouver le public des grandes étapes.</p></div>
-   <div><h3>Partenaires</h3><p>Associer votre entreprise à la course, à un skipper ou à la formation des champions de demain.</p></div>
-   <div><h3>Skippers</h3><p>Préparer votre saison avec nous et faire entendre vos attentes sur le format et le calendrier.</p></div>
-  </div>
+<section class="suite" id="suite"><div class="wrap">
+ <h2 style="margin-bottom:1.2rem">La légende poursuit son cap</h2>
+ <p class="lede" style="margin:0 0 3rem;color:#DCE3E8">Un nouveau nom, une organisation, des partenaires. Tout se construit maintenant, et vous pouvez en être.</p>
+ <div class="voies">
+  <div><h3>Villes et territoires</h3><p>Accueillir un départ, une arrivée ou une escale, et retrouver le public des grandes étapes.</p></div>
+  <div><h3>Partenaires</h3><p>Associer votre entreprise à la plus prestigieuse des courses au large, ou à l&rsquo;un de ses skippers.</p></div>
+  <div><h3>Skippers</h3><p>Préparer votre saison avec nous et faire entendre vos attentes sur le format et le calendrier.</p></div>
  </div>
- <div>
-  <form id="f" data-mode="suite" novalidate>
-   <label for="nom">Prénom et nom</label><input type="text" id="nom" name="nom" required maxlength="80" autocomplete="name">
-   <label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email">
-   <label for="tel">Téléphone (facultatif)</label><input type="tel" id="tel" name="tel" autocomplete="tel">
-   <label for="qualite">Vous êtes</label><select id="qualite" name="qualite" required><option value="">Choisir</option><option value="Élu / Collectivité">Élu / Collectivité</option><option value="Partenaire">Partenaire</option><option value="Sponsor">Sponsor</option><option value="Skipper">Skipper</option><option value="Professionnel de la course au large">Professionnel de la course au large</option><option value="Club ou école de voile">Club ou école de voile</option></select>
-   <label for="structure">Ville, entreprise ou bateau (facultatif)</label><input type="text" id="structure" name="structure" maxlength="70">
-   <label for="bateau">Votre intérêt en quelques mots (facultatif)</label><textarea id="bateau" name="bateau" rows="3" maxlength="120" placeholder="Ex. : accueillir une arrivée d'étape, devenir partenaire titre, courir la prochaine édition"></textarea>
-   <label class="check"><input type="checkbox" id="charte" name="charte" required><span>J&rsquo;accepte d&rsquo;être recontacté par le collectif au sujet de la suite.</span></label>
-   <div class="hp" aria-hidden="true"><label for="hp_extra">Laisser vide</label><input type="text" id="hp_extra" name="hp_extra" tabindex="-1" autocomplete="off"></div>
-   <button type="submit" id="btn" disabled>Me faire connaître</button>
-   <div class="hint" id="hint" aria-live="polite"></div>
-  </form>
-  <div class="msg" id="ok" role="status">Demande transmise. Les membres fondateurs du collectif reviennent vers vous rapidement.</div>
-  <div class="msg" id="err" role="alert"></div>
-  <p style="font-size:.85rem;color:var(--gris);margin-top:1rem">Votre demande n&rsquo;est pas publiée. Elle est transmise aux membres fondateurs du collectif et peut être partagée avec les institutions concernées.</p>
- </div>
-</div>
-</section>
+ <a class="btn btn--jaune" href="/v2/rejoindre/">Signer et nous rejoindre</a>
+</div></section>
 
 <section class="signer"><div class="wrap">
  <h2>Signez pour la course</h2>
@@ -407,39 +408,4 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 </div></footer>
 <button id="totop" type="button" aria-label="Revenir en haut de la page">&#8593;</button>
 <script>(function(){var b=document.getElementById('totop');function t(){b.classList.toggle('on',window.scrollY>700)}window.addEventListener('scroll',t,{passive:true});t();b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();</script>
-<script>
-var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
-(function(){
-  var f=document.getElementById('f'), btn=document.getElementById('btn'), ok=document.getElementById('ok'), err=document.getElementById('err'), hint=document.getElementById('hint');
-  var el=function(n){return f.querySelector('[name="'+n+'"]');};
-  var emailRe=/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/, MODE=f.getAttribute('data-mode'), LABEL=btn.textContent;
-  function missing(){
-    var m=[];
-    if(el('nom').value.trim().length<3) m.push("votre prénom et nom");
-    if(!emailRe.test(el('email').value.trim())) m.push("un email valide");
-    if(!el('qualite').value) m.push("votre qualité");
-    if(MODE==='signer' && !f.querySelector('input[name=consentement]:checked')) m.push("la visibilité de votre soutien");
-    if(!el('charte').checked) m.push(MODE==='signer'?"votre soutien aux principes":"votre accord pour être recontacté");
-    return m;
-  }
-  function refresh(){var m=missing();btn.disabled=m.length>0;
-    if(m.length&&(el('nom').value||el('email').value||el('qualite').value)){hint.textContent="Pour envoyer, il manque : "+m.join(", ")+".";hint.classList.add('on');}else{hint.classList.remove('on');}}
-  f.addEventListener('input',refresh);f.addEventListener('change',refresh);refresh();
-  setTimeout(function(){el('hp_extra').value='';},600);
-  f.addEventListener('submit',function(e){
-    e.preventDefault(); if(missing().length){refresh();return;}
-    err.classList.remove('err');
-    var bateau=el('bateau').value.trim(), cons;
-    if(MODE==='suite'){ var s=el('structure').value.trim(); bateau=('[LA SUITE] '+(s?s+' : ':'')+bateau).slice(0,200); cons='Institutions'; }
-    else { cons=f.querySelector('input[name=consentement]:checked').value; }
-    var payload={nom:el('nom').value.trim(),email:el('email').value.trim(),tel:el('tel').value.trim(),qualite:el('qualite').value,bateau:bateau,consentement:cons,charte:el('charte').checked,website:el('hp_extra').value};
-    btn.disabled=true; btn.textContent="Envoi en cours";
-    fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-     .then(function(r){return r.json().then(function(j){return{s:r.status,j:j};});})
-     .then(function(res){ if(res.j&&res.j.ok){f.style.display='none';ok.classList.add('ok');ok.scrollIntoView({behavior:'smooth',block:'center'});}
-        else{err.textContent=(res.j&&res.j.error)||("L'enregistrement a échoué (erreur "+res.s+"). Réessayez dans un instant.");err.classList.add('err');btn.textContent=LABEL;refresh();}})
-     .catch(function(){err.textContent="Le serveur ne répond pas. Si un bloqueur de publicités est actif, désactivez-le pour ce site, ou réessayez depuis un autre navigateur.";err.classList.add('err');btn.textContent=LABEL;refresh();});
-  });
-})();
-</script>
 </body></html>
