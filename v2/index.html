@@ -18,7 +18,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛵</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<style>
+<style>@media(max-width:860px){#relais{grid-template-columns:1fr!important}}
 :root{--mer:#12304A;--mer2:#0C2236;--papier:#F1F0EC;--encre:#15191D;--jaune:#E8B923;--rouge:#B5281C;--gris:#5C636A;--trait:rgba(21,25,29,.14);
 --disp:'Anton',Impact,'Arial Narrow',sans-serif;--body:'Libre Franklin',system-ui,-apple-system,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace}
 *{box-sizing:border-box}
@@ -171,7 +171,7 @@ footer .legal{margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid rgba(255
 <figure class="slide"><picture><source media="(max-width:700px)" srcset="/img/band-depart88-m.webp"><img src="/img/band-depart88-w.webp" alt="Un départ d'étape à la fin des années 1980, en half-tonners" loading=lazy></picture><figcaption>Départ d'étape, half-tonners &copy; J. Vapillon</figcaption></figure></div>
  <header class="navbar navbar--dark"><nav class="nav" aria-label="Navigation principale">
 <a class="brand" href="/v2/">La course <span>continue</span></a>
-<ul><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/la-suite/">La suite</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
+<ul><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/la-suite/">La suite</a></li><li class=navopt><a href="/v2/le-relais/">Le relais</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
 </nav></header>
 
  <div class="hero-body"><div class="wrap">
@@ -203,7 +203,7 @@ footer .legal{margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid rgba(255
 <li><b>Les pôles</b><span>Port-la-Forêt, Lorient, les entraîneurs et les préparateurs qui forment, chaque hiver, les marins de demain.</span></li>
 <li><b>Les skippers</b><span>Les vainqueurs d'hier, les champions d'aujourd'hui et les bizuths qui découvrent le haut niveau.</span></li>
 <li><b>Le palmarès</b><span>Cinquante-sept éditions, des vainqueurs devenus des légendes, et une liste que la course continue d&rsquo;allonger chaque été.</span></li>
-<li><b>Le prestige</b><span>L&rsquo;épreuve de référence du solitaire côtier, celle que les plus grands marins ont voulu gagner avant de partir autour du monde.</span></li>
+<li><b>Le prestige</b><span>Une aura qui dépasse les frontières : des marins venus de toute l&rsquo;Europe et d&rsquo;au-delà se mesurent chaque été à la référence mondiale du solitaire côtier.</span></li>
 <li><b>Les ports</b><span>Les villes qui accueillent les départs et les arrivées, et le public qui se presse sur les jetées.</span></li>
 <li><b>Le format</b><span>Le solitaire côtier, les étapes, les nuits au ras des cailloux et des arrivées qui se jouent à la minute.</span></li>
 <li><b>L'esprit</b><span>Une course ouverte, où un jeune marin soutenu par une entreprise de sa région peut battre les meilleurs.</span></li></ul>
@@ -274,6 +274,12 @@ footer .legal{margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid rgba(255
  <p class="vlist-note">Et un vainqueur qui a choisi de soutenir le collectif sans que son nom soit publié. <a href="/v2/signataires/">Voir tous les signataires</a></p>
 </div></section>
 
+
+<section style="background:var(--papier);border-top:1px solid var(--trait);padding:clamp(2.5rem,5vw,4rem) 0"><div class="wrap" style="display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:3rem;align-items:center" id="relais">
+ <div><p style="font-family:var(--mono);font-size:.85rem;color:var(--rouge);margin:0 0 .6rem;text-transform:uppercase;letter-spacing:.14em">Vous nous avez connus sous un autre nom</p><h2 style="font-size:clamp(1.9rem,4vw,2.8rem)">De Pour la Solitaire à La course continue</h2>
+ <p style="margin:1rem 0 0;max-width:56ch">Plus de six cents d&rsquo;entre vous ont signé sur pourlasolitaire.fr. Ce site ferme, le collectif continue ici, et votre signature reste acquise. Rien à refaire.</p></div>
+ <div><a class="btn btn--mer" href="/v2/le-relais/">Lire le passage de relais</a></div>
+</div></section>
 <section class="suite"><div class="wrap grid">
  <div><h2>La suite s&rsquo;écrit maintenant</h2></div>
  <div><p>Le nouveau nom sera annoncé prochainement. Villes, partenaires et skippers : vous voulez en être, accueillir une étape, associer votre entreprise ou préparer votre saison ? Faites-vous connaître dès aujourd&rsquo;hui.</p>
@@ -289,7 +295,7 @@ footer .legal{margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid rgba(255
 <div class="cols">
  <div><a class="brand" href="/v2/">La course <span style="color:var(--jaune)">continue</span></a>
  <p style="max-width:42ch;margin-top:1rem">Le collectif des marins, des professionnels et des passionnés qui font vivre la grande course en solitaire sur monotype Figaro Bénéteau, et préparent sa suite.</p></div>
- <div><ul><li><a href="/v2/#histoire">L&rsquo;histoire</a></li><li><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/la-suite/">La suite</a></li></ul></div>
+ <div><ul><li><a href="/v2/#histoire">L&rsquo;histoire</a></li><li><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/la-suite/">La suite</a></li><li><a href="/v2/le-relais/">Le relais</a></li></ul></div>
  <div><ul><li><a href="/v2/rejoindre/">Signer</a></li><li><a href="mailto:contact@pourlasolitaire.fr">contact@pourlasolitaire.fr</a></li><li><a href="/v2/mentions-legales/">Mentions légales</a></li></ul></div>
 </div>
 <p class="legal">Photographies © Jacques Vapillon, publiées avec son autorisation. Collectif indépendant et non officiel, sans lien avec le Groupe Figaro, La Solitaire du Figaro, OC Sport Pen Duick ni leurs partenaires.</p>
