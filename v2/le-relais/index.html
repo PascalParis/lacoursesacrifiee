@@ -129,6 +129,25 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 .legal p,.legal dd{max-width:72ch}
 .legal dt{font-weight:700;margin-top:1rem}
 .legal dd{margin:0}
+
+.navbar{position:relative;z-index:50}
+.nav-r{display:none}
+.burger{background:none;border:0;width:44px;height:44px;padding:11px 9px;cursor:pointer;color:inherit}
+.burger span{display:block;height:2px;background:currentColor;margin:0 0 6px;transition:transform .2s,opacity .2s}
+.burger span:last-child{margin:0}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:860px){
+ .nav-r{display:flex;align-items:center;gap:.5rem}
+ .nav-r .cta{background:var(--jaune);color:var(--encre);padding:.5rem 1rem;font-weight:700;font-size:.92rem;text-decoration:none}
+ .nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--mer2);padding:.4rem 1.4rem 1.2rem;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+ .nav ul.open{display:flex}
+ .nav ul li,.nav ul li.navopt{display:block!important}
+ .nav ul li:last-child{display:none!important}
+ .nav ul li a{display:block;padding:.9rem 0;color:var(--papier);font-size:1.05rem;border-bottom:1px solid rgba(241,240,236,.14)}
+ .nav ul li:nth-last-child(2) a{border-bottom:0}
+}
 </style>
 <script data-goatcounter="https://lacoursesacrifiee.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
@@ -155,8 +174,8 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 <body>
 <header class="navbar"><nav class="nav" aria-label="Navigation principale">
 <a class="brand" href="/v2/">La course <span>continue</span></a>
-<ul><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/#suite">La suite</a></li><li class=navopt><a href="/v2/le-relais/">D&rsquo;où nous venons</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
-</nav></header>
+<ul id="menu"><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/#suite">La suite</a></li><li class=navopt><a href="/v2/le-relais/">D&rsquo;où nous venons</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
+<div class="nav-r"><a class="cta" href="/v2/rejoindre/">Signer</a><button class="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav></header>
 <div class="phead"><div class="wrap"><h1>La course continue d&rsquo;écrire sa légende</h1><p class="lede">Vous nous avez connus sous le nom de <b>Pour la Solitaire</b>, sur pourlasolitaire.fr. C&rsquo;est là que plus de six cents d&rsquo;entre vous se sont rassemblés en quelques semaines. Ce site ferme. Le collectif, lui, continue ici, avec vous et avec tout ce qu&rsquo;il a construit.</p></div></div>
 <div class="facts"><div class="wrap"><p>Même collectif, mêmes signataires, mêmes fondateurs, même adresse de contact. Seule l&rsquo;enseigne change.</p></div></div>
 
@@ -205,4 +224,8 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 </div></footer>
 <button id="totop" type="button" aria-label="Revenir en haut de la page">&#8593;</button>
 <script>(function(){var b=document.getElementById('totop');function t(){b.classList.toggle('on',window.scrollY>700)}window.addEventListener('scroll',t,{passive:true});t();b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();</script>
+<script>(function(){var b=document.querySelector('.burger'),m=document.getElementById('menu');if(!b||!m)return;
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();</script>
 </body></html>
