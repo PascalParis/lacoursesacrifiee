@@ -162,7 +162,7 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
 <a class="brand" href="/v2/">La course <span>continue</span></a>
 <ul id="menu"><li class=navopt><a href="/v2/#histoire">L&rsquo;histoire</a></li><li class=navopt><a href="/v2/#continue">Ce qui continue</a></li><li><a href="/v2/signataires/">Les signataires</a></li><li><a href="/v2/#suite">La suite</a></li><li class=navopt><a href="/v2/le-relais/">D&rsquo;où nous venons</a></li><li><a class="cta" href="/v2/rejoindre/">Signer</a></li></ul>
 <div class="nav-r"><a class="cta" href="/v2/rejoindre/">Signer</a><button class="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav></header>
-<div class="phead"><div class="wrap"><h1>Signez pour la course</h1><p class="lede">Plus de six cents personnes ont déjà signé : vainqueurs, skippers, préparateurs, partenaires, bénévoles, élus et passionnés. Votre nom rejoint le leur, avec la visibilité que vous choisissez. Villes, partenaires, skippers : dites-nous aussi si vous voulez en être.</p></div></div>
+<div class="phead"><div class="wrap"><h1>Signez pour la course</h1><p class="lede">Plus de six cents personnes ont déjà signé : vainqueurs, skippers, préparateurs, partenaires, bénévoles, élus et passionnés. Votre nom rejoint le leur, avec la visibilité que vous choisissez.</p></div></div>
 <section><div class="wrap formwrap">
  <div>
   <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1rem">Ce que vous soutenez</h2>
@@ -179,16 +179,11 @@ form button:disabled{background:#E4DCC2;color:#7D7769;cursor:not-allowed}
    <label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email">
    <label for="tel">Téléphone (facultatif)</label><input type="tel" id="tel" name="tel" autocomplete="tel">
    <label for="qualite">Vous êtes</label><select id="qualite" name="qualite" required><option value="">Choisir</option><option value="Skipper">Skipper</option><option value="Préparateur">Préparateur</option><option value="Professionnel de la course au large">Professionnel de la course au large</option><option value="Propriétaire">Propriétaire</option><option value="Partenaire">Partenaire</option><option value="Sponsor">Sponsor</option><option value="Élu / Collectivité">Élu / Collectivité</option><option value="Club ou école de voile">Club ou école de voile</option><option value="Bénévole">Bénévole</option><option value="Supporter">Supporter</option></select>
-   <label for="bateau">Votre lien avec la course, ville ou entreprise (facultatif)</label><input type="text" id="bateau" name="bateau" maxlength="200" placeholder="Ex. : Figaro 3 n°87, partenaire 2019 à 2024, bénévole à Lorient">
+   <label for="bateau">Votre lien avec la course (facultatif)</label><input type="text" id="bateau" name="bateau" maxlength="200" placeholder="Ex. : Figaro 3 n°87, partenaire 2019 à 2024, bénévole à Lorient">
    <fieldset><legend>Visibilité de votre soutien</legend>
     <label class="opt"><input type="radio" name="consentement" value="Public"><span><b>Public</b><small>Votre nom et votre qualité peuvent figurer parmi les signataires publiés.</small></span></label>
     <label class="opt"><input type="radio" name="consentement" value="Institutions"><span><b>Institutions uniquement</b><small>Votre nom peut être communiqué aux institutions (Fédération, élus), jamais publié.</small></span></label>
     <label class="opt"><input type="radio" name="consentement" value="Confidentiel"><span><b>Confidentiel</b><small>Vous êtes compté parmi les signataires, votre nom n&rsquo;est ni publié ni communiqué.</small></span></label>
-   </fieldset>
-   <fieldset><legend>Vous voulez aussi en être&nbsp;? (facultatif)</legend>
-    <label class="opt"><input type="checkbox" name="interet" value="étape"><span><b>Accueillir une étape</b><small>Ville ou territoire : un départ, une arrivée, une escale.</small></span></label>
-    <label class="opt"><input type="checkbox" name="interet" value="partenaire"><span><b>Devenir partenaire</b><small>Associer votre entreprise à la course ou à un skipper.</small></span></label>
-    <label class="opt"><input type="checkbox" name="interet" value="skipper"><span><b>Courir la prochaine édition</b><small>Préparer votre saison avec nous.</small></span></label>
    </fieldset>
    <label class="check"><input type="checkbox" id="charte" name="charte" required><span>Je soutiens les principes ci-contre.</span></label>
    <div class="hp" aria-hidden="true"><label for="hp_extra">Laisser vide</label><input type="text" id="hp_extra" name="hp_extra" tabindex="-1" autocomplete="off"></div>
@@ -225,7 +220,7 @@ var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
     err.classList.remove('err');
     var bateau=el('bateau').value.trim(), cons;
     if(MODE==='suite'){ var s=el('structure').value.trim(); bateau=('[LA SUITE] '+(s?s+' : ':'')+bateau).slice(0,200); cons='Institutions'; }
-    else { cons=f.querySelector('input[name=consentement]:checked').value; var it=[].map.call(f.querySelectorAll('input[name=interet]:checked'),function(x){return x.value;}); if(it.length){ bateau=('[LA SUITE : '+it.join(', ')+'] '+bateau).slice(0,200); } }
+    else { cons=f.querySelector('input[name=consentement]:checked').value; }
     var payload={nom:el('nom').value.trim(),email:el('email').value.trim(),tel:el('tel').value.trim(),qualite:el('qualite').value,bateau:bateau,consentement:cons,charte:el('charte').checked,website:el('hp_extra').value};
     btn.disabled=true; btn.textContent="Envoi en cours";
     fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
