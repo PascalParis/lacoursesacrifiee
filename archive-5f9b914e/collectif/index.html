@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rejoindre le collectif · Collectif pour La Solitaire</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23123C6B'/%3E%3Cg fill='%23F1F0EC'%3E%3Crect width='16' height='16'/%3E%3Crect x='32' width='16' height='16'/%3E%3Crect x='16' y='16' width='16' height='16'/%3E%3Crect x='48' y='16' width='16' height='16'/%3E%3Crect y='32' width='16' height='16'/%3E%3Crect x='32' y='32' width='16' height='16'/%3E%3Crect x='16' y='48' width='16' height='16'/%3E%3Crect x='48' y='48' width='16' height='16'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="description" content="Marins, propriétaires, sponsors, bénévoles, partenaires : unissons nos voix pour que vive La Solitaire. Rejoignez le Collectif.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,300..800;1,300..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#F1F0EC; --papier-2:#E5E3DC; --noir:#0E0E0E; --gris:#565657;
+  --rouge:#CB1F17; --rouge-band:#A31710; --bleu:#123C6B; --jaune:#E8B923;
+  --trait:rgba(14,14,14,.16);
+  --disp:'Anton',Impact,sans-serif; --body:'Libre Franklin',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--noir);font-family:var(--body);line-height:1.6;font-size:1.02rem}
+.wrap{max-width:820px;margin:0 auto;padding:0 1.2rem}
+.top{background:var(--noir);color:var(--papier);padding:.7rem 0}
+.top a{color:var(--jaune);text-decoration:none;font-family:var(--mono);font-size:.85rem;letter-spacing:.06em}
+.hero{background:var(--noir);color:var(--papier);padding:3rem 0 2.6rem;border-bottom:6px solid var(--jaune)}
+.kick{font-family:var(--mono);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--jaune);margin:0 0 .8rem}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.02;text-transform:uppercase;margin:0}
+.charte{padding:2.6rem 0 2rem;margin-bottom:0}
+.charte h2{font-family:var(--disp);font-weight:400;font-size:1.5rem;text-transform:uppercase;margin:0 0 1rem}
+.charte p{margin:0 0 1rem;max-width:68ch}
+.charte .signe{font-family:var(--mono);font-size:.85rem;color:var(--gris)}
+.etat{background:var(--noir);color:var(--papier);padding:2.6rem 0 2.6rem;margin:0}
+.etat h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.5rem,4.2vw,2.1rem);text-transform:uppercase;margin:0 0 1.4rem;color:var(--jaune);line-height:1.06}
+.etat p{margin:0 0 1.1rem;max-width:66ch}
+.etat b{color:var(--jaune);font-weight:600}
+.etat .rejoins{font-family:var(--disp);font-weight:400;font-size:1.4rem;text-transform:uppercase;margin:1.6rem 0 0;letter-spacing:.02em}
+.formband{background:var(--papier-2);border-top:2px solid var(--noir);padding:2.4rem 0 3rem;margin-top:0}
+.formband h2{font-family:var(--disp);font-weight:400;font-size:1.5rem;text-transform:uppercase;margin:0 0 1.4rem}
+label{display:block;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin:1.1rem 0 .35rem}
+input[type=text],input[type=email],input[type=tel],select{width:100%;padding:.7rem .8rem;border:1.5px solid var(--noir);background:#fff;font-family:var(--body);font-size:1rem;border-radius:0}
+.row{display:grid;grid-template-columns:110px 1fr;gap:.8rem}
+fieldset{border:1.5px solid var(--noir);margin:1.4rem 0 0;padding:1rem 1.1rem}
+legend{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:0 .4rem}
+.opt{display:flex;gap:.8rem;align-items:flex-start;margin:.45rem 0;padding:.65rem .7rem;border:1.5px solid transparent;cursor:pointer}
+.opt:hover{background:#fff}
+.opt:has(input:checked){background:#fff;border-color:var(--noir)}
+.opt input{margin-top:.25rem;transform:scale(1.4);accent-color:var(--rouge-band);cursor:pointer;flex:none}
+.opt b{font-weight:600}
+.opt small{display:block;color:var(--gris)}
+.check{display:flex;gap:.8rem;align-items:flex-start;margin:1.3rem 0 0;cursor:pointer}
+.check input{margin-top:.3rem;transform:scale(1.4);accent-color:var(--rouge-band);cursor:pointer;flex:none}
+.hp{position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden}
+button{margin-top:1.6rem;background:var(--rouge-band);color:#fff;border:none;padding:.95rem 1.8rem;font-family:var(--mono);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+button:hover{background:var(--rouge)}
+button:disabled{background:#B8B6AE;cursor:not-allowed}
+.hint{margin-top:.7rem;font-family:var(--mono);font-size:.78rem;color:var(--rouge-band);display:none}
+.hint.on{display:block}
+.msg{margin-top:1.2rem;padding:1rem 1.1rem;font-family:var(--mono);font-size:.9rem;display:none}
+.msg.ok{display:block;background:var(--noir);color:var(--jaune)}
+.msg.err{display:block;background:var(--rouge-band);color:#fff}
+.rgpd{font-size:.82rem;color:var(--gris);margin-top:1.4rem;max-width:70ch}
+.rgpd a{color:var(--gris)}
+footer{padding:2rem 0;font-family:var(--mono);font-size:.8rem;color:var(--gris)}
+footer a{color:var(--gris)}
+
+#totop{position:fixed;right:1.1rem;bottom:1.1rem;z-index:60;width:46px;height:46px;border:none;background:#0E0E0E;color:#E8B923;font-size:1.2rem;line-height:1;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease,background .2s ease;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+#totop.on{opacity:1;pointer-events:auto}
+#totop:hover{background:#A31710;color:#F1F0EC}
+@media(max-width:600px){#totop{right:.75rem;bottom:.75rem;width:42px;height:42px}}
+
+.indepbar{background:#0E0E0E;color:#F1F0EC;font-family:var(--mono,'IBM Plex Mono',monospace);font-size:.68rem;letter-spacing:.04em;text-align:center;padding:.45rem .8rem;border-bottom:1px solid #E8B923}
+.indepbar a{color:#E8B923;text-decoration:none;margin-left:.5rem}
+</style>
+<meta property="og:image" content="https://pourlasolitaire.fr/img/og-collectif.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pourlasolitaire.fr/img/og-collectif.webp">
+</head>
+<body><div style="position:sticky;top:0;z-index:9999;background:#12304A;color:#F1F0EC;font:600 14px/1.4 system-ui,sans-serif;padding:.6rem 1rem;text-align:center">Archive du site pourlasolitaire.fr, figée le 4 octobre 2026. <a href="https://www.lacoursecontinue.fr/" style="color:#E8B923">Le collectif continue sur lacoursecontinue.fr</a></div>
+<div class="indepbar">Collectif indépendant et non officiel, sans lien avec le Groupe Figaro, La Solitaire du Figaro, OC Sport Pen Duick ni leurs partenaires.<a href="/archive-5f9b914e/mentions-legales/">Mentions légales</a></div>
+<div class="top"><div class="wrap"><a href="/archive-5f9b914e/">&larr; pourlasolitaire.fr</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <p class="kick">Ils veulent la remplacer. Nous voulons qu'elle vive.</p>
+  <h1>Collectif pour<br>La Solitaire</h1>
+</div></header>
+
+<section class="charte"><div class="wrap">
+  <h2>La charte</h2>
+  <h3 style="font-family:var(--disp);font-weight:400;font-size:1.15rem;text-transform:uppercase;margin:.2rem 0 1rem">L'appel pour que La Solitaire reste La Solitaire</h3>
+  <p>Nous, skippers, préparateurs, propriétaires, sponsors, bénévoles, partenaires, élus et passionnés de course au large, unissons nos voix pour que vive La Solitaire : monument de la course au large qui, depuis 1970, fait de la voile française la première du monde. Une course accessible, où le classement récompense le marin et son engagement, jamais le budget.</p>
+  <p>Nous affirmons que ses cinquante-sept éditions constituent un patrimoine sportif et maritime commun, construit par des milliers de marins, cinquante ports et un demi-siècle d'engagement public. Un capital, un héritage, qui ne sauraient être captés ni dénaturés par aucun acteur, quel qu'il soit, sans concertation de ceux qui l'ont bâti et qui le font vivre.</p>
+  <p>Nous formulons trois demandes, indissociables :</p>
+  <p><b>1. La concertation.</b> Le retrait de la décision du 17 juillet 2026 et l'ouverture d'une véritable concertation avec toutes les parties.</p>
+  <p><b>2. La pérennité.</b> L'examen loyal des solutions économiques qui permettent à l'épreuve de vivre sans renier sa nature : monotype, ouverte, formatrice.</p>
+  <p><b>3. Le respect des identités.</b> Pour la classe Ocean Fifty et son projet, la création d'une grande course qui porte son propre nom.</p>
+  <p>Nous ne sommes contre personne. Nous défendons : une course, une filière, un patrimoine. Et si nous ne céderons sur aucun des trois, chacun des acteurs, organisateur compris, garde sa place dans la solution.</p>
+  <p><b>La Solitaire est un patrimoine vivant. Elle ne se confisque pas, elle ne se dénature pas. Et son nom ne peut servir à désigner ce qu'elle n'est pas.</b></p>
+  <p class="signe">En rejoignant le Collectif, je soutiens ces principes. Mon nom peut être publié, communiqué aux seules institutions, ou rester strictement confidentiel : c'est moi qui choisis ci-dessous.</p>
+</div></section>
+
+
+<section class="etat"><div class="wrap">
+  <h2>Ils ont &eacute;crit cette course. Ils la d&eacute;fendent. Rejoignez-les.</h2>
+  <p>En trois semaines, l&rsquo;appel a rassembl&eacute; 91 figaristes. Ensemble, ils totalisent <b>544 participations &agrave; La Solitaire, 33 victoires au g&eacute;n&eacute;ral, 75 podiums et 107 victoires d&rsquo;&eacute;tape</b>. Trente-trois victoires sur cinquante-sept &eacute;ditions : <b>plus de la moiti&eacute; du palmar&egrave;s de l&rsquo;histoire de la course a sign&eacute;.</b></p>
+  <p>Toutes les g&eacute;n&eacute;rations sont l&agrave;. Les vainqueurs des ann&eacute;es 70 et celui de 2026. Les triples vainqueurs, ceux qui ont grav&eacute; leur nom trois fois sur la m&ecirc;me coupe. La premi&egrave;re femme mont&eacute;e sur le podium. Des champions du Vend&eacute;e Globe, de la Route du Rhum, des transats. Et les bizuths de la derni&egrave;re &eacute;dition, qui ont sign&eacute; entre deux courses, &agrave; vingt ans, pour une &eacute;preuve qu&rsquo;ils esp&egrave;rent encore disputer dix fois.</p>
+  <p>Autour d&rsquo;eux, toute la fili&egrave;re : propri&eacute;taires, pr&eacute;parateurs, professionnels, partenaires, techniciens pr&eacute;sents sur l&rsquo;&eacute;preuve depuis plus de vingt ans, anciens organisateurs, directeurs de port, b&eacute;n&eacute;voles, clubs et &eacute;coles de voile. Plus de 350 signataires.</p>
+</div></section>
+
+<section class="formband"><div class="wrap">
+  <h2>Rejoindre le collectif</h2>
+  <form id="f" novalidate>
+    <label for="nom">Prénom et nom *</label>
+    <input type="text" id="nom" name="nom" required maxlength="80" autocomplete="name">
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required autocomplete="email">
+
+    <label for="tel">Téléphone (facultatif)</label>
+    <input type="tel" id="tel" name="tel" autocomplete="tel">
+
+    <label for="qualite">Vous êtes *</label>
+    <select id="qualite" name="qualite" required>
+      <option value="">Choisir…</option>
+      <option value="Propriétaire">Propriétaire</option>
+      <option value="Skipper">Skipper</option>
+      <option value="Sponsor">Sponsor</option>
+      <option value="Bénévole">Bénévole</option>
+      <option value="Partenaire">Partenaire</option>
+      <option value="Supporter">Supporter</option>
+      <option value="Préparateur">Préparateur</option>
+      <option value="Professionnel de la course au large">Professionnel de la course au large</option>
+      <option value="Élu / Collectivité">Élu / Collectivité</option>
+      <option value="Club ou école de voile">Club ou école de voile</option>
+    </select>
+
+    <label for="bateau">Bateau, structure ou lien avec la course (facultatif)</label>
+    <input type="text" id="bateau" name="bateau" maxlength="200" placeholder="Ex. : Figaro 3 n°87, sponsor 2019-2024, bénévole à Kinsale…">
+
+    <fieldset>
+      <legend>Visibilité de mon soutien *</legend>
+      <label class="opt"><input type="radio" name="consentement" value="Public"><span><b>Public</b><small>Mon nom et ma qualité peuvent figurer parmi les signataires publiés.</small></span></label>
+      <label class="opt"><input type="radio" name="consentement" value="Institutions"><span><b>Institutions uniquement</b><small>Mon nom peut être communiqué aux institutions (Fédération, élus) mais jamais publié.</small></span></label>
+      <label class="opt"><input type="radio" name="consentement" value="Confidentiel"><span><b>Confidentiel</b><small>Je suis compté dans le nombre, mon nom n'est ni publié ni communiqué.</small></span></label>
+    </fieldset>
+
+    <label class="check">
+      <input type="checkbox" id="charte" name="charte" required>
+      <span>Je soutiens les principes de la charte ci-dessus. *</span>
+    </label>
+
+    <div class="hp" aria-hidden="true">
+      <label for="hp_extra">Laisser vide</label>
+      <input type="text" id="hp_extra" name="hp_extra" tabindex="-1" autocomplete="off">
+    </div>
+
+    <button type="submit" id="btn" disabled>Je rejoins le collectif</button>
+      <a href="/archive-5f9b914e/collectif/figaristes/" style="display:inline-block;margin-left:.7rem;background:var(--jaune);color:var(--noir);font-family:var(--mono);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:.95rem 1.5rem;text-decoration:none;font-weight:600;vertical-align:middle">La liste</a>
+    <div class="hint" id="hint"></div>
+  </form>
+  <div class="msg" id="ok">Merci ! Votre soutien a été enregistré avec succès.</div>
+  <div class="msg" id="err"></div>
+
+  <p class="rgpd">Vos données (identité, contact, qualité, choix de visibilité) sont collectées par le Collectif pour La Solitaire sur la base de votre consentement, hébergées en Union européenne, et utilisées exclusivement pour l'action du Collectif. Elles ne sont ni cédées ni utilisées à des fins commerciales. Vous pouvez à tout moment demander leur modification ou leur suppression : contact@pourlasolitaire.fr</p>
+</div></section>
+
+<footer><div class="wrap">Collectif pour La Solitaire &middot; <a href="/archive-5f9b914e/">pourlasolitaire.fr</a> &middot; contact@pourlasolitaire.fr &middot; <a href="/archive-5f9b914e/collectif/liste/" style="color:inherit;text-decoration:none">v17</a></div>
+<div class="wrap" style="margin-top:1.2rem;padding-top:.9rem;border-top:1px solid rgba(241,240,236,.22);font-family:var(--mono,monospace);font-size:.74rem;opacity:.85">Collectif indépendant, non officiel et non affilié au Groupe Figaro, à La Solitaire du Figaro, à OC Sport Pen Duick ni à leurs partenaires. <a href="/archive-5f9b914e/mentions-legales/" style="color:inherit;text-decoration:underline">Mentions légales</a></div>
+</footer>
+
+<script>
+var WORKER_URL = "https://collectif-solitaire.pour-sauver-le-nom.workers.dev";
+console.log("Formulaire collectif v17 fr");
+(function(){
+  var f = document.getElementById('f'), btn = document.getElementById('btn');
+  var ok = document.getElementById('ok'), err = document.getElementById('err'), hint = document.getElementById('hint');
+  var el = function(n){ return f.querySelector('[name="'+n+'"]'); };
+  var emailRe = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/;
+  function missing(){
+    var m = [];
+    if (el('nom').value.trim().length < 3) m.push("votre prénom et nom");
+    if (!emailRe.test(el('email').value.trim())) m.push("un email valide");
+    if (!el('qualite').value) m.push("votre qualité");
+    if (!f.querySelector('input[name=consentement]:checked')) m.push("la visibilité de votre soutien");
+    if (!el('charte').checked) m.push("votre soutien à la charte");
+    return m;
+  }
+  function refresh(){
+    var m = missing();
+    btn.disabled = m.length > 0;
+    if (m.length > 0 && (el('nom').value || el('email').value || el('qualite').value)) {
+      hint.textContent = "Pour activer le bouton, il manque : " + m.join(", ") + ".";
+      hint.classList.add('on');
+    } else {
+      hint.classList.remove('on');
+    }
+  }
+  f.addEventListener('input', refresh);
+  f.addEventListener('change', refresh);
+  refresh();
+  // L'autofill des navigateurs remplit parfois les champs caches : on nettoie derriere lui.
+  setTimeout(function(){ el('hp_extra').value = ''; }, 600);
+  setTimeout(function(){ el('hp_extra').value = ''; }, 2000);
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (missing().length) { refresh(); return; }
+    err.classList.remove('err'); ok.classList.remove('ok');
+    var cons = f.querySelector('input[name=consentement]:checked');
+    var payload = {
+       nom: el('nom').value.trim(), email: el('email').value.trim(),
+      tel: el('tel').value.trim(), qualite: el('qualite').value, bateau: el('bateau').value.trim(),
+      consentement: cons.value, charte: el('charte').checked, website: el('hp_extra').value
+    };
+    console.log("Payload envoy\u00e9:", JSON.stringify(payload));
+    btn.disabled = true; btn.textContent = "Envoi…";
+    fetch(WORKER_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
+      .then(function(r){ return r.json().then(function(j){ return {s:r.status, j:j}; }); })
+      .then(function(res){
+        if (res.j && res.j.ok) { f.style.display='none'; ok.classList.add('ok'); ok.scrollIntoView({behavior:'smooth'}); }
+        else {
+          err.textContent = (res.j && res.j.error) || "Erreur d'enregistrement (" + res.s + ").";
+          err.classList.add('err'); btn.textContent = "Je rejoins le collectif"; refresh();
+        }
+      })
+      .catch(function(){
+        err.textContent = "Impossible de joindre le serveur. Si vous utilisez un bloqueur de publicités, désactivez-le pour ce site, ou réessayez depuis un autre navigateur.";
+        err.classList.add('err'); btn.textContent = "Je rejoins le collectif"; refresh();
+      });
+  });
+})();
+</script>
+<button id="totop" type="button" aria-label="Revenir en haut de la page">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('totop');if(!b)return;
+function t(){b.classList.toggle('on', window.scrollY>700);}
+window.addEventListener('scroll',t,{passive:true});t();
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();
+</script>
+<script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();e.stopImmediatePropagation();},true);f.querySelectorAll("button,input[type=submit]").forEach(function(b){b.disabled=true;b.title="Archive : formulaire désactivé";});});});</script></body>
+</html>

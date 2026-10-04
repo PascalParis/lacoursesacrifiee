@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-Disallow: /collectif/liste/
-
-Sitemap: https://pourlasolitaire.fr/sitemap.xml
